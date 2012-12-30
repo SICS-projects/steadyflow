@@ -1,0 +1,461 @@
+# Persian translation for steadyflow
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the steadyflow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: steadyflow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-05-14 00:00+0700\n"
+"PO-Revision-Date: 2011-07-11 03:22+0000\n"
+"Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
+"Language-Team: Persian <fa@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2011-07-12 04:56+0000\n"
+"X-Generator: Launchpad (build 13168)\n"
+
+#: Steadyflow/IndicatorController.vala:61 MainWindow.ui~:6 MainWindow.ui:6
+msgid "_Add download..."
+msgstr "افزودن بارگیری..."
+
+#: Steadyflow/IndicatorController.vala:63
+msgid "_Pause all"
+msgstr "مکث همه"
+
+#: Steadyflow/IndicatorController.vala:64
+msgid "_Resume all"
+msgstr "ادامه‌ی همه"
+
+#: Steadyflow/IndicatorController.vala:68
+msgid "Show download manager"
+msgstr "نمایش مدیر بارگیری"
+
+#: Steadyflow/IndicatorController.vala:182
+msgid "Start %s"
+msgstr "شروع %s"
+
+#: Steadyflow/IndicatorController.vala:186
+msgid "Pause %s"
+msgstr "مکث %s"
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr "مدیر بارگیری Steadyflow"
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr "مدیر بارگیری"
+
+#: Steadyflow/MainWindow.vala:219
+msgid "The file \"%s\" is not downloaded yet"
+msgstr "پرونده‌ی «%s» هنوز بارگیری نشده است"
+
+#: Steadyflow/MainWindow.vala:220
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr ""
+"پرونده‌ای که درخواست حذفش از سیاهه‌ی بارگیری را را دارید هنوز کامل نشده است. "
+"آیا مطمئن هستید که می‌خواهید حذفش کنید؟"
+
+#: Steadyflow/MainWindow.vala:283
+msgid "Could not launch web browser for URL %s"
+msgstr "ناتوانی در آغاز مروگر وب برای آدرس %s"
+
+#: Steadyflow/MainWindow.vala:306
+msgid "Simple download manager for GNOME"
+msgstr "مدیر بارگیری ساده برای گنوم"
+
+#: Steadyflow/MainWindow.vala:309
+msgid "Website"
+msgstr "وب‌گاه"
+
+#: Steadyflow/MainWindow.vala:310
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Danial Behzadi https://launchpad.net/~dani.behzi"
+
+#: Steadyflow/MainWindow.vala:420
+msgid "%d downloading, %d paused, %d finished"
+msgstr "%d پرونده در حال بارگیری، %d بارگیری معلق، %d بارگیری پایان یافته"
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
+msgstr "افزودن پرونده برای بارگیری"
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr "اوپس!"
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+"Steadyflow با مشکل مواجه شد و باید بسته شود. لظفا اطلاعات زیر را به "
+"توسعه‌دهندگان منتقل کنید:\n"
+"\n"
+"کد خطای %d:\n"
+"\n"
+"%s"
+
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr "بارگیری آغاز شد"
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr "بارگیری پایان یافت"
+
+#: Steadyflow/FileListController.vala:182
+msgid "Please enter a command to run"
+msgstr "لطفا دستوری برای اجرا وارد کنید"
+
+#: Steadyflow/FileListController.vala:183
+msgid ""
+"You have specified that Steadyflow should run a command when the download "
+"finishes, but have not entered a command to run. Please specify it."
+msgstr ""
+"شما مشحص کردید که Steadyflow باید هنگام پایان بارگیری دسنوری را اجرا کند، "
+"ولی دستوری را برای اجرا وارد نکرده‌اید. لطفا آن را مشخص کنید."
+
+#: Steadyflow/FileListController.vala:195
+msgid "Invalid file name"
+msgstr "نام پرونده‌ی نامعتبر"
+
+#: Steadyflow/FileListController.vala:196
+msgid "The file name you have entered is not valid. Please correct it."
+msgstr "نام پرونده‌ای که وارد کرده‌اید معتبر نیست. لطفا تصحیحش کنید."
+
+#: Steadyflow/FileListController.vala:203
+msgid "File exists"
+msgstr "پرونده وجود دارد"
+
+#: Steadyflow/FileListController.vala:204
+msgid ""
+"The file you are trying to save the download to already exists. Are you sure "
+"you want to overwrite it?"
+msgstr ""
+"پرونده‌ای که سعی دارید در آن بارگیری کنید از قبل موجود است. مطمئن هستید که "
+"می‌خواهید روی آن بنویسید؟"
+
+#: Steadyflow/FileListController.vala:208
+msgid "Overwrite"
+msgstr "جای‌نوشت"
+
+#: Steadyflow/FileListController.vala:226
+msgid "Error adding download"
+msgstr "خطا در افزودن بارگیری"
+
+#: Steadyflow/FileListController.vala:227
+msgid "An error has occurred while trying to start the download."
+msgstr "هنگام تلاش برای شروع بارگیری خطایی رخ داد."
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr "ترجیحات Steadyflow"
+
+#: Steadyflow/Application.vala:135
+msgid "Another instance of Steadyflow is already running."
+msgstr "یک پروسه‌ی Steadyflow دیگر هم‌اکنون در حال اجراست."
+
+#: Steadyflow/Application.vala:194
+msgid ""
+"Cannot start a D-Bus service. Another instance of Steadyflow may be already "
+"running."
+msgstr ""
+"ناتوانی در شروع سرویس D-Bus. ممکن است نسخه ی دیگری از Steadyflow درحال اجرا "
+"باشد."
+
+#: Steadyflow.Core/DownloadService.vala:78
+msgid ""
+"Cannot create settings directory - a non-directory with that name already "
+"exists"
+msgstr ""
+"ناتوانی در ایجاد دایرکتوری تنظیمات - نادایرکتوری‌ای با این نام وجود دارد"
+
+#: Steadyflow.UI/UIUtil.vala:56
+msgid "Clear"
+msgstr "پاک کردن"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:50
+msgid "%s downloaded"
+msgstr "%s بارگیری شد"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:55
+msgid "%s of %s downloaded"
+msgstr "%sتا از %sتا بارگیری شدند"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:65
+msgid "Downloading at speed %s/s"
+msgstr "درحال بارگیری با سرعت %s/s"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:69
+msgid "Connecting..."
+msgstr "در حال اتصال..."
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:72
+msgid "Download paused"
+msgstr "بارگیری معلق شد"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:75
+msgid "Download finished"
+msgstr "بارگیری پایان یافت"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:78
+msgid "Download stopped: network error"
+msgstr "بارگیری متوقف شد: خطای شبکه"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:165
+msgid "unknown time remaining"
+msgstr "زمان نامعلومی باقی مانده"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:170
+msgid "a few seconds remaining"
+msgstr "چند ثانیه باقی مانده"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:177
+msgid "%d second remaining"
+msgid_plural "%d seconds remaining"
+msgstr[0] "%d ثانیه مانده"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:183
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] "%d دقیقه مانده"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:190
+msgid "%s, %d minute remaining"
+msgid_plural "%s, %d minutes remaining"
+msgstr[0] "%s, %d دقیقه مانده"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:191
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d ساعت"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:197
+msgid "%s, %d hour remaining"
+msgid_plural "%s, %d hour remaining"
+msgstr[0] "%s, %d ساعت مانده"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:198
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d روز"
+
+#: Steadyflow.UI/IGtkBuilderContainer.vala:40
+msgid "Cannot find XML definition file for window %s"
+msgstr "پرونده‌ی تعریف XML برای پنجره‌ی %s یافت نشد"
+
+#: MainWindow.ui~:7 MainWindow.ui:7
+msgid "_Add"
+msgstr "افزودن"
+
+#: MainWindow.ui~:13
+msgid "Copy link location"
+msgstr "رونوشت از مکان پیوند"
+
+#: MainWindow.ui~:18 PreferencesDialog.ui:131 MainWindow.ui:18
+msgid "Open downloaded file"
+msgstr "پرونده‌ی بارگیری شده را باز کن"
+
+#: MainWindow.ui~:22 PreferencesDialog.ui:152 MainWindow.ui:22
+msgid "Open containing folder"
+msgstr "پوشه‌ی حاوی پرونده را باز کن"
+
+#: MainWindow.ui~:26 MainWindow.ui:26
+msgid "_Pause"
+msgstr "مکث"
+
+#: MainWindow.ui~:32 MainWindow.ui:32
+msgid "_Remove"
+msgstr "حذف"
+
+#: MainWindow.ui~:38 MainWindow.ui:38
+msgid "_Start"
+msgstr "آغاز"
+
+#: MainWindow.ui~:44 MainWindow.ui:44
+msgid "Show _status panel"
+msgstr "نمایش پنل وضعیت"
+
+#: MainWindow.ui~:62 MainWindow.ui:62
+msgid "Add a new download"
+msgstr "افزودن یک بارگیری جدید"
+
+#: MainWindow.ui~:76 MainWindow.ui:76
+msgid "Start the selected download"
+msgstr "شروع بارگیری انتخاب شده"
+
+#: MainWindow.ui~:89 MainWindow.ui:89
+msgid "Pause the selected download"
+msgstr "مکث بارگیری انتخاب شده"
+
+#: MainWindow.ui~:102 MainWindow.ui:102
+msgid "Remove the selected file from the download list"
+msgstr "حذف پرونده‌ی انتخاب شده از سیاهه‌ی بارگیری"
+
+#: MainWindow.ui~:121 MainWindow.ui:121
+msgid "Type here to filter downloads by file name"
+msgstr "برای پالایش بارگیری‌ها برحسب نام این‌جا بنویسید"
+
+#: MainWindow.ui~:140 MainWindow.ui:140
+msgid "Application menu"
+msgstr "فهرست برنامه"
+
+#: MainWindow.ui~:142 MainWindow.ui:142
+msgid "Menu"
+msgstr "فهرست"
+
+#: MainWindow.ui~:206 AddFileDialog.ui:21 MainWindow.ui:206
+msgid "URL address:"
+msgstr "آدرس URL:"
+
+#: MainWindow.ui~:220 MainWindow.ui:220
+msgid "Download location:"
+msgstr "مکان بارگیری:"
+
+#: MainWindow.ui~:326 MainWindow.ui:326
+msgid "Report a _problem"
+msgstr "گزارش یک مشکل"
+
+#: MainWindow.ui~:338 MainWindow.ui:338
+msgid "_Translate this application"
+msgstr "بازگردانی این برنامه"
+
+#: AddFileDialog.ui:61
+msgid "Save to:"
+msgstr "ذخیره در:"
+
+#: AddFileDialog.ui:88
+msgid "Upon completion:"
+msgstr "پس از تکمیل:"
+
+#: AddFileDialog.ui:101
+msgid "Save as:"
+msgstr "ذخیره به عنوان:"
+
+#: AddFileDialog.ui:160
+msgid "Command to run:"
+msgstr "دستور برای اجرا:"
+
+#: AddFileDialog.ui:187
+msgid "Run with the file as an argument"
+msgstr "اجرا با پرونده به عنوان آرگومان"
+
+#: AddFileDialog.ui:241
+msgid "Run command"
+msgstr "اجراي دستور"
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr "بارگیری‌های جدید"
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr "شروع خودکار از برنامه‌های خارجی"
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+"هنگامی که یک برنامه‌ی خارجی برای بارگیری یک پرونده درخواست کرد، به جای نمایش "
+"پنجره‌ی «افزودن پرونده برای بارگیری»، بارگیری خودکار را آغاز کن."
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr "پوشه‌ی پیش‌فرض برای ذخیره‌ی پرونده‌ها:"
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr "پس از تکمیل"
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr "هیچ کاری نکن"
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr "بارگیری‌ها"
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr "نمایش اطلاعیه‌های بازشونده"
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr "نمایش در پنل نمایش‌گر"
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr "ادامه‌ی کار هنگام بسته شدن پنجره‌ی اصلی"
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr "پنهان کردن پنجره‌ی اصلی هنگام شروع"
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
+msgstr "اطلاعیه‌ها"
+
+#: MainWindow.ui:13
+msgid "Copy remote address"
+msgstr "رونوشت از مکان راه دور"
+
+#: Steadyflow/FileListController.vala:208
+msgid "File already in list"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:209
+msgid ""
+"The address you are trying to add for download is already in the file list."
+msgstr ""
+
+#: Steadyflow/Application.vala:130
+msgid "Cannot connect to D-Bus. Steadyflow will exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:150
+msgid ""
+"Can neither create a D-Bus service nor connect to an existing instance of "
+"Steadyflow. Steadyflow will now exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:168
+msgid "Steadyflow version %s"
+msgstr ""
+
+#~ msgid "Steadyflow Error: %s\n"
+#~ msgstr "خطاهای Steadyflow:%s\n"
+
+#~ msgid "Configuration file not found - creating"
+#~ msgstr "پرونده‌ی پیکربندی یافت نشد - درحال ایجاد"
+
+#~ msgid "Help"
+#~ msgstr "راه‌نمایی"
+
+#~ msgid "Download paused, copied %s of %s"
+#~ msgstr "بارگیری مکث کرد، %sتا از %sتا رونوشت شدند"
+
+#~ msgid "Steadyflow _website"
+#~ msgstr "وب‌گاه Steadyflow"
+
+#~ msgid "Report a _bug"
+#~ msgstr "گزارش یک اشکال"
+
+#~ msgid "Unknown time remaining"
+#~ msgstr "زمان باقی‌مانده نامشخص"
+
+#~ msgid "A few seconds remaining"
+#~ msgstr "چند ثانیه مانده"

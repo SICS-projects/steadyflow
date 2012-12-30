@@ -1,0 +1,440 @@
+# Arabic translation for steadyflow
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the steadyflow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: steadyflow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-05-14 00:00+0700\n"
+"PO-Revision-Date: 2012-05-09 06:53+0000\n"
+"Last-Translator: Maia Kozheva <Unknown>\n"
+"Language-Team: Arabic <ar@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
+"3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
+"X-Launchpad-Export-Date: 2012-05-10 05:35+0000\n"
+"X-Generator: Launchpad (build 15213)\n"
+
+#: Steadyflow/IndicatorController.vala:61 MainWindow.ui~:6 MainWindow.ui:6
+msgid "_Add download..."
+msgstr "أضف ملف للتحميل"
+
+#: Steadyflow/IndicatorController.vala:63
+msgid "_Pause all"
+msgstr "توقيف مؤقت"
+
+#: Steadyflow/IndicatorController.vala:64
+msgid "_Resume all"
+msgstr "إعادة تشغيل الكل"
+
+#: Steadyflow/IndicatorController.vala:68
+msgid "Show download manager"
+msgstr "أظهر متصرف التنزيلات"
+
+#: Steadyflow/IndicatorController.vala:182
+msgid "Start %s"
+msgstr "ابدأ %s"
+
+#: Steadyflow/IndicatorController.vala:186
+msgid "Pause %s"
+msgstr "توقيف مؤقت"
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr "متصرف التنزيلات Steadyflow"
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr "مدير التّنزيل"
+
+#: Steadyflow/MainWindow.vala:219
+msgid "The file \"%s\" is not downloaded yet"
+msgstr "الملف\"%s\" لم يتم تحميله بعد"
+
+#: Steadyflow/MainWindow.vala:220
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr ""
+"الملف الذي تود حذفه من قائمة التنزيلات لم يتم تحميله بالكامل، هل تريد حقاً "
+"إزالته؟"
+
+#: Steadyflow/MainWindow.vala:283
+msgid "Could not launch web browser for URL %s"
+msgstr "فشل في اطلاق متصفح الانترنت للعنوان %s"
+
+#: Steadyflow/MainWindow.vala:306
+msgid "Simple download manager for GNOME"
+msgstr "مدير التنزيلات البسيط لسطح مكتب جنوم"
+
+#: Steadyflow/MainWindow.vala:309
+msgid "Website"
+msgstr "الموقع الإلكتروني"
+
+#: Steadyflow/MainWindow.vala:310
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Ibrahim Saed https://launchpad.net/~ibraheem5000\n"
+"  Maia Kozheva https://launchpad.net/~sikon\n"
+"  Muhammad Negm https://launchpad.net/~ravingeek\n"
+"  abdallah alemran https://launchpad.net/~abukhallad\n"
+"  salahjaafar https://launchpad.net/~salah-jaafar"
+
+#: Steadyflow/MainWindow.vala:420
+msgid "%d downloading, %d paused, %d finished"
+msgstr "جاري تنزيل %d ، %d معلق ،%d منتهي"
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
+msgstr "أضف ملفاً ليتم تنزيله"
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr "ياللهول!"
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+"ستيدي فلو تعثر ويحتاج إلي أن يغلق برجاء تبليغ المطور بالآتي : \n"
+"\n"
+"مسلسل الخطأ%d: \n"
+"\n"
+"%s"
+
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr "التنزيل بدأ"
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr "التنزيل اكتمل"
+
+#: Steadyflow/FileListController.vala:182
+msgid "Please enter a command to run"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:183
+msgid ""
+"You have specified that Steadyflow should run a command when the download "
+"finishes, but have not entered a command to run. Please specify it."
+msgstr ""
+
+#: Steadyflow/FileListController.vala:195
+msgid "Invalid file name"
+msgstr "اسم ملف غير صالح"
+
+#: Steadyflow/FileListController.vala:196
+msgid "The file name you have entered is not valid. Please correct it."
+msgstr "اسم الملف الذي ادخلته غير صالح برجاء تصحيحه."
+
+#: Steadyflow/FileListController.vala:203
+msgid "File exists"
+msgstr "الملف موجود"
+
+#: Steadyflow/FileListController.vala:204
+msgid ""
+"The file you are trying to save the download to already exists. Are you sure "
+"you want to overwrite it?"
+msgstr "الملف الذي تود حفظه موجود بالفعل هل تود الكتابة فوقه؟"
+
+#: Steadyflow/FileListController.vala:208
+msgid "Overwrite"
+msgstr "الكتابة فوق"
+
+#: Steadyflow/FileListController.vala:226
+msgid "Error adding download"
+msgstr "خطأ في اضافة التنزيل"
+
+#: Steadyflow/FileListController.vala:227
+msgid "An error has occurred while trying to start the download."
+msgstr "خطأ اثناء المحاولة في بدء التنزيل"
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr "تفضيلات ستيدي فلو"
+
+#: Steadyflow/Application.vala:135
+msgid "Another instance of Steadyflow is already running."
+msgstr "هناك عملية من ستيدي فلو جارية بالفعل"
+
+#: Steadyflow/Application.vala:194
+msgid ""
+"Cannot start a D-Bus service. Another instance of Steadyflow may be already "
+"running."
+msgstr ""
+
+#: Steadyflow.Core/DownloadService.vala:78
+msgid ""
+"Cannot create settings directory - a non-directory with that name already "
+"exists"
+msgstr "فشل في إنشاء ملف الإعدادات - هناك ملف موجود بالفعل بنفس الاسم"
+
+#: Steadyflow.UI/UIUtil.vala:56
+msgid "Clear"
+msgstr "امحُ"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:50
+msgid "%s downloaded"
+msgstr "%s  انتهى"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:55
+msgid "%s of %s downloaded"
+msgstr "انتهى %s باقي %s"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:65
+msgid "Downloading at speed %s/s"
+msgstr "بدأ التنزيل بسرعة %s /ث"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:69
+msgid "Connecting..."
+msgstr "يتصل..."
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:72
+msgid "Download paused"
+msgstr "تم تجميد التحميل"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:75
+msgid "Download finished"
+msgstr "تم التنزيل"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:78
+msgid "Download stopped: network error"
+msgstr "توقف التنزيل بسبب خطأ بالشبكة"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:165
+msgid "unknown time remaining"
+msgstr "غير معلوم ما تبقى من الوقت"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:170
+msgid "a few seconds remaining"
+msgstr "بقيت ثوانٍ قليلة"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:177
+msgid "%d second remaining"
+msgid_plural "%d seconds remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:183
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:190
+msgid "%s, %d minute remaining"
+msgid_plural "%s, %d minutes remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:191
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:197
+msgid "%s, %d hour remaining"
+msgid_plural "%s, %d hour remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:198
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Steadyflow.UI/IGtkBuilderContainer.vala:40
+msgid "Cannot find XML definition file for window %s"
+msgstr "لم يتم العثور علي ملف تعريف XML للنافذة %s"
+
+#: MainWindow.ui~:7 MainWindow.ui:7
+msgid "_Add"
+msgstr "أ_ضف"
+
+#: MainWindow.ui~:13
+msgid "Copy link location"
+msgstr ""
+
+#: MainWindow.ui~:18 PreferencesDialog.ui:131 MainWindow.ui:18
+msgid "Open downloaded file"
+msgstr "افتح الملف المنزل"
+
+#: MainWindow.ui~:22 PreferencesDialog.ui:152 MainWindow.ui:22
+msgid "Open containing folder"
+msgstr "افتح الملف الذي يحوي التنزيل"
+
+#: MainWindow.ui~:26 MainWindow.ui:26
+msgid "_Pause"
+msgstr "إي_قاف مؤقت"
+
+#: MainWindow.ui~:32 MainWindow.ui:32
+msgid "_Remove"
+msgstr "_حذف"
+
+#: MainWindow.ui~:38 MainWindow.ui:38
+msgid "_Start"
+msgstr "اب_دأ"
+
+#: MainWindow.ui~:44 MainWindow.ui:44
+msgid "Show _status panel"
+msgstr "اظهر شريط الحالة"
+
+#: MainWindow.ui~:62 MainWindow.ui:62
+msgid "Add a new download"
+msgstr "إضافة تنزيل جديد"
+
+#: MainWindow.ui~:76 MainWindow.ui:76
+msgid "Start the selected download"
+msgstr "ابدأ التنزيل المختار"
+
+#: MainWindow.ui~:89 MainWindow.ui:89
+msgid "Pause the selected download"
+msgstr "علق التنزيل المؤشر"
+
+#: MainWindow.ui~:102 MainWindow.ui:102
+msgid "Remove the selected file from the download list"
+msgstr "أزل الملف المؤشر من قائمة التنزيلات"
+
+#: MainWindow.ui~:121 MainWindow.ui:121
+msgid "Type here to filter downloads by file name"
+msgstr "اكتب هنا لتصفية التنزيلات بالاسم"
+
+#: MainWindow.ui~:140 MainWindow.ui:140
+msgid "Application menu"
+msgstr "قائمة البرنامج"
+
+#: MainWindow.ui~:142 MainWindow.ui:142
+msgid "Menu"
+msgstr "القائمة"
+
+#: MainWindow.ui~:206 AddFileDialog.ui:21 MainWindow.ui:206
+msgid "URL address:"
+msgstr "عنوان:"
+
+#: MainWindow.ui~:220 MainWindow.ui:220
+msgid "Download location:"
+msgstr "مكان التنزيل:"
+
+#: MainWindow.ui~:326 MainWindow.ui:326
+msgid "Report a _problem"
+msgstr "أبلغ عن _مشكلة..."
+
+#: MainWindow.ui~:338 MainWindow.ui:338
+msgid "_Translate this application"
+msgstr "_ترجم هذا التطبيق"
+
+#: AddFileDialog.ui:61
+msgid "Save to:"
+msgstr "حفظ إلى:"
+
+#: AddFileDialog.ui:88
+msgid "Upon completion:"
+msgstr "عند الانتهاء"
+
+#: AddFileDialog.ui:101
+msgid "Save as:"
+msgstr "حفظ باسم:"
+
+#: AddFileDialog.ui:160
+msgid "Command to run:"
+msgstr ""
+
+#: AddFileDialog.ui:187
+msgid "Run with the file as an argument"
+msgstr ""
+
+#: AddFileDialog.ui:241
+msgid "Run command"
+msgstr ""
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr "تنزيلات جديدة"
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr "ابدأ مباشرة من البرامج الاخرى"
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+"عندما يطلب برنامج آخر تنزيل ملف ، ابدأ بتنزيل الملف آلياً بدلاً من إظهار نافذة "
+"تأكيد التنزيل"
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr "المسار الافتراضي لحفظ الملفات:"
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr "عند الانتهاء"
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr "لا تفعل شيئا"
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr "التنزيلات"
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr "اظهر الاشعارات المنبثقة"
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr "اظهر المؤشر في الشريط"
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr "تابع العمل اذا تم اغلاق النافذة الرئيسية"
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr "أخفِ النافذة الرئيسة عند البدء"
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
+msgstr "إشعارات"
+
+#: MainWindow.ui:13
+msgid "Copy remote address"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:208
+msgid "File already in list"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:209
+msgid ""
+"The address you are trying to add for download is already in the file list."
+msgstr ""
+
+#: Steadyflow/Application.vala:130
+msgid "Cannot connect to D-Bus. Steadyflow will exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:150
+msgid ""
+"Can neither create a D-Bus service nor connect to an existing instance of "
+"Steadyflow. Steadyflow will now exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:168
+msgid "Steadyflow version %s"
+msgstr ""

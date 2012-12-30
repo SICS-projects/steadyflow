@@ -1,0 +1,91 @@
+Steadyflow 0.2.0 (2012-06-30)
+
+  * The "just before Debian freeze" release.
+  * Ported to GTK 3.
+  * Dropped libunique dependency.
+  * Moved dconf settings to a new location (/net/launchpad/steadyflow).
+  * Launchpad bugs fixed:
+    + #777296  Port to GTK3
+    + #983560  Settings in wrong path (/apps/ etc. are deprecated)
+    + #642272  Steadyflow should warn about duplicating sources
+    + #1019541 [0.1.7] Bug in Dutch translation
+    + #858243  Show the application window by clicking on tray icon
+
+
+Steadyflow 0.1.7 (2011-05-22)
+
+  * Added support for password authentication for FTP/SFTP/SMB. Remembered
+    passwords are shared with Nautilus and the GNOME desktop, if you have
+    them installed.
+  * Added the ability to select multiple files in the file list and start,
+    pause or resume them at once.
+  * The indicator menu has been expanded. It now features the ability to start
+    or pause the first six files being downloaded individually, or all files
+    at once.
+  * The context menu in the file list now features an option to copy the
+    file's URL address.
+  * The "add download" window is no longer modal, and it is possible to have
+    several such windows open at once.
+  * An "add download" option has been added to Steadyflow's Unity dock menu.
+  * Launchpad bugs fixed:
+    + #642318 "Add download" window shouldn't be modal
+    + #779134 Gtk-WARNING **: Unknown property: GtkMenu.ubuntu-local
+    + #781492 Indicator icons not displayed with KDE and Oxygen
+    + #642316 Feature request: allow selecting multiple items in file list
+    + #642739 Support FTP password authentication
+    + #643037 "Pause all ,Start all option in the menu"
+    + #692754 use edit-clear-symbolic
+    + #692766 AppMenu should be a toggle button
+    + #779107 Add list of downloads in progress to indicator menu
+    + #779902 Launcher Unity
+    + #780685 Feature request: Copy download Link
+
+
+Steadyflow 0.1.6 (2011-05-06)
+
+  * Added remaining time estimate. Patch by Hunter Rew.
+  * Added the ability to specify a custom command on download finish.
+  * Now requires Vala 0.12 to build.
+  * Migrate from the deprecated dbus-glib to GDBus.
+  * Tighten dependencies: now we require glib >= 2.26 for GSettings and GDBus.
+    As a consequence, the local files settings backend has been dropped, and
+    this version will not build on Ubuntu Lucid.
+  * Allow building with either libnotify 0.5 or 0.7.
+  * Launchpad bugs fixed:
+    + #647336 Trim trailing control characters from clipboard
+    + #648466 a blank filename makes steadyflow attempt to overwrite folder
+    + #692770 Report a Bug
+    + #777263 Removed files are not correctly removed on application exit
+    + #645190 Remaining Time informations
+    + #648719 Open containing folder is enabled only for finished downloads
+    + #692749 don't show clear icon if there is nothing to clear
+    + #692756 Search entry should be insensitive if there is nothing to search
+    + #705211 Upon completion run custom command
+
+
+Steadyflow 0.1.5 (2010-09-22)
+
+  * The "rebranding" release.
+  * New application icon by Daniel Fore.
+  * Made some UI strings translated that previously weren't.
+  * The add dialog is now prepopulated with the clipboard contents if the
+    clipboard contains a valid URL. Patch by Thura.
+  * "steadyflow add" without arguments now launches a blank add dialog
+    (possibly populated with the clipboard contents).
+  * Launchpad bugs fixed:
+    + 642203 Some FTP downloads fail
+    + 641751 Don't allow steadyflow to run in background without
+             indicator icon
+    + 642252 "Add file" window shouldn't have fixed size
+    + 642256 [Tiny bug] Needs \n after "Уже выполняется другой экземпляр
+             Steadyflow"
+    + 642719 Startup Notify behaves improperly in "start minimized" mode
+    + 641833 "Add from clipboard" functionality
+    + 641834 Double clicking a file should open it
+    + 642284 Change application icon
+    + 642372 Merge Help and App menus
+
+
+Steadyflow 0.1 (2010-09-17)
+
+  * Initial release.

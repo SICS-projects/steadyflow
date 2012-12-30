@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Steadyflow
+_GenericName=Download Manager
+_X-GNOME-FullName=Steadyflow Download Manager
+Exec=steadyflow
+Icon=steadyflow
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GTK;Network;FileTransfer;
+X-Ubuntu-Gettext-Domain=steadyflow
+X-Ayatana-Desktop-Shortcuts=Add
+
+[Add Shortcut Group]
+_Name=_Add download...
+Exec=steadyflow add %s
+TargetEnvironment=Unity

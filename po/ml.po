@@ -1,0 +1,434 @@
+# Malayalam translation for steadyflow
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the steadyflow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: steadyflow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-05-14 00:00+0700\n"
+"PO-Revision-Date: 2011-09-13 06:01+0000\n"
+"Last-Translator: Amal Bose <axatrikx@gmail.com>\n"
+"Language-Team: Malayalam <ml@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2011-09-14 04:58+0000\n"
+"X-Generator: Launchpad (build 13921)\n"
+
+#: Steadyflow/IndicatorController.vala:61 MainWindow.ui~:6 MainWindow.ui:6
+msgid "_Add download..."
+msgstr "_ഡൌണ്‍ലോഡ് ചേര്‍ക്കുക"
+
+#: Steadyflow/IndicatorController.vala:63
+msgid "_Pause all"
+msgstr "_താല്‍കാലികമായി നിര്‍ത്തിവയ്ക്കുക"
+
+#: Steadyflow/IndicatorController.vala:64
+msgid "_Resume all"
+msgstr "_എല്ലാം തുടരുക"
+
+#: Steadyflow/IndicatorController.vala:68
+msgid "Show download manager"
+msgstr "ഡൌണ്‍ലോഡ് നിയന്ത്രികന്‍"
+
+#: Steadyflow/IndicatorController.vala:182
+msgid "Start %s"
+msgstr ""
+
+#: Steadyflow/IndicatorController.vala:186
+msgid "Pause %s"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr "സ്റ്റെഡിഫ്ലോ ഡൌണ്‍ലോഡ് കാര്യസ്ഥന്‍"
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr "ഡൌണ്‍ലോഡ്  കാര്യസ്ഥന്‍"
+
+#: Steadyflow/MainWindow.vala:219
+msgid "The file \"%s\" is not downloaded yet"
+msgstr "\"%s\" ഫയല്‍ ഇത് വരെ ഡൌണ്‍ലോഡ് ആയിട്ടില്ല"
+
+#: Steadyflow/MainWindow.vala:220
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr ""
+"നിങ്ങള്‍ ഡൌണ്‍ലോഡ്  പട്ടികയില്‍ നിന്നും നീക്കം ചെയ്യാന്‍ നിര്‍ദ്ദേശിച്ച ഫയലിന്റെ ഡൌണ്ലോഡിംഗ് ഇത് "
+"വരെ പൂര്‍ത്തി ആയിട്ടില്ല. അത് നീക്കം ചെയ്യണമെന്നു നിങ്ങള്‍ക്ക് ഉറപ്പാണോ?"
+
+#: Steadyflow/MainWindow.vala:283
+msgid "Could not launch web browser for URL %s"
+msgstr "%s എന്ന യു ആര്‍ എല്‍ ഇനുവേണ്ടി വെബ് ബ്രൌസര്‍ തുടങ്ങാന്‍ ആവുന്നില്ല"
+
+#: Steadyflow/MainWindow.vala:306
+msgid "Simple download manager for GNOME"
+msgstr "ഗ്നോമിന് അനാഡംബര ഡൌണ്‍ലോഡ് നിയന്ത്രികന്‍"
+
+#: Steadyflow/MainWindow.vala:309
+msgid "Website"
+msgstr "വെബ്സൈറ്റ്"
+
+#: Steadyflow/MainWindow.vala:310
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Amal Bose https://launchpad.net/~axatrikx\n"
+"  maheshmohan.mu https://launchpad.net/~maheshmohan.mu"
+
+#: Steadyflow/MainWindow.vala:420
+msgid "%d downloading, %d paused, %d finished"
+msgstr "%d ഡൌണ്‍ലോഡ് ചെയ്യുന്നു, %d തല്‍കാലം നിര്‍ത്തിവെച്ചു, %d അവസാനിച്ചു"
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
+msgstr "ഡൌണ്‍ലോഡിനായി ഫയല്‍ കൂട്ടിച്ചേര്‍ക്കുക"
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr "ഹയ്യോ!"
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+"സ്റ്റെഡിഫ്ലോ ഒരു പ്രശ്നം നേരിടേണ്ടിവന്നത്  കാരണം പ്രവര്‍ത്തനം നിര്‍ത്തി വയ്ക്കല്‍ ആവശ്യമായി "
+"വന്നിരിക്കുന്നു. ദയവായി ഈ വിവരം രചയിതാവിന്  കൈ മാറുക:\n"
+"പിശകു് കോഡ് &d:\n"
+"\n"
+"%s"
+
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr "ഡൌണ്‍ലോഡ് തുടങ്ങി"
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr "ഡൗണ്‍ലോഡ് പൂര്‍ത്തിയായി"
+
+#: Steadyflow/FileListController.vala:182
+msgid "Please enter a command to run"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:183
+msgid ""
+"You have specified that Steadyflow should run a command when the download "
+"finishes, but have not entered a command to run. Please specify it."
+msgstr ""
+
+#: Steadyflow/FileListController.vala:195
+msgid "Invalid file name"
+msgstr "തെറ്റായ ഫയല്‍ നാമം"
+
+#: Steadyflow/FileListController.vala:196
+msgid "The file name you have entered is not valid. Please correct it."
+msgstr "നിങ്ങള്‍ നല്‍കിയ ഫയല്‍ നാമം അസാധുവാണ്. ദയവായി തിരുത്തുക."
+
+#: Steadyflow/FileListController.vala:203
+msgid "File exists"
+msgstr "ഫയല്‍ നിലവിലുണ്ട്"
+
+#: Steadyflow/FileListController.vala:204
+msgid ""
+"The file you are trying to save the download to already exists. Are you sure "
+"you want to overwrite it?"
+msgstr "ഡൌണ്‍ലോഡ് ചെയ്യാന്‍ ഉദ്ദേശിക്കുന്ന ഫയല്‍ മുപേ ഉണ്ട്. തിരുത്തിയെഴുതണമെന്നു ഉറപ്പാണോ?"
+
+#: Steadyflow/FileListController.vala:208
+msgid "Overwrite"
+msgstr "മീതേയെഴുതുക"
+
+#: Steadyflow/FileListController.vala:226
+msgid "Error adding download"
+msgstr "ഡൌണ്‍ലോഡ് കൂട്ടിചേര്‍ക്കുന്നതില്‍ പിശക്"
+
+#: Steadyflow/FileListController.vala:227
+msgid "An error has occurred while trying to start the download."
+msgstr "ഡൌണ്‍ലോഡ് തുടങ്ങിയപ്പോള്‍ പിഴവ് സംഭവിച്ചു"
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr "സ്റ്റെഡിഫ്ലോ മുന്‍‌ഗണനകള്‍"
+
+#: Steadyflow/Application.vala:135
+msgid "Another instance of Steadyflow is already running."
+msgstr "സ്റ്റെഡിഫ്ലോയുടെ മറ്റൊരു പതിപ്പ് ഇപ്പോള്‍ തന്നെ പ്രവര്‍ത്തിക്കുന്നു"
+
+#: Steadyflow/Application.vala:194
+msgid ""
+"Cannot start a D-Bus service. Another instance of Steadyflow may be already "
+"running."
+msgstr ""
+
+#: Steadyflow.Core/DownloadService.vala:78
+msgid ""
+"Cannot create settings directory - a non-directory with that name already "
+"exists"
+msgstr "സജ്ജീകരണ തട്ട് നിര്‍മ്മിക്കാന്‍ കഴിയില്ല - അതെ പേരിലുള്ള തട്ട് ഇപ്പോള്‍ തന്നെ നിലവില്‍ ഉണ്ട്"
+
+#: Steadyflow.UI/UIUtil.vala:56
+msgid "Clear"
+msgstr ""
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:50
+msgid "%s downloaded"
+msgstr "%s ഡൌണ്‍ലോഡ് ചെയ്തു"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:55
+msgid "%s of %s downloaded"
+msgstr "%s ന്റെ %s ഡൌണ്‍ലോഡ് ചെയ്തു"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:65
+msgid "Downloading at speed %s/s"
+msgstr "%s/s സ്പീഡില്‍ ഡൌണ്‍ലോഡ് ചെയ്യുന്നു"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:69
+msgid "Connecting..."
+msgstr "ബന്ധിപ്പിച്ചുകൊണ്ടിരിയ്ക്കുന്നു..."
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:72
+msgid "Download paused"
+msgstr "ഡൌണ്‍ലോഡ് താല്‍ക്കാലികമായി നിര്‍ത്തിവച്ചു"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:75
+msgid "Download finished"
+msgstr "ഡൌണ്‍ലോഡ് തീര്‍ന്നിരിയ്ക്കുന്നു"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:78
+msgid "Download stopped: network error"
+msgstr "ഡൌണ്‍ലോഡ്  നിര്‍ത്തിയിരിയ്ക്കുകയാണു് : ശൃംഖലയില്‍ തകരാര്‍"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:165
+msgid "unknown time remaining"
+msgstr "അജ്ഞാത സമയം ബാക്കി കിടക്കുന്നു"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:170
+msgid "a few seconds remaining"
+msgstr "ഏതാനും നിമിഷങ്ങള്‍ ബാക്കി"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:177
+msgid "%d second remaining"
+msgid_plural "%d seconds remaining"
+msgstr[0] "%d നിമിഷം ബാക്കി"
+msgstr[1] "%d നിമിഷങ്ങള്‍ ബാക്കി"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:183
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] "%d മിനിറ്റ് ബാക്കി"
+msgstr[1] "%d മിനിറ്റുകള്‍ ബാക്കി"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:190
+msgid "%s, %d minute remaining"
+msgid_plural "%s, %d minutes remaining"
+msgstr[0] "%s, %d മിനിറ്റ് ബാക്കി"
+msgstr[1] "%s, %d മിനിറ്റുകള്‍ ബാക്കി"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:191
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:197
+msgid "%s, %d hour remaining"
+msgid_plural "%s, %d hour remaining"
+msgstr[0] "%s, %d  മണിക്കൂര്‍"
+msgstr[1] "%s, %d മണിക്കൂറുകള്‍"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:198
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: Steadyflow.UI/IGtkBuilderContainer.vala:40
+msgid "Cannot find XML definition file for window %s"
+msgstr "%s ജാലകത്തിന് വേണ്ടിയുള്ള എക്സ് എം എല്‍ നിര്‍വചനം കാണുന്നില്ല"
+
+#: MainWindow.ui~:7 MainWindow.ui:7
+msgid "_Add"
+msgstr "കൂട്ടിച്ചേര്‍ക്കുക"
+
+#: MainWindow.ui~:13
+msgid "Copy link location"
+msgstr ""
+
+#: MainWindow.ui~:18 PreferencesDialog.ui:131 MainWindow.ui:18
+msgid "Open downloaded file"
+msgstr "ഡൌണ്‍ലോഡ്  ചെയ്ത ഫയല്‍ തുറക്കുക"
+
+#: MainWindow.ui~:22 PreferencesDialog.ui:152 MainWindow.ui:22
+msgid "Open containing folder"
+msgstr "ഉള്‍കൊള്ളുന്ന അറ തുറക്കുക"
+
+#: MainWindow.ui~:26 MainWindow.ui:26
+msgid "_Pause"
+msgstr "_താല്‍ക്കാലികമായി നിര്‍ത്തുക"
+
+#: MainWindow.ui~:32 MainWindow.ui:32
+msgid "_Remove"
+msgstr "_നീക്കം ചെയ്യുക"
+
+#: MainWindow.ui~:38 MainWindow.ui:38
+msgid "_Start"
+msgstr "_ആരംഭിക്കുക"
+
+#: MainWindow.ui~:44 MainWindow.ui:44
+msgid "Show _status panel"
+msgstr ""
+
+#: MainWindow.ui~:62 MainWindow.ui:62
+msgid "Add a new download"
+msgstr "പുതിയ ഡൌണ്‍ലോഡ്  കൂട്ടിച്ചേര്‍ത്തു"
+
+#: MainWindow.ui~:76 MainWindow.ui:76
+msgid "Start the selected download"
+msgstr "തെരഞ്ഞെടുത്ത ഡൌണ്‍ലോഡ് തുടങ്ങുക"
+
+#: MainWindow.ui~:89 MainWindow.ui:89
+msgid "Pause the selected download"
+msgstr "തെരഞ്ഞെടുത്ത ഡൌണ്‍ലോഡ് താല്‍കാലികമായി നിര്‍ത്തിവക്കുക"
+
+#: MainWindow.ui~:102 MainWindow.ui:102
+msgid "Remove the selected file from the download list"
+msgstr "തെരഞ്ഞെടുത്ത ഫയല്‍ ഡൌണ്‍ലോഡ് പട്ടികയില്‍ നിന്നും നീക്കം ചെയ്യുക"
+
+#: MainWindow.ui~:121 MainWindow.ui:121
+msgid "Type here to filter downloads by file name"
+msgstr "ഡൌണ്‍ലോഡുകളെ ഫയല്‍ നാമം കൊണ്ട് അരിപ്പപ്രയോഗം നടത്താന്‍ ഇവിടെ ടൈപ്പ് ചെയ്യുക"
+
+#: MainWindow.ui~:140 MainWindow.ui:140
+msgid "Application menu"
+msgstr "പ്രയോഗ മെനു"
+
+#: MainWindow.ui~:142 MainWindow.ui:142
+msgid "Menu"
+msgstr ""
+
+#: MainWindow.ui~:206 AddFileDialog.ui:21 MainWindow.ui:206
+msgid "URL address:"
+msgstr "യുആര്‍എല്‍ വിലാസം:"
+
+#: MainWindow.ui~:220 MainWindow.ui:220
+msgid "Download location:"
+msgstr "ഡൗണ്ലോഡിന്റെ സ്ഥലം"
+
+#: MainWindow.ui~:326 MainWindow.ui:326
+msgid "Report a _problem"
+msgstr "ഒരു പിശക് പ്രസ്താവിക്കുക"
+
+#: MainWindow.ui~:338 MainWindow.ui:338
+msgid "_Translate this application"
+msgstr "ഈ ആപ്ലിക്കേഷന്‍ തര്‍ജ്ജമ ചെയ്യുക"
+
+#: AddFileDialog.ui:61
+msgid "Save to:"
+msgstr "ഇവിടേക്ക്  സേവ് ചെയ്യുക:"
+
+#: AddFileDialog.ui:88
+msgid "Upon completion:"
+msgstr ""
+
+#: AddFileDialog.ui:101
+msgid "Save as:"
+msgstr "പേരു് മാറ്റി സൂക്ഷിക്കുക:"
+
+#: AddFileDialog.ui:160
+msgid "Command to run:"
+msgstr ""
+
+#: AddFileDialog.ui:187
+msgid "Run with the file as an argument"
+msgstr ""
+
+#: AddFileDialog.ui:241
+msgid "Run command"
+msgstr ""
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr "പുതിയ ഡൌണ്ലോഡുകള്‍"
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr "മറ്റു പ്രോഗ്രാമ്മുകളില്‍ നിന്ന് തനിയേ തുടങ്ങുക"
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr ""
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr ""
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr "ഒരു പ്രവര്‍ത്തിയും ചെയ്യാതിരിക്കുക"
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr "ഡൗണ്‍ലോഡുകള്‍"
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr "പൊങ്ങിവരുന്ന അറിയിപ്പ് കാണിക്കുക"
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr "പാനല്‍ ഇന്‍ഡിക്കേറ്റര്‍ കാണിക്കുക"
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr ""
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr "പ്രധാന ജാലകം തുടക്കത്തില്‍ ഒളിപ്പിക്കുക"
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
+msgstr "അറിയിപ്പുകള്‍"
+
+#: MainWindow.ui:13
+msgid "Copy remote address"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:208
+msgid "File already in list"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:209
+msgid ""
+"The address you are trying to add for download is already in the file list."
+msgstr ""
+
+#: Steadyflow/Application.vala:130
+msgid "Cannot connect to D-Bus. Steadyflow will exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:150
+msgid ""
+"Can neither create a D-Bus service nor connect to an existing instance of "
+"Steadyflow. Steadyflow will now exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:168
+msgid "Steadyflow version %s"
+msgstr ""

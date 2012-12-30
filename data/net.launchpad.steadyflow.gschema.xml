@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<schemalist>
+  <enum id="finish-action">
+    <value nick="do-nothing" value="0" />
+    <value nick="open-file" value="1" />
+    <value nick="open-folder" value="2" />
+  </enum>
+  <schema id="net.launchpad.steadyflow" path="/net/launchpad/steadyflow/" gettext-domain="steadyflow">
+    <key name="show-statuspanel" type="b">
+      <default>true</default>
+      <description>Whether to show the status panel.</description>
+    </key>
+    <key name="window-width" type="i">
+      <default>500</default>
+      <description>Width of the main window.</description>
+    </key>
+    <key name="window-height" type="i">
+      <default>450</default>
+      <description>Height of the main window.</description>
+    </key>
+    <key name="default-download-folder" type="s">
+      <default>""</default>
+      <description>Default folder where downloaded files are saved. Leaving this blank specifies the XDG Downloads folder.</description>
+    </key>
+    <key name="show-notifications" type="b">
+      <default>true</default>
+      <description>Show notification popups.</description>
+    </key>
+    <key name="show-indicator" type="b">
+      <default>true</default>
+      <description>Show the panel indicator.</description>
+    </key>
+    <key name="minimize-to-indicator" type="b">
+      <default>true</default>
+      <description>Show notification popups.</description>
+    </key>
+    <key name="start-minimized" type="b">
+      <default>true</default>
+      <description>Hide the main window when the application starts.</description>
+    </key>
+    <key name="default-post-download-action" enum="finish-action">
+      <default>"do-nothing"</default>
+      <description>Default action to execute when a file download finishes.</description>
+    </key>
+  </schema>
+</schemalist>

@@ -1,0 +1,458 @@
+# German translation for steadyflow
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the steadyflow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: steadyflow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-05-14 00:00+0700\n"
+"PO-Revision-Date: 2012-03-05 06:57+0000\n"
+"Last-Translator: Maia Kozheva <Unknown>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2012-03-06 04:57+0000\n"
+"X-Generator: Launchpad (build 14900)\n"
+
+#: Steadyflow/IndicatorController.vala:61 MainWindow.ui~:6 MainWindow.ui:6
+msgid "_Add download..."
+msgstr "_Download hinzufügen..."
+
+#: Steadyflow/IndicatorController.vala:63
+msgid "_Pause all"
+msgstr "Alle pausieren"
+
+#: Steadyflow/IndicatorController.vala:64
+msgid "_Resume all"
+msgstr "Alle wiederaufnehmen"
+
+#: Steadyflow/IndicatorController.vala:68
+msgid "Show download manager"
+msgstr "Download-Manager anzeigen"
+
+#: Steadyflow/IndicatorController.vala:182
+msgid "Start %s"
+msgstr "Starte %s"
+
+#: Steadyflow/IndicatorController.vala:186
+msgid "Pause %s"
+msgstr "%s pausieren"
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr "Steadyflow-Download-Manager"
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr "Download-Manager"
+
+#: Steadyflow/MainWindow.vala:219
+msgid "The file \"%s\" is not downloaded yet"
+msgstr "Die Datei »%s« wurde noch nicht heruntergeladen"
+
+#: Steadyflow/MainWindow.vala:220
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr ""
+"Dieser Download ist noch nicht abgeschlossen. Möchten Sie Ihn dennoch aus "
+"der Download-Liste löschen?"
+
+#: Steadyflow/MainWindow.vala:283
+msgid "Could not launch web browser for URL %s"
+msgstr "Web-Browser für URL %s kann nicht gestartet werden"
+
+#: Steadyflow/MainWindow.vala:306
+msgid "Simple download manager for GNOME"
+msgstr "Einfacher Dowload-Manager für GNOME"
+
+#: Steadyflow/MainWindow.vala:309
+msgid "Website"
+msgstr "Website"
+
+#: Steadyflow/MainWindow.vala:310
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Anducar https://launchpad.net/~mustacmarijo\n"
+"  Benny Schmidt https://launchpad.net/~mail-gidix\n"
+"  Christian Lins https://launchpad.net/~cli\n"
+"  Florian Selent https://launchpad.net/~fselent\n"
+"  Gerfried Fuchs https://launchpad.net/~rhonda\n"
+"  Henrik Graßhoff https://launchpad.net/~henrik-grasshoff\n"
+"  Ingo Gerth https://launchpad.net/~igerth\n"
+"  Maia Kozheva https://launchpad.net/~sikon\n"
+"  Martin Lettner https://launchpad.net/~m.lettner\n"
+"  Phil Krämer https://launchpad.net/~man0riax\n"
+"  Tim O. https://launchpad.net/~tim.o\n"
+"  pert7 https://launchpad.net/~pert7\n"
+"  stephan herold | sh_dhc https://launchpad.net/~sh-dhc"
+
+#: Steadyflow/MainWindow.vala:420
+msgid "%d downloading, %d paused, %d finished"
+msgstr "%d herunterladen, %d angehalten, %d beendet"
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
+msgstr "Datei zum Herunterladen hinzufügen"
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr "Hoppla!"
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+"Steadyflow hat ein Problem festgestellt und muss beendet werden. Bitte "
+"informieren Sie das Entwickler-Team über folgenden Fehler:\n"
+"\n"
+"Error Code: %d\n"
+"\n"
+"%s"
+
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr "Download gestartet"
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr "Download abgeschlossen"
+
+#: Steadyflow/FileListController.vala:182
+msgid "Please enter a command to run"
+msgstr "Bitte geben Sie einen Befehl zum Ausführen ein"
+
+#: Steadyflow/FileListController.vala:183
+msgid ""
+"You have specified that Steadyflow should run a command when the download "
+"finishes, but have not entered a command to run. Please specify it."
+msgstr ""
+"Sie haben angegeben, dass Steadyflow einen Befehl ausführen soll, wenn der "
+"Download beendet ist. Sie haben jedoch keinen Befehl eingegeben. Bitte geben "
+"Sie einen an."
+
+#: Steadyflow/FileListController.vala:195
+msgid "Invalid file name"
+msgstr "Ungültiger Dateiname"
+
+#: Steadyflow/FileListController.vala:196
+msgid "The file name you have entered is not valid. Please correct it."
+msgstr "Der eingegebene Dateiname ist ungültig. Bitte korrigieren Sie ihn."
+
+#: Steadyflow/FileListController.vala:203
+msgid "File exists"
+msgstr "Die Datei existiert bereits"
+
+#: Steadyflow/FileListController.vala:204
+msgid ""
+"The file you are trying to save the download to already exists. Are you sure "
+"you want to overwrite it?"
+msgstr ""
+"Die Datei, die Sie speichern möchten, existiert bereits. Möchten Sie diese "
+"überschreiben?"
+
+#: Steadyflow/FileListController.vala:208
+msgid "Overwrite"
+msgstr "Überschreiben"
+
+#: Steadyflow/FileListController.vala:226
+msgid "Error adding download"
+msgstr "Beim Hinzufügen der Datei ist ein Fehler aufgetreten"
+
+#: Steadyflow/FileListController.vala:227
+msgid "An error has occurred while trying to start the download."
+msgstr "Beim Starten des Downloads ist ein Fehler aufgetreten"
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr "Steadyflow-Einstellungen"
+
+#: Steadyflow/Application.vala:135
+msgid "Another instance of Steadyflow is already running."
+msgstr "Es läuft bereits eine Instanz von Steadyflow"
+
+#: Steadyflow/Application.vala:194
+msgid ""
+"Cannot start a D-Bus service. Another instance of Steadyflow may be already "
+"running."
+msgstr ""
+"Kann D-Bus Dienst nicht starten. Eine andere Instanz von Steadyflow läuft "
+"möglicherweise bereits."
+
+#: Steadyflow.Core/DownloadService.vala:78
+msgid ""
+"Cannot create settings directory - a non-directory with that name already "
+"exists"
+msgstr ""
+"Der Konfigurationsordner konnte nicht angelegt werden. Eine Datei mit diesem "
+"Namen existiert bereits"
+
+#: Steadyflow.UI/UIUtil.vala:56
+msgid "Clear"
+msgstr "Zurücksetzen"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:50
+msgid "%s downloaded"
+msgstr "%s heruntergeladen"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:55
+msgid "%s of %s downloaded"
+msgstr "%s von %s heruntergeladen"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:65
+msgid "Downloading at speed %s/s"
+msgstr "Download-Geschwindigkeit: %s/s"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:69
+msgid "Connecting..."
+msgstr "Verbinden …"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:72
+msgid "Download paused"
+msgstr "Download angehalten"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:75
+msgid "Download finished"
+msgstr "Download abgeschlossen"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:78
+msgid "Download stopped: network error"
+msgstr "Herunterladen angehalten: Netzwerkfehler"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:165
+msgid "unknown time remaining"
+msgstr "Verbleibende Zeit unbekannt"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:170
+msgid "a few seconds remaining"
+msgstr "Wenige Sekunden verbleibend"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:177
+msgid "%d second remaining"
+msgid_plural "%d seconds remaining"
+msgstr[0] "%d Sekunde verbleibt"
+msgstr[1] "%d Sekunden verbleiben"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:183
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] "%d Minute verbleibt"
+msgstr[1] "%d Minuten verbleiben"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:190
+msgid "%s, %d minute remaining"
+msgid_plural "%s, %d minutes remaining"
+msgstr[0] "%s, %d Minute verbleibt"
+msgstr[1] "%s, %d Minuten verbleiben"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:191
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d Stunde"
+msgstr[1] "%d Stunden"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:197
+msgid "%s, %d hour remaining"
+msgid_plural "%s, %d hour remaining"
+msgstr[0] "%s, %d Stunde verbleibend"
+msgstr[1] "%s, %d Stunden verbleibend"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:198
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d Tag"
+msgstr[1] "%d Tage"
+
+#: Steadyflow.UI/IGtkBuilderContainer.vala:40
+msgid "Cannot find XML definition file for window %s"
+msgstr "XML-Definition für Fenster %s nicht gefunden"
+
+#: MainWindow.ui~:7 MainWindow.ui:7
+msgid "_Add"
+msgstr "_Hinzufügen"
+
+#: MainWindow.ui~:13
+msgid "Copy link location"
+msgstr "Linkadresse kopieren"
+
+#: MainWindow.ui~:18 PreferencesDialog.ui:131 MainWindow.ui:18
+msgid "Open downloaded file"
+msgstr "Die heruntergeladene Datei öffnen"
+
+#: MainWindow.ui~:22 PreferencesDialog.ui:152 MainWindow.ui:22
+msgid "Open containing folder"
+msgstr "Übergeordnetes Verzeichnis öffnen"
+
+#: MainWindow.ui~:26 MainWindow.ui:26
+msgid "_Pause"
+msgstr "_Pausieren"
+
+#: MainWindow.ui~:32 MainWindow.ui:32
+msgid "_Remove"
+msgstr "_Entfernen"
+
+#: MainWindow.ui~:38 MainWindow.ui:38
+msgid "_Start"
+msgstr "_Starten"
+
+#: MainWindow.ui~:44 MainWindow.ui:44
+msgid "Show _status panel"
+msgstr "Zeige _Statusleiste"
+
+#: MainWindow.ui~:62 MainWindow.ui:62
+msgid "Add a new download"
+msgstr "Füge neuen Download hinzu"
+
+#: MainWindow.ui~:76 MainWindow.ui:76
+msgid "Start the selected download"
+msgstr "Ausgewählten Download starten"
+
+#: MainWindow.ui~:89 MainWindow.ui:89
+msgid "Pause the selected download"
+msgstr "Ausgewählten Download anhalten"
+
+#: MainWindow.ui~:102 MainWindow.ui:102
+msgid "Remove the selected file from the download list"
+msgstr "Entferne markierten Download"
+
+#: MainWindow.ui~:121 MainWindow.ui:121
+msgid "Type here to filter downloads by file name"
+msgstr "Hier tippen um Downloads nach Namen zu filtern"
+
+#: MainWindow.ui~:140 MainWindow.ui:140
+msgid "Application menu"
+msgstr "Anwendungsmenü"
+
+#: MainWindow.ui~:142 MainWindow.ui:142
+msgid "Menu"
+msgstr "Menü"
+
+#: MainWindow.ui~:206 AddFileDialog.ui:21 MainWindow.ui:206
+msgid "URL address:"
+msgstr "URL-Adresse:"
+
+#: MainWindow.ui~:220 MainWindow.ui:220
+msgid "Download location:"
+msgstr "Speicherort für Downloads:"
+
+#: MainWindow.ui~:326 MainWindow.ui:326
+msgid "Report a _problem"
+msgstr "Ein _Problem melden"
+
+#: MainWindow.ui~:338 MainWindow.ui:338
+msgid "_Translate this application"
+msgstr "Diese Anwendung _übersetzen …"
+
+#: AddFileDialog.ui:61
+msgid "Save to:"
+msgstr "Speichern in:"
+
+#: AddFileDialog.ui:88
+msgid "Upon completion:"
+msgstr "Nach Fertigstellung:"
+
+#: AddFileDialog.ui:101
+msgid "Save as:"
+msgstr "Speichern unter:"
+
+#: AddFileDialog.ui:160
+msgid "Command to run:"
+msgstr "Befehl zum Ausführen:"
+
+#: AddFileDialog.ui:187
+msgid "Run with the file as an argument"
+msgstr "Mit Datei als Argument ausführen"
+
+#: AddFileDialog.ui:241
+msgid "Run command"
+msgstr "Befehl ausführen"
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr "Aktuelle Downloads"
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr "Aus externen Programmen automatisch starten"
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+"Den Download automatisch starten, wenn ein externes Programm eine Datei "
+"herunterladen will, anstatt den »Datei zum Download hinzufügen«-Dialog "
+"anzuzeigen."
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr "Standard-Verzeichnis zum Speichern der Dateien:"
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr "Nach Fertigstellung"
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr "Nichts unternehmen"
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr "Downloads"
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr "Benachrichtigungs-Hinweise anzeigen"
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr "Symbol im Benachrichtigungsfeld anzeigen"
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr "Programm weiterhin ausführen, wenn das Hauptfenster geschlossen wird"
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr "Hauptfenster beim Starten nicht anzeigen"
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
+msgstr "Benachrichtungen"
+
+#: MainWindow.ui:13
+msgid "Copy remote address"
+msgstr "Remote-Adresse kopieren"
+
+#: Steadyflow/FileListController.vala:208
+msgid "File already in list"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:209
+msgid ""
+"The address you are trying to add for download is already in the file list."
+msgstr ""
+
+#: Steadyflow/Application.vala:130
+msgid "Cannot connect to D-Bus. Steadyflow will exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:150
+msgid ""
+"Can neither create a D-Bus service nor connect to an existing instance of "
+"Steadyflow. Steadyflow will now exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:168
+msgid "Steadyflow version %s"
+msgstr ""

@@ -1,0 +1,429 @@
+# Chinese (Traditional) translation for steadyflow
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the steadyflow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: steadyflow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-05-14 00:00+0700\n"
+"PO-Revision-Date: 2011-07-24 04:40+0000\n"
+"Last-Translator: extraymond@gmail.com <extraymond@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2011-07-25 04:40+0000\n"
+"X-Generator: Launchpad (build 13405)\n"
+
+#: Steadyflow/IndicatorController.vala:61 MainWindow.ui~:6 MainWindow.ui:6
+msgid "_Add download..."
+msgstr "加入下載(_A)"
+
+#: Steadyflow/IndicatorController.vala:63
+msgid "_Pause all"
+msgstr "暫停全部(_P)"
+
+#: Steadyflow/IndicatorController.vala:64
+msgid "_Resume all"
+msgstr "繼續全部(_R)"
+
+#: Steadyflow/IndicatorController.vala:68
+msgid "Show download manager"
+msgstr "顯示下載管理員"
+
+#: Steadyflow/IndicatorController.vala:182
+msgid "Start %s"
+msgstr "啟動 %s"
+
+#: Steadyflow/IndicatorController.vala:186
+msgid "Pause %s"
+msgstr "暫停 %s"
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr "Steadyflow 下載管理員"
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr "下載管理員"
+
+#: Steadyflow/MainWindow.vala:219
+msgid "The file \"%s\" is not downloaded yet"
+msgstr "檔案 \"%s\" 尚未下載完畢"
+
+#: Steadyflow/MainWindow.vala:220
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr "您要求要移除的檔案尚未下載完畢。您確定要移除此檔案嗎？"
+
+#: Steadyflow/MainWindow.vala:283
+msgid "Could not launch web browser for URL %s"
+msgstr "無法以網路瀏覽器開啟 %s"
+
+#: Steadyflow/MainWindow.vala:306
+msgid "Simple download manager for GNOME"
+msgstr "GNOME 簡易下載管理員"
+
+#: Steadyflow/MainWindow.vala:309
+msgid "Website"
+msgstr "網站"
+
+#: Steadyflow/MainWindow.vala:310
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  extraymond@gmail.com https://launchpad.net/~extraymond"
+
+#: Steadyflow/MainWindow.vala:420
+msgid "%d downloading, %d paused, %d finished"
+msgstr "%d 下載中, %d 暫停, %d 已完成"
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
+msgstr "增加檔案至下載"
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr "糟糕！"
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+"Steadyflow 遭遇了問題必須關閉。請將下列資訊提交給開發者。\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr "下載已開始"
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr "下載完畢"
+
+#: Steadyflow/FileListController.vala:182
+msgid "Please enter a command to run"
+msgstr "請輸入欲執行之指令"
+
+#: Steadyflow/FileListController.vala:183
+msgid ""
+"You have specified that Steadyflow should run a command when the download "
+"finishes, but have not entered a command to run. Please specify it."
+msgstr ""
+"您已經指派 Steadyflow 於下載完成之後執行指令，但尚未輸入欲執行之指令。請指"
+"派。"
+
+#: Steadyflow/FileListController.vala:195
+msgid "Invalid file name"
+msgstr "無效的檔案名稱"
+
+#: Steadyflow/FileListController.vala:196
+msgid "The file name you have entered is not valid. Please correct it."
+msgstr "您輸入的檔名無效。請更正。"
+
+#: Steadyflow/FileListController.vala:203
+msgid "File exists"
+msgstr "已有此檔案"
+
+#: Steadyflow/FileListController.vala:204
+msgid ""
+"The file you are trying to save the download to already exists. Are you sure "
+"you want to overwrite it?"
+msgstr "您想要下載的位檔案置已經存在。您確定要覆寫此檔案嗎？"
+
+#: Steadyflow/FileListController.vala:208
+msgid "Overwrite"
+msgstr "覆寫"
+
+#: Steadyflow/FileListController.vala:226
+msgid "Error adding download"
+msgstr "增加下載時錯誤"
+
+#: Steadyflow/FileListController.vala:227
+msgid "An error has occurred while trying to start the download."
+msgstr "試圖開始下載時發生錯誤"
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr "Steadyflow 偏好設定"
+
+#: Steadyflow/Application.vala:135
+msgid "Another instance of Steadyflow is already running."
+msgstr "另一個 Steadyflow 程序已在運行"
+
+#: Steadyflow/Application.vala:194
+msgid ""
+"Cannot start a D-Bus service. Another instance of Steadyflow may be already "
+"running."
+msgstr "無法啟動 D-Bus 服務。另外一個 Steadyflow 程序也許正在運行。"
+
+#: Steadyflow.Core/DownloadService.vala:78
+msgid ""
+"Cannot create settings directory - a non-directory with that name already "
+"exists"
+msgstr "無法創造設定資料夾，一擁有此名稱之 非設定資料夾 已經存在。"
+
+#: Steadyflow.UI/UIUtil.vala:56
+msgid "Clear"
+msgstr "清除"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:50
+msgid "%s downloaded"
+msgstr "%s 已下載"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:55
+msgid "%s of %s downloaded"
+msgstr "%s 之 %s 已下載"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:65
+msgid "Downloading at speed %s/s"
+msgstr "以 %s/s 速度下載中"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:69
+msgid "Connecting..."
+msgstr "連線中"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:72
+msgid "Download paused"
+msgstr "下載暫停"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:75
+msgid "Download finished"
+msgstr "完成下載"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:78
+msgid "Download stopped: network error"
+msgstr "下載暫停 : 網路錯誤"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:165
+msgid "unknown time remaining"
+msgstr "剩餘時間未知"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:170
+msgid "a few seconds remaining"
+msgstr "剩餘幾秒鐘"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:177
+msgid "%d second remaining"
+msgid_plural "%d seconds remaining"
+msgstr[0] "剩餘 %d 秒鐘"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:183
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] "剩餘 %d 分鐘"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:190
+msgid "%s, %d minute remaining"
+msgid_plural "%s, %d minutes remaining"
+msgstr[0] "剩餘 %d 分 %s 秒鐘"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:191
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d 小時"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:197
+msgid "%s, %d hour remaining"
+msgid_plural "%s, %d hour remaining"
+msgstr[0] "剩餘 %d 小時 %s 分鐘"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:198
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d 天"
+
+#: Steadyflow.UI/IGtkBuilderContainer.vala:40
+msgid "Cannot find XML definition file for window %s"
+msgstr "無法找到視窗 %s 之 XML 目標檔案"
+
+#: MainWindow.ui~:7 MainWindow.ui:7
+msgid "_Add"
+msgstr "加入(_A)"
+
+#: MainWindow.ui~:13
+msgid "Copy link location"
+msgstr "複製連結位置"
+
+#: MainWindow.ui~:18 PreferencesDialog.ui:131 MainWindow.ui:18
+msgid "Open downloaded file"
+msgstr "開啟下載的檔案"
+
+#: MainWindow.ui~:22 PreferencesDialog.ui:152 MainWindow.ui:22
+msgid "Open containing folder"
+msgstr "開啟包含的資料夾"
+
+#: MainWindow.ui~:26 MainWindow.ui:26
+msgid "_Pause"
+msgstr "暫停(_P)"
+
+#: MainWindow.ui~:32 MainWindow.ui:32
+msgid "_Remove"
+msgstr "移除(_R)"
+
+#: MainWindow.ui~:38 MainWindow.ui:38
+msgid "_Start"
+msgstr "開始(_S)"
+
+#: MainWindow.ui~:44 MainWindow.ui:44
+msgid "Show _status panel"
+msgstr "顯示 _狀態 面板"
+
+#: MainWindow.ui~:62 MainWindow.ui:62
+msgid "Add a new download"
+msgstr "增加一個新的下載"
+
+#: MainWindow.ui~:76 MainWindow.ui:76
+msgid "Start the selected download"
+msgstr "開始所選的下載"
+
+#: MainWindow.ui~:89 MainWindow.ui:89
+msgid "Pause the selected download"
+msgstr "暫停所選的下載"
+
+#: MainWindow.ui~:102 MainWindow.ui:102
+msgid "Remove the selected file from the download list"
+msgstr "從下載清單中移除所選檔案"
+
+#: MainWindow.ui~:121 MainWindow.ui:121
+msgid "Type here to filter downloads by file name"
+msgstr "以 下載名稱 在此輸入篩選"
+
+#: MainWindow.ui~:140 MainWindow.ui:140
+msgid "Application menu"
+msgstr "應用程式選單"
+
+#: MainWindow.ui~:142 MainWindow.ui:142
+msgid "Menu"
+msgstr "選單"
+
+#: MainWindow.ui~:206 AddFileDialog.ui:21 MainWindow.ui:206
+msgid "URL address:"
+msgstr "網址:"
+
+#: MainWindow.ui~:220 MainWindow.ui:220
+msgid "Download location:"
+msgstr "下載位置:"
+
+#: MainWindow.ui~:326 MainWindow.ui:326
+msgid "Report a _problem"
+msgstr "回報 _問題"
+
+#: MainWindow.ui~:338 MainWindow.ui:338
+msgid "_Translate this application"
+msgstr "翻譯此應用程式(_T)"
+
+#: AddFileDialog.ui:61
+msgid "Save to:"
+msgstr "儲存到："
+
+#: AddFileDialog.ui:88
+msgid "Upon completion:"
+msgstr "當下載完成時:"
+
+#: AddFileDialog.ui:101
+msgid "Save as:"
+msgstr "另存新檔:"
+
+#: AddFileDialog.ui:160
+msgid "Command to run:"
+msgstr "欲執行指令:"
+
+#: AddFileDialog.ui:187
+msgid "Run with the file as an argument"
+msgstr ""
+
+#: AddFileDialog.ui:241
+msgid "Run command"
+msgstr "執行指令"
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr "新下載"
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr "從外部程式自動開始下載"
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+"當外部程式要求下載一個檔案時，自動開始下載而不是顯示 \"增加檔案至下載\" 對話"
+"框。"
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr "預設儲存目錄:"
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr "當下載完成時"
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr "什麼都不做"
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr "下載"
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr "顯示彈出通告視窗"
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr "顯示面板指示器"
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr "當主視窗關閉時繼續運行"
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr "登入時隱藏主視窗"
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
+msgstr "彈出通知視窗"
+
+#: MainWindow.ui:13
+msgid "Copy remote address"
+msgstr "複製遠端網址"
+
+#: Steadyflow/FileListController.vala:208
+msgid "File already in list"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:209
+msgid ""
+"The address you are trying to add for download is already in the file list."
+msgstr ""
+
+#: Steadyflow/Application.vala:130
+msgid "Cannot connect to D-Bus. Steadyflow will exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:150
+msgid ""
+"Can neither create a D-Bus service nor connect to an existing instance of "
+"Steadyflow. Steadyflow will now exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:168
+msgid "Steadyflow version %s"
+msgstr ""

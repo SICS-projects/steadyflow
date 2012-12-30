@@ -1,0 +1,472 @@
+# Turkish translation for steadyflow
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the steadyflow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: steadyflow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-05-14 00:00+0700\n"
+"PO-Revision-Date: 2011-06-05 22:52+0000\n"
+"Last-Translator: Maia Kozheva <Unknown>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2011-06-06 05:38+0000\n"
+"X-Generator: Launchpad (build 12959)\n"
+
+#: Steadyflow/IndicatorController.vala:61 MainWindow.ui~:6 MainWindow.ui:6
+msgid "_Add download..."
+msgstr "_İndirme ekle..."
+
+#: Steadyflow/IndicatorController.vala:63
+msgid "_Pause all"
+msgstr "Hepsini _duraklat"
+
+#: Steadyflow/IndicatorController.vala:64
+msgid "_Resume all"
+msgstr "_Hepsine devam et"
+
+#: Steadyflow/IndicatorController.vala:68
+msgid "Show download manager"
+msgstr "İndirme yöneticisini göster"
+
+#: Steadyflow/IndicatorController.vala:182
+msgid "Start %s"
+msgstr "Başlat %s"
+
+#: Steadyflow/IndicatorController.vala:186
+msgid "Pause %s"
+msgstr "Durdur %s"
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr "Steadyflow İndirme Yöneticisi"
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr "İndirme Yöneticisi"
+
+#: Steadyflow/MainWindow.vala:219
+msgid "The file \"%s\" is not downloaded yet"
+msgstr "\"%s\" dosyası henüz tam olarak indirilmedi"
+
+#: Steadyflow/MainWindow.vala:220
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr ""
+"Kaldırmaya çalıştığınız dosyanın indirilmesi henüz tamamlanmadı. Dosyayı "
+"kaldırmak istediğinizden emin misiniz?"
+
+#: Steadyflow/MainWindow.vala:283
+msgid "Could not launch web browser for URL %s"
+msgstr "Tarayıcı %s adresine gitmek üzere başlatılamadı"
+
+#: Steadyflow/MainWindow.vala:306
+msgid "Simple download manager for GNOME"
+msgstr "GNOME için basit bir indirme yöneticisi"
+
+#: Steadyflow/MainWindow.vala:309
+msgid "Website"
+msgstr "Websitesi"
+
+#: Steadyflow/MainWindow.vala:310
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Can Kaya https://launchpad.net/~ckaya\n"
+"  Hamit Selahattin Naiboğlu https://launchpad.net/~selo\n"
+"  Maia Kozheva https://launchpad.net/~sikon\n"
+"  Mesut Yaver https://launchpad.net/~afg-mesut\n"
+"  Yalçın Can https://launchpad.net/~echza"
+
+#: Steadyflow/MainWindow.vala:420
+msgid "%d downloading, %d paused, %d finished"
+msgstr "%d indiriliyor, %d durduruldu, %d tamamlandı"
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
+msgstr "İndirmek için bir dosya ekle"
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr "Tüh!"
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+"Steadyflow bir sorunla karşılaştı ve kapatılması gerekiyor. Lütfen aşağıdaki "
+"hata kodunu geliştiriciye iletin:\n"
+"\n"
+"Hata Kodu %d:\n"
+"\n"
+"%s"
+
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr "İndirme Başladı"
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr "İndirme Tamamlandı"
+
+#: Steadyflow/FileListController.vala:182
+msgid "Please enter a command to run"
+msgstr "Çalıştırmak için lütfen bir komut girin"
+
+#: Steadyflow/FileListController.vala:183
+msgid ""
+"You have specified that Steadyflow should run a command when the download "
+"finishes, but have not entered a command to run. Please specify it."
+msgstr ""
+"İndirme bittiği zaman Steadyflow'dan bir komut çalıştırmasını istediniz, "
+"ancak istenilen komutu belirtmediniz. Lütfen belirtiniz."
+
+#: Steadyflow/FileListController.vala:195
+msgid "Invalid file name"
+msgstr "Geçersiz dosya ismi"
+
+#: Steadyflow/FileListController.vala:196
+msgid "The file name you have entered is not valid. Please correct it."
+msgstr "Girdiğiniz dosya ismi geçerli değil. Lütfen düzeltin."
+
+#: Steadyflow/FileListController.vala:203
+msgid "File exists"
+msgstr "Dosya mevcut"
+
+#: Steadyflow/FileListController.vala:204
+msgid ""
+"The file you are trying to save the download to already exists. Are you sure "
+"you want to overwrite it?"
+msgstr ""
+"İndirmeye çalıştığınız dosya diskte mevcut. Üzerine yazmak ister misiniz?"
+
+#: Steadyflow/FileListController.vala:208
+msgid "Overwrite"
+msgstr "Üzerine yaz"
+
+#: Steadyflow/FileListController.vala:226
+msgid "Error adding download"
+msgstr "Dosya eklenirken bir hata oluştu"
+
+#: Steadyflow/FileListController.vala:227
+msgid "An error has occurred while trying to start the download."
+msgstr "İndirme başlatılmaya çalışılırken bir hata oluştu."
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr "Steadyflow Tercihleri"
+
+#: Steadyflow/Application.vala:135
+msgid "Another instance of Steadyflow is already running."
+msgstr "Steadyflow zaten çalışıyor"
+
+#: Steadyflow/Application.vala:194
+msgid ""
+"Cannot start a D-Bus service. Another instance of Steadyflow may be already "
+"running."
+msgstr "D-Bus hizmeti başlatılamıyor. Steadyflow hala çalışıyor olabilir."
+
+#: Steadyflow.Core/DownloadService.vala:78
+msgid ""
+"Cannot create settings directory - a non-directory with that name already "
+"exists"
+msgstr ""
+"Ayarlar dizini yaratılamadı - diskte, yaratılmaya çalışılan dizinle aynı "
+"isimde bir dosya mevcut"
+
+#: Steadyflow.UI/UIUtil.vala:56
+msgid "Clear"
+msgstr "Temizle"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:50
+msgid "%s downloaded"
+msgstr "%s indirildi"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:55
+msgid "%s of %s downloaded"
+msgstr "%s'in %s'i indirildi"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:65
+msgid "Downloading at speed %s/s"
+msgstr "İndirme hızı: %s/s"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:69
+msgid "Connecting..."
+msgstr "Bağlanıyor..."
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:72
+msgid "Download paused"
+msgstr "İndirme duraklatıldı"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:75
+msgid "Download finished"
+msgstr "İndirme tamamlandı"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:78
+msgid "Download stopped: network error"
+msgstr "İndirme işlemi durdu: bağlantı hatası"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:165
+msgid "unknown time remaining"
+msgstr "bilinmeyen zaman kaldı"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:170
+msgid "a few seconds remaining"
+msgstr "birkaç saniye kaldı"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:177
+msgid "%d second remaining"
+msgid_plural "%d seconds remaining"
+msgstr[0] "%d saniye kaldı"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:183
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] "%d dakika kaldı"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:190
+msgid "%s, %d minute remaining"
+msgid_plural "%s, %d minutes remaining"
+msgstr[0] "%s, %d dakika kaldı"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:191
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d saat"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:197
+msgid "%s, %d hour remaining"
+msgid_plural "%s, %d hour remaining"
+msgstr[0] "%s, %d saat kaldı"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:198
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d gün"
+
+#: Steadyflow.UI/IGtkBuilderContainer.vala:40
+msgid "Cannot find XML definition file for window %s"
+msgstr "%s penceresi için XML tanımlayıcı dosyası bulunamadı"
+
+#: MainWindow.ui~:7 MainWindow.ui:7
+msgid "_Add"
+msgstr "_Ekle"
+
+#: MainWindow.ui~:13
+msgid "Copy link location"
+msgstr "Bağlantı konumunu kopyala"
+
+#: MainWindow.ui~:18 PreferencesDialog.ui:131 MainWindow.ui:18
+msgid "Open downloaded file"
+msgstr "İndirilen dosyayı aç"
+
+#: MainWindow.ui~:22 PreferencesDialog.ui:152 MainWindow.ui:22
+msgid "Open containing folder"
+msgstr "İçinde bulunduğu dizini aç"
+
+#: MainWindow.ui~:26 MainWindow.ui:26
+msgid "_Pause"
+msgstr "Durakla_t"
+
+#: MainWindow.ui~:32 MainWindow.ui:32
+msgid "_Remove"
+msgstr "_Kaldır"
+
+#: MainWindow.ui~:38 MainWindow.ui:38
+msgid "_Start"
+msgstr "_Başlat"
+
+#: MainWindow.ui~:44 MainWindow.ui:44
+msgid "Show _status panel"
+msgstr "Durum çubuğunu _göster"
+
+#: MainWindow.ui~:62 MainWindow.ui:62
+msgid "Add a new download"
+msgstr "Yeni bir indirme ekle"
+
+#: MainWindow.ui~:76 MainWindow.ui:76
+msgid "Start the selected download"
+msgstr "Seçili indirmeyi başlat"
+
+#: MainWindow.ui~:89 MainWindow.ui:89
+msgid "Pause the selected download"
+msgstr "Seçili indirmeyi durdur"
+
+#: MainWindow.ui~:102 MainWindow.ui:102
+msgid "Remove the selected file from the download list"
+msgstr "Seçili indirmeyi listeden kaldır"
+
+#: MainWindow.ui~:121 MainWindow.ui:121
+msgid "Type here to filter downloads by file name"
+msgstr "İndirmeleri dosya adına göre filtrelemek için buraya bir şeyler yazın"
+
+#: MainWindow.ui~:140 MainWindow.ui:140
+msgid "Application menu"
+msgstr "Uygulama menüsü"
+
+#: MainWindow.ui~:142 MainWindow.ui:142
+msgid "Menu"
+msgstr "Menü"
+
+#: MainWindow.ui~:206 AddFileDialog.ui:21 MainWindow.ui:206
+msgid "URL address:"
+msgstr "URL adresi:"
+
+#: MainWindow.ui~:220 MainWindow.ui:220
+msgid "Download location:"
+msgstr "İndirme yeri:"
+
+#: MainWindow.ui~:326 MainWindow.ui:326
+msgid "Report a _problem"
+msgstr "Bir _sorunu bildirin"
+
+#: MainWindow.ui~:338 MainWindow.ui:338
+msgid "_Translate this application"
+msgstr "Bu uygulamayı te_rcüme et"
+
+#: AddFileDialog.ui:61
+msgid "Save to:"
+msgstr "Kaydetme Yeri:"
+
+#: AddFileDialog.ui:88
+msgid "Upon completion:"
+msgstr "Yükleme bitince:"
+
+#: AddFileDialog.ui:101
+msgid "Save as:"
+msgstr "Farklı Kaydet:"
+
+#: AddFileDialog.ui:160
+msgid "Command to run:"
+msgstr "Çalıştırılacak komut:"
+
+#: AddFileDialog.ui:187
+msgid "Run with the file as an argument"
+msgstr "Dosya ile beraber parametre gibi çalış"
+
+#: AddFileDialog.ui:241
+msgid "Run command"
+msgstr "Komut çalıştır"
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr "Yeni İndirilenler"
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr "Diğer programlar tarafından atomatik başlatın"
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+"Dış bir uygulama bir dosya indirmek istediğinde otomatik olarak işlemi "
+"başlat."
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr "İndirilen dosyaların kaydedileceği dizin:"
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr "Yükleme Bitince"
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr "Hiçbir şey yapma"
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr "İndirilenler"
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr "Bildirim balonları göster"
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr "Panelde göster"
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr "Ana pencere kapatıldığında çalışmaya devam et"
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr "Başlangıçta ana pencereyi gizle"
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
+msgstr "Bildirimler"
+
+#: MainWindow.ui:13
+msgid "Copy remote address"
+msgstr "Uzak adresi kopyala"
+
+#: Steadyflow/FileListController.vala:208
+msgid "File already in list"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:209
+msgid ""
+"The address you are trying to add for download is already in the file list."
+msgstr ""
+
+#: Steadyflow/Application.vala:130
+msgid "Cannot connect to D-Bus. Steadyflow will exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:150
+msgid ""
+"Can neither create a D-Bus service nor connect to an existing instance of "
+"Steadyflow. Steadyflow will now exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:168
+msgid "Steadyflow version %s"
+msgstr ""
+
+#~ msgid "Steadyflow Error: %s\n"
+#~ msgstr "Steadyflow Hatası: %s\n"
+
+#~ msgid "Configuration file not found - creating"
+#~ msgstr "Yapılandırma dosyası bulunamadı - oluşturuluyor"
+
+#~ msgid "_View"
+#~ msgstr "_Görünüm"
+
+#~ msgid "_Help"
+#~ msgstr "_Yardım"
+
+#~ msgid "_Edit"
+#~ msgstr "_Düzenle"
+
+#~ msgid "_File"
+#~ msgstr "_Dosya"
+
+#~ msgid "_Properties"
+#~ msgstr "Ö_zellikler"
+
+#~ msgid "Steadyflow _website"
+#~ msgstr "Steadyflow _örün sayfası"
+
+#~ msgid "Report a _bug"
+#~ msgstr "Hata _bildirimi gönder"
+
+#~ msgid "_Toolbar"
+#~ msgstr "_Araç Çubuğu"
+
+#~ msgid "_Status bar"
+#~ msgstr "_Durum çubuğu"

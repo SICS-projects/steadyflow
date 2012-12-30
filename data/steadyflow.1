@@ -1,0 +1,31 @@
+.TH STEADYFLOW "1" "May 2011" "Steadyflow version 0.1.6" "User Commands"
+.SH NAME
+steadyflow \- GTK+ download manager
+.SH SYNOPSIS
+.B steadyflow
+.I [command [args...] [\-option1=value1] [\-option2=value2]...]
+.SH DESCRIPTION
+Steadyflow is a GTK+ based download manager that aims for minimalism, ease
+of use, and a clean, malleable codebase. It should be easy to control,
+whether from the GUI, command line, or D-Bus.
+.TP
+.B steadyflow add [url]
+Add a file for download. If url is omitted, populates
+the add dialog with the clipboard content if it is a
+valid URL.
+.TP
+.B steadyflow show
+Show the main window
+.TP
+.B steadyflow hide
+Hide the main window
+.TP
+.B steadyflow help
+Show the help screen
+.TP
+.B steadyflow version
+Show version information
+.SH AUTHOR
+The author of Steadyflow is Maia Kozheva <sikon@ubuntu.com>.
+.SH BUGS
+Please submit bugs to \fBhttps://bugs.launchpad.net/steadyflow\fR.

@@ -1,0 +1,46 @@
+For developers
+
+While CMake lets you do out-of-source builds anywhere, and it should install
+correctly in any case, the code that's there to allow running from the source
+tree makes some assumptions at the moment. It is therefore preferable to
+build with these commands:
+
+mkdir bin
+cd bin
+cmake ..
+make
+
+To build Steadyflow, you will need development packages for:
+  * CMake >= 2.6 (cmake)
+  * Vala >= 0.16 (valac)
+  * GTK+ >= 3.0 (libgtk-3-dev)
+  * GLib >= 2.30 (libglib2.0-dev)
+  * libgee (libgee-dev)
+  * libnotify >= 0.7 (libnotify-dev)
+  * Optionally: libappindicator (libappindicator-dev) for Ubuntu indicator
+
+The structure of the source tree is as follows:
+
+cmake
+ - Project-unspecific cmake scripts, plus a copy of intltool-extract
+data
+ - Data files (Glade, icons, setting schemas)
+po
+ - Translations
+scripts
+ - All three scripts assume they are run from the source root.
+   - updatepo - update translations
+   - seed - create a new class file
+         syntax: seed Steadyflow{|.Core|.UI} ClassName
+vapi
+ - Required VAPI files, including AppConfig.vapi - a Vala mapping for config.h
+Steadyflow.Core
+ - Reusable non-GUI dependent classes
+Steadyflow.UI
+ - Reusable GUI classes
+Steadyflow
+ - Main application logic
+
+CMakeLists.txt: main CMake script
+sources.cmake: list of source .vala files to include in the build
+install.cmake: rules for make install

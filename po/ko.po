@@ -1,0 +1,434 @@
+# Korean translation for steadyflow
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the steadyflow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: steadyflow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-05-14 00:00+0700\n"
+"PO-Revision-Date: 2012-06-02 08:11+0000\n"
+"Last-Translator: Flask <pop9310@gmail.com>\n"
+"Language-Team: Korean <ko@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2012-06-03 05:10+0000\n"
+"X-Generator: Launchpad (build 15342)\n"
+
+#: Steadyflow/IndicatorController.vala:61 MainWindow.ui~:6 MainWindow.ui:6
+msgid "_Add download..."
+msgstr "_다운로드 추가..."
+
+#: Steadyflow/IndicatorController.vala:63
+msgid "_Pause all"
+msgstr "_모두 일시정지"
+
+#: Steadyflow/IndicatorController.vala:64
+msgid "_Resume all"
+msgstr "_모두 다시 시작"
+
+#: Steadyflow/IndicatorController.vala:68
+msgid "Show download manager"
+msgstr "다운로드 매니저 보이기"
+
+#: Steadyflow/IndicatorController.vala:182
+msgid "Start %s"
+msgstr "%s 시작"
+
+#: Steadyflow/IndicatorController.vala:186
+msgid "Pause %s"
+msgstr "%s 일시 중지"
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr "Steadyflow 다운로드 매니저"
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr "다운로드 매니저"
+
+#: Steadyflow/MainWindow.vala:219
+msgid "The file \"%s\" is not downloaded yet"
+msgstr "\"%s\" 파일은 아직 다운로드 되지 않았습니다"
+
+#: Steadyflow/MainWindow.vala:220
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr ""
+"다운로드 리스트에서 지우기로한 파일은 아직 모두 다운로드 되지 않았습니다. 그"
+"래도 지우겠습니까?"
+
+#: Steadyflow/MainWindow.vala:283
+msgid "Could not launch web browser for URL %s"
+msgstr "웹 브라우져에서 URL %s 을 열지 못했습니다"
+
+#: Steadyflow/MainWindow.vala:306
+msgid "Simple download manager for GNOME"
+msgstr "GNOME을 위한 간단한 다운로드 매니저"
+
+#: Steadyflow/MainWindow.vala:309
+msgid "Website"
+msgstr "웹사이트"
+
+#: Steadyflow/MainWindow.vala:310
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Flask https://launchpad.net/~pop9310"
+
+#: Steadyflow/MainWindow.vala:420
+msgid "%d downloading, %d paused, %d finished"
+msgstr "%d 다운로드중, %d 일지정지됨, %d 완료됨"
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
+msgstr "다운로드할 파일추가"
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr "웁시!"
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+"Steadyflow가 문제에 봉착해서 닫아야 합니다. 다음의 정보를 개발자에게 보내주십"
+"시오:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr "다운로드 시작됨"
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr "다운로드 완료"
+
+#: Steadyflow/FileListController.vala:182
+msgid "Please enter a command to run"
+msgstr "실행할 명령을 넣어주세요"
+
+#: Steadyflow/FileListController.vala:183
+msgid ""
+"You have specified that Steadyflow should run a command when the download "
+"finishes, but have not entered a command to run. Please specify it."
+msgstr ""
+"다운로드가 완료됬을때에 명령을 실행하려고 합니다. 하지만 실행할 명령을 넣어주"
+"지 않았습니다. 명령을 기입하세요."
+
+#: Steadyflow/FileListController.vala:195
+msgid "Invalid file name"
+msgstr "잘못된 파일 이름"
+
+#: Steadyflow/FileListController.vala:196
+msgid "The file name you have entered is not valid. Please correct it."
+msgstr "파일이름이 잘못되었습니다. 수정하세요."
+
+#: Steadyflow/FileListController.vala:203
+msgid "File exists"
+msgstr "파일이 존재합니다."
+
+#: Steadyflow/FileListController.vala:204
+msgid ""
+"The file you are trying to save the download to already exists. Are you sure "
+"you want to overwrite it?"
+msgstr "다운로드 하려는 파일이 이미 존재합니다. 덮어쓰기 하시겠습니까?"
+
+#: Steadyflow/FileListController.vala:208
+msgid "Overwrite"
+msgstr "덮어쓰기"
+
+#: Steadyflow/FileListController.vala:226
+msgid "Error adding download"
+msgstr "다운로드 추가하기 에러"
+
+#: Steadyflow/FileListController.vala:227
+msgid "An error has occurred while trying to start the download."
+msgstr "다운로드를 시작하는데 에러가 발생했습니다."
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr "Steadyflow 환경설정"
+
+#: Steadyflow/Application.vala:135
+msgid "Another instance of Steadyflow is already running."
+msgstr "다른 Steadyflow 인스턴스가 이미 실행중입니다."
+
+#: Steadyflow/Application.vala:194
+msgid ""
+"Cannot start a D-Bus service. Another instance of Steadyflow may be already "
+"running."
+msgstr ""
+"D-Bus 장치를 시작할 수 없습니다. 아마도 다른 Steadyflow 인스턴스가 실행중입니"
+"다."
+
+#: Steadyflow.Core/DownloadService.vala:78
+msgid ""
+"Cannot create settings directory - a non-directory with that name already "
+"exists"
+msgstr "설정 디렉토리를 생성할 수 없습니다. - 디렉토리 이름이 없습니다."
+
+#: Steadyflow.UI/UIUtil.vala:56
+msgid "Clear"
+msgstr "지우기"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:50
+msgid "%s downloaded"
+msgstr "%s 다운로드됨"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:55
+msgid "%s of %s downloaded"
+msgstr "%s중 %s다운로드됨"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:65
+msgid "Downloading at speed %s/s"
+msgstr "다운로드 속도 %s/s"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:69
+msgid "Connecting..."
+msgstr "접속중..."
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:72
+msgid "Download paused"
+msgstr "다운로드 일시정지됨"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:75
+msgid "Download finished"
+msgstr "다운로드 완료됨"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:78
+msgid "Download stopped: network error"
+msgstr "다운로드 중지됨: 네트워크 에러"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:165
+msgid "unknown time remaining"
+msgstr "남은 시간 모름"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:170
+msgid "a few seconds remaining"
+msgstr "몇초 남음"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:177
+msgid "%d second remaining"
+msgid_plural "%d seconds remaining"
+msgstr[0] "%d 초 남음"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:183
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] "%d 분 남음"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:190
+msgid "%s, %d minute remaining"
+msgid_plural "%s, %d minutes remaining"
+msgstr[0] "%s, %d 분 남음"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:191
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d 시간"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:197
+msgid "%s, %d hour remaining"
+msgid_plural "%s, %d hour remaining"
+msgstr[0] "%s, %d 시간 남음"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:198
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d 일"
+
+#: Steadyflow.UI/IGtkBuilderContainer.vala:40
+msgid "Cannot find XML definition file for window %s"
+msgstr "윈도우%s 를 위한 XML정의 파일을 찾지 못했습니다."
+
+#: MainWindow.ui~:7 MainWindow.ui:7
+msgid "_Add"
+msgstr "_추가"
+
+#: MainWindow.ui~:13
+msgid "Copy link location"
+msgstr "링크 주소 복사"
+
+#: MainWindow.ui~:18 PreferencesDialog.ui:131 MainWindow.ui:18
+msgid "Open downloaded file"
+msgstr "다운로드된 파일 열기"
+
+#: MainWindow.ui~:22 PreferencesDialog.ui:152 MainWindow.ui:22
+msgid "Open containing folder"
+msgstr "담긴폴더 열기"
+
+#: MainWindow.ui~:26 MainWindow.ui:26
+msgid "_Pause"
+msgstr "_일시정지"
+
+#: MainWindow.ui~:32 MainWindow.ui:32
+msgid "_Remove"
+msgstr "_삭제"
+
+#: MainWindow.ui~:38 MainWindow.ui:38
+msgid "_Start"
+msgstr "_시작"
+
+#: MainWindow.ui~:44 MainWindow.ui:44
+msgid "Show _status panel"
+msgstr "상태 패널 열기"
+
+#: MainWindow.ui~:62 MainWindow.ui:62
+msgid "Add a new download"
+msgstr "새로운 다운로드 추가"
+
+#: MainWindow.ui~:76 MainWindow.ui:76
+msgid "Start the selected download"
+msgstr "선택된 다운로드 시작"
+
+#: MainWindow.ui~:89 MainWindow.ui:89
+msgid "Pause the selected download"
+msgstr "선택된 다운로드 일시중지"
+
+#: MainWindow.ui~:102 MainWindow.ui:102
+msgid "Remove the selected file from the download list"
+msgstr "다운로드 리스트로부터 선택된 파일 삭제"
+
+#: MainWindow.ui~:121 MainWindow.ui:121
+msgid "Type here to filter downloads by file name"
+msgstr "파일 이름으로된 필터다운로드를 하기 위해 여기에 작성하세요."
+
+#: MainWindow.ui~:140 MainWindow.ui:140
+msgid "Application menu"
+msgstr "어플리케이션 메뉴"
+
+#: MainWindow.ui~:142 MainWindow.ui:142
+msgid "Menu"
+msgstr "메뉴"
+
+#: MainWindow.ui~:206 AddFileDialog.ui:21 MainWindow.ui:206
+msgid "URL address:"
+msgstr "URL 주소:"
+
+#: MainWindow.ui~:220 MainWindow.ui:220
+msgid "Download location:"
+msgstr "다운로드 장소 :"
+
+#: MainWindow.ui~:326 MainWindow.ui:326
+msgid "Report a _problem"
+msgstr "_problem 제보하기"
+
+#: MainWindow.ui~:338 MainWindow.ui:338
+msgid "_Translate this application"
+msgstr "이 어플리케이션 _Translate하기"
+
+#: AddFileDialog.ui:61
+msgid "Save to:"
+msgstr "여기에 저장 :"
+
+#: AddFileDialog.ui:88
+msgid "Upon completion:"
+msgstr "완료에 대해:"
+
+#: AddFileDialog.ui:101
+msgid "Save as:"
+msgstr "다른이름으로 저장:"
+
+#: AddFileDialog.ui:160
+msgid "Command to run:"
+msgstr "실행할 명령:"
+
+#: AddFileDialog.ui:187
+msgid "Run with the file as an argument"
+msgstr "인자로서 파일 실행"
+
+#: AddFileDialog.ui:241
+msgid "Run command"
+msgstr "명령 실행"
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr "새로운 다운로드"
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr "자동으로 외부 프로그램을 시작"
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+"외부 프로그램이 다운로드 파일을 요청하면 자동으로 화면에\"새로운파일추가\" 다"
+"이얼로그창 표시없이 다운로드 시작"
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr "저장할 파일들의 기본 폴더:"
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr "완료를 위해"
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr "아무것도 안하기"
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr "다운로드"
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr "알림 팝업 보이기"
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr "패널 인디케이터 보이기"
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr "창이 닫혀도 계속 실행하기"
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr "시작시 메인 창 감추기"
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
+msgstr "알림"
+
+#: MainWindow.ui:13
+msgid "Copy remote address"
+msgstr "원격 주소 복사"
+
+#: Steadyflow/FileListController.vala:208
+msgid "File already in list"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:209
+msgid ""
+"The address you are trying to add for download is already in the file list."
+msgstr ""
+
+#: Steadyflow/Application.vala:130
+msgid "Cannot connect to D-Bus. Steadyflow will exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:150
+msgid ""
+"Can neither create a D-Bus service nor connect to an existing instance of "
+"Steadyflow. Steadyflow will now exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:168
+msgid "Steadyflow version %s"
+msgstr ""

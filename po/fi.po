@@ -1,0 +1,444 @@
+# Finnish translation for steadyflow
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the steadyflow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: steadyflow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-05-14 00:00+0700\n"
+"PO-Revision-Date: 2011-05-23 12:31+0000\n"
+"Last-Translator: Jiri Grönroos <Unknown>\n"
+"Language-Team: Finnish <fi@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2011-05-24 05:29+0000\n"
+"X-Generator: Launchpad (build 12959)\n"
+
+#: Steadyflow/IndicatorController.vala:61 MainWindow.ui~:6 MainWindow.ui:6
+msgid "_Add download..."
+msgstr "_Lisää lataus..."
+
+#: Steadyflow/IndicatorController.vala:63
+msgid "_Pause all"
+msgstr "_Keskeytä kaikki"
+
+#: Steadyflow/IndicatorController.vala:64
+msgid "_Resume all"
+msgstr "_Palauta kaikki"
+
+#: Steadyflow/IndicatorController.vala:68
+msgid "Show download manager"
+msgstr "Näytä lataushallinta"
+
+#: Steadyflow/IndicatorController.vala:182
+msgid "Start %s"
+msgstr "Käynnistä %s"
+
+#: Steadyflow/IndicatorController.vala:186
+msgid "Pause %s"
+msgstr "Keskeytä %s"
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr "Steadyflow-lataushallinta"
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr "Lataushallinta"
+
+#: Steadyflow/MainWindow.vala:219
+msgid "The file \"%s\" is not downloaded yet"
+msgstr "Tiedostoa \"%s\" ei ole ladattu vielä"
+
+#: Steadyflow/MainWindow.vala:220
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr ""
+"Latauslistalta poistettavaksi valitun tiedoston lataus ei ole vielä valmis. "
+"Haluatko varmasti poistaa tiedoston?"
+
+#: Steadyflow/MainWindow.vala:283
+msgid "Could not launch web browser for URL %s"
+msgstr "Selaimen avaus osoitteelle %s epäonnistui"
+
+#: Steadyflow/MainWindow.vala:306
+msgid "Simple download manager for GNOME"
+msgstr "Yksinkertainen lataushallinta Gnomelle"
+
+#: Steadyflow/MainWindow.vala:309
+msgid "Website"
+msgstr "Verkkosivu"
+
+#: Steadyflow/MainWindow.vala:310
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Jiri Grönroos https://launchpad.net/~jiri-gronroos\n"
+"  Maia Kozheva https://launchpad.net/~sikon\n"
+"  Tuomas Siipola https://launchpad.net/~tomppa8-deactivatedaccount"
+
+#: Steadyflow/MainWindow.vala:420
+msgid "%d downloading, %d paused, %d finished"
+msgstr "%d latauksessa, %d keskeytetty, %d valmistunut"
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
+msgstr "Lisää tiedosto ladattavaksi"
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr "Hups!"
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+"Steadyflow on suljettava ilmenneen vian vuoksi. Ilmoitathan seuraavat tiedot "
+"kehittäjälle:\n"
+"\n"
+"Virhekoodi %d:\n"
+"\n"
+"%s"
+
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr "Lataus aloitettu"
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr "Lataus valmis"
+
+#: Steadyflow/FileListController.vala:182
+msgid "Please enter a command to run"
+msgstr "Anna suoritettava komento"
+
+#: Steadyflow/FileListController.vala:183
+msgid ""
+"You have specified that Steadyflow should run a command when the download "
+"finishes, but have not entered a command to run. Please specify it."
+msgstr ""
+
+#: Steadyflow/FileListController.vala:195
+msgid "Invalid file name"
+msgstr "Virheellinen tiedostonimi"
+
+#: Steadyflow/FileListController.vala:196
+msgid "The file name you have entered is not valid. Please correct it."
+msgstr ""
+"Tiedostolle antamasi nimi on virheellinen. Anna tiedostolle kelvollinen nimi."
+
+#: Steadyflow/FileListController.vala:203
+msgid "File exists"
+msgstr "Tiedosto on jo olemassa"
+
+#: Steadyflow/FileListController.vala:204
+msgid ""
+"The file you are trying to save the download to already exists. Are you sure "
+"you want to overwrite it?"
+msgstr "Ladattava tiedosto on jo olemassa. Haluatko varmasti korvata sen?"
+
+#: Steadyflow/FileListController.vala:208
+msgid "Overwrite"
+msgstr "Korvaa"
+
+#: Steadyflow/FileListController.vala:226
+msgid "Error adding download"
+msgstr "Virhe latausta lisättäessä"
+
+#: Steadyflow/FileListController.vala:227
+msgid "An error has occurred while trying to start the download."
+msgstr "Latausta aloittaessa ilmeni virhe."
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr "Steadyflow'n asetukset"
+
+#: Steadyflow/Application.vala:135
+msgid "Another instance of Steadyflow is already running."
+msgstr "Steadyflow on jo käynnissä."
+
+#: Steadyflow/Application.vala:194
+msgid ""
+"Cannot start a D-Bus service. Another instance of Steadyflow may be already "
+"running."
+msgstr ""
+"D-Bus-palvelun käynnistys epäonnistui. Steadyflow saattaa olla jo käynnissä."
+
+#: Steadyflow.Core/DownloadService.vala:78
+msgid ""
+"Cannot create settings directory - a non-directory with that name already "
+"exists"
+msgstr ""
+"Asetuksille ei voi luoda kansiota - tiedosto samalla nimellä on jo olemassa"
+
+#: Steadyflow.UI/UIUtil.vala:56
+msgid "Clear"
+msgstr "Tyhjennä"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:50
+msgid "%s downloaded"
+msgstr "%s ladattu"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:55
+msgid "%s of %s downloaded"
+msgstr "%s/%s ladattu"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:65
+msgid "Downloading at speed %s/s"
+msgstr "Ladataan nopeudella %s/s"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:69
+msgid "Connecting..."
+msgstr "Yhdistetään..."
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:72
+msgid "Download paused"
+msgstr "Lataus keskeytetty"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:75
+msgid "Download finished"
+msgstr "Lataus valmistui"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:78
+msgid "Download stopped: network error"
+msgstr "Lataus pysähtyi: verkkovirhe"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:165
+msgid "unknown time remaining"
+msgstr "tuntematon aika jäljellä"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:170
+msgid "a few seconds remaining"
+msgstr "muutama sekunti jäljellä"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:177
+msgid "%d second remaining"
+msgid_plural "%d seconds remaining"
+msgstr[0] "%d sekunti jäljellä"
+msgstr[1] "%d sekuntia jäljellä"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:183
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] "%d minuutti jäljellä"
+msgstr[1] "%d minuttia jäljellä"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:190
+msgid "%s, %d minute remaining"
+msgid_plural "%s, %d minutes remaining"
+msgstr[0] "%s, %d minuutti jäljellä"
+msgstr[1] "%s, %d minuuttia jäljellä"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:191
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d tunti"
+msgstr[1] "%d tuntia"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:197
+msgid "%s, %d hour remaining"
+msgid_plural "%s, %d hour remaining"
+msgstr[0] "%s, %d tunti jäljellä"
+msgstr[1] "%s, %d tuntia jäljellä"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:198
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d päivä"
+msgstr[1] "%d päivää"
+
+#: Steadyflow.UI/IGtkBuilderContainer.vala:40
+msgid "Cannot find XML definition file for window %s"
+msgstr "Ikkunalle %s ei löydetä XML määritelmää"
+
+#: MainWindow.ui~:7 MainWindow.ui:7
+msgid "_Add"
+msgstr "_Lisää"
+
+#: MainWindow.ui~:13
+msgid "Copy link location"
+msgstr "Kopioi linkin kohde"
+
+#: MainWindow.ui~:18 PreferencesDialog.ui:131 MainWindow.ui:18
+msgid "Open downloaded file"
+msgstr "Avaa ladattu tiedosto"
+
+#: MainWindow.ui~:22 PreferencesDialog.ui:152 MainWindow.ui:22
+msgid "Open containing folder"
+msgstr "Avaa tiedoston sisältävä kansio"
+
+#: MainWindow.ui~:26 MainWindow.ui:26
+msgid "_Pause"
+msgstr "_Keskeytä"
+
+#: MainWindow.ui~:32 MainWindow.ui:32
+msgid "_Remove"
+msgstr "_Poista"
+
+#: MainWindow.ui~:38 MainWindow.ui:38
+msgid "_Start"
+msgstr "_Aloita"
+
+#: MainWindow.ui~:44 MainWindow.ui:44
+msgid "Show _status panel"
+msgstr "Näytä tilapaneeli"
+
+#: MainWindow.ui~:62 MainWindow.ui:62
+msgid "Add a new download"
+msgstr "Lisää uusi lataus"
+
+#: MainWindow.ui~:76 MainWindow.ui:76
+msgid "Start the selected download"
+msgstr "Aloita valittu lataus"
+
+#: MainWindow.ui~:89 MainWindow.ui:89
+msgid "Pause the selected download"
+msgstr "Keskeytä valittu lataus"
+
+#: MainWindow.ui~:102 MainWindow.ui:102
+msgid "Remove the selected file from the download list"
+msgstr "Poista valittu tiedosto latauslistalta"
+
+#: MainWindow.ui~:121 MainWindow.ui:121
+msgid "Type here to filter downloads by file name"
+msgstr "Etsi latauksista nimellä..."
+
+#: MainWindow.ui~:140 MainWindow.ui:140
+msgid "Application menu"
+msgstr "Sovelluksen valikko"
+
+#: MainWindow.ui~:142 MainWindow.ui:142
+msgid "Menu"
+msgstr "Valikko"
+
+#: MainWindow.ui~:206 AddFileDialog.ui:21 MainWindow.ui:206
+msgid "URL address:"
+msgstr "Verkko-osoite:"
+
+#: MainWindow.ui~:220 MainWindow.ui:220
+msgid "Download location:"
+msgstr "Latausten tallennuspaikka:"
+
+#: MainWindow.ui~:326 MainWindow.ui:326
+msgid "Report a _problem"
+msgstr "Ilmoita _ongelmasta"
+
+#: MainWindow.ui~:338 MainWindow.ui:338
+msgid "_Translate this application"
+msgstr "_Käännä tämä ohjelma"
+
+#: AddFileDialog.ui:61
+msgid "Save to:"
+msgstr "Tallenna tiedostoon:"
+
+#: AddFileDialog.ui:88
+msgid "Upon completion:"
+msgstr "Latauksen valmistuessa:"
+
+#: AddFileDialog.ui:101
+msgid "Save as:"
+msgstr "Tallenna nimellä:"
+
+#: AddFileDialog.ui:160
+msgid "Command to run:"
+msgstr "Suoritettava komento:"
+
+#: AddFileDialog.ui:187
+msgid "Run with the file as an argument"
+msgstr ""
+
+#: AddFileDialog.ui:241
+msgid "Run command"
+msgstr "Suorita komento"
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr "Uudet lataukset"
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr "Käynnistä automaattisesti ulkoisista ohjelmista"
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+"Kun ulkoinen ohjelma pyytää lataamaan tiedoston, aloita lataaminen "
+"automaattisesti näyttämättä \"Lisää uusi lataus\" ikkunaa."
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr "Oletuskansio latauksille:"
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr "Latauksen valmistuttua"
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr "Älä tee mitään"
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr "Lataukset"
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr "Näytä ilmoitusten ponnahdusikkunat"
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr "Näytä paneeli-ilmaisin"
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr "Pidä sovellus käynnissä pääikkunan ollessa suljettuna"
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr "Piilota pääikkuna käynnistettäessä"
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
+msgstr "Ilmoitukset"
+
+#: MainWindow.ui:13
+msgid "Copy remote address"
+msgstr "Kopioi etäosoite"
+
+#: Steadyflow/FileListController.vala:208
+msgid "File already in list"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:209
+msgid ""
+"The address you are trying to add for download is already in the file list."
+msgstr ""
+
+#: Steadyflow/Application.vala:130
+msgid "Cannot connect to D-Bus. Steadyflow will exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:150
+msgid ""
+"Can neither create a D-Bus service nor connect to an existing instance of "
+"Steadyflow. Steadyflow will now exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:168
+msgid "Steadyflow version %s"
+msgstr ""
+
+#~ msgid "Report a _bug"
+#~ msgstr "_Ilmoita viasta"

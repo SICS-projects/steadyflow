@@ -1,0 +1,433 @@
+# Vietnamese translation for steadyflow
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
+# This file is distributed under the same license as the steadyflow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: steadyflow\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2011-05-14 00:00+0700\n"
+"PO-Revision-Date: 2011-11-16 06:45+0000\n"
+"Last-Translator: Lê Trường An <truongan@linuxmail.org>\n"
+"Language-Team: Vietnamese <vi@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2011-11-17 05:52+0000\n"
+"X-Generator: Launchpad (build 14291)\n"
+
+#: Steadyflow/IndicatorController.vala:61 MainWindow.ui~:6 MainWindow.ui:6
+msgid "_Add download..."
+msgstr "_Thêm tải về..."
+
+#: Steadyflow/IndicatorController.vala:63
+msgid "_Pause all"
+msgstr "Tạm _dừng tất cả"
+
+#: Steadyflow/IndicatorController.vala:64
+msgid "_Resume all"
+msgstr "T_iếp tục tải"
+
+#: Steadyflow/IndicatorController.vala:68
+msgid "Show download manager"
+msgstr "Hiện trình quản lí tải về"
+
+#: Steadyflow/IndicatorController.vala:182
+msgid "Start %s"
+msgstr "Bắt đầu %s"
+
+#: Steadyflow/IndicatorController.vala:186
+msgid "Pause %s"
+msgstr "Tạm dừng %s"
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr "Trình quản lí tải về Steadyflow"
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr "Trình quản lí tải về"
+
+#: Steadyflow/MainWindow.vala:219
+msgid "The file \"%s\" is not downloaded yet"
+msgstr "Tập tin \"%s\" chưa được tải xong"
+
+#: Steadyflow/MainWindow.vala:220
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr ""
+"Tập tin mà bạn yêu cầu loại bỏ khỏi danh sách tải về vẫn chưa được tải xong. "
+"Bạn có chắc muốn loại bỏ nó?"
+
+#: Steadyflow/MainWindow.vala:283
+msgid "Could not launch web browser for URL %s"
+msgstr "Không thể khởi chạy trình duyệt với URL %s"
+
+#: Steadyflow/MainWindow.vala:306
+msgid "Simple download manager for GNOME"
+msgstr "Trình quản lí tải về đơn giản cho GNOME"
+
+#: Steadyflow/MainWindow.vala:309
+msgid "Website"
+msgstr "Trang web"
+
+#: Steadyflow/MainWindow.vala:310
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Lê Trường An https://launchpad.net/~truongan"
+
+#: Steadyflow/MainWindow.vala:420
+msgid "%d downloading, %d paused, %d finished"
+msgstr "Đang tải %d, tạm dừng %d, hoàn tất %d"
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
+msgstr "Thêm tập tin để tải"
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr "Whoopsie!"
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+"Steadyflow gặp lỗi và cần phải đóng. Vui lòng chuyển những thông tin sau đến "
+"các nhà phát triển:\n"
+"\n"
+"Mã lỗi %d:\n"
+"\n"
+"%s"
+
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr "Đã bắt đầu tải"
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr "Đã tải xong"
+
+#: Steadyflow/FileListController.vala:182
+msgid "Please enter a command to run"
+msgstr "Vui lòng nhập lệnh để chạy"
+
+#: Steadyflow/FileListController.vala:183
+msgid ""
+"You have specified that Steadyflow should run a command when the download "
+"finishes, but have not entered a command to run. Please specify it."
+msgstr ""
+"Bạn đã chỉ định Steadyflow sẽ chạy một câu lệnh khi tải xong, nhưng chưa "
+"nhập lệnh vào. Vui lòng nhập."
+
+#: Steadyflow/FileListController.vala:195
+msgid "Invalid file name"
+msgstr "Tên tập tin không hợp lệ"
+
+#: Steadyflow/FileListController.vala:196
+msgid "The file name you have entered is not valid. Please correct it."
+msgstr "Tên tập tin bạn đã nhập không hợp lệ. Vui lòng sửa lại."
+
+#: Steadyflow/FileListController.vala:203
+msgid "File exists"
+msgstr "Tập tin đã tồn tại"
+
+#: Steadyflow/FileListController.vala:204
+msgid ""
+"The file you are trying to save the download to already exists. Are you sure "
+"you want to overwrite it?"
+msgstr ""
+"Tập tin mà bạn muốn lưu cho tải về đã tồn tại. Bạn có muốn ghi đè nó không?"
+
+#: Steadyflow/FileListController.vala:208
+msgid "Overwrite"
+msgstr "Ghi đè"
+
+#: Steadyflow/FileListController.vala:226
+msgid "Error adding download"
+msgstr "Lỗi khi thêm tải về"
+
+#: Steadyflow/FileListController.vala:227
+msgid "An error has occurred while trying to start the download."
+msgstr "Có lỗi xảy ra khi bắt đầu tải."
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr "Tùy chỉnh Steadyflow"
+
+#: Steadyflow/Application.vala:135
+msgid "Another instance of Steadyflow is already running."
+msgstr "Steadyflow đang chạy."
+
+#: Steadyflow/Application.vala:194
+msgid ""
+"Cannot start a D-Bus service. Another instance of Steadyflow may be already "
+"running."
+msgstr "Không thể khởi động dịch vụ D-Bus. Có thể Steadyflow đã chạy rồi."
+
+#: Steadyflow.Core/DownloadService.vala:78
+msgid ""
+"Cannot create settings directory - a non-directory with that name already "
+"exists"
+msgstr "Không thể tạo thư mục thiết lập - có tập tin trùng với tên muốn tạo"
+
+#: Steadyflow.UI/UIUtil.vala:56
+msgid "Clear"
+msgstr "Xóa trống"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:50
+msgid "%s downloaded"
+msgstr "Đã tải %s"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:55
+msgid "%s of %s downloaded"
+msgstr "Đã tải %s trong số %s"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:65
+msgid "Downloading at speed %s/s"
+msgstr "Tải với tốc độ %s/giây"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:69
+msgid "Connecting..."
+msgstr "Đang kết nối..."
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:72
+msgid "Download paused"
+msgstr "Tạm dừng tải về"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:75
+msgid "Download finished"
+msgstr "Đã tải xong"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:78
+msgid "Download stopped: network error"
+msgstr "Tải về bị dừng: lỗi mạng"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:165
+msgid "unknown time remaining"
+msgstr "chưa biết thời gian còn lại"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:170
+msgid "a few seconds remaining"
+msgstr "còn một vài giây nữa"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:177
+msgid "%d second remaining"
+msgid_plural "%d seconds remaining"
+msgstr[0] "còn %d giây nữa"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:183
+msgid "%d minute remaining"
+msgid_plural "%d minutes remaining"
+msgstr[0] "còn %d phút nữa"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:190
+msgid "%s, %d minute remaining"
+msgid_plural "%s, %d minutes remaining"
+msgstr[0] "%s, còn %d phút nữa"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:191
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d giờ"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:197
+msgid "%s, %d hour remaining"
+msgid_plural "%s, %d hour remaining"
+msgstr[0] "%s, còn %d giờ nữa"
+
+#: Steadyflow.UI/DownloadCellRenderer.vala:198
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d ngày"
+
+#: Steadyflow.UI/IGtkBuilderContainer.vala:40
+msgid "Cannot find XML definition file for window %s"
+msgstr "Không thể tìm thấy tập tin định nghĩa XML cho cửa sổ %s"
+
+#: MainWindow.ui~:7 MainWindow.ui:7
+msgid "_Add"
+msgstr "_Thêm"
+
+#: MainWindow.ui~:13
+msgid "Copy link location"
+msgstr "Chép đường dẫn"
+
+#: MainWindow.ui~:18 PreferencesDialog.ui:131 MainWindow.ui:18
+msgid "Open downloaded file"
+msgstr "Mở tập tin đã tải"
+
+#: MainWindow.ui~:22 PreferencesDialog.ui:152 MainWindow.ui:22
+msgid "Open containing folder"
+msgstr "Mở thư mục chứa"
+
+#: MainWindow.ui~:26 MainWindow.ui:26
+msgid "_Pause"
+msgstr "Tạm _dừng"
+
+#: MainWindow.ui~:32 MainWindow.ui:32
+msgid "_Remove"
+msgstr "Loại _bỏ"
+
+#: MainWindow.ui~:38 MainWindow.ui:38
+msgid "_Start"
+msgstr "_Bắt đầu"
+
+#: MainWindow.ui~:44 MainWindow.ui:44
+msgid "Show _status panel"
+msgstr "_Hiện thanh trạng thái"
+
+#: MainWindow.ui~:62 MainWindow.ui:62
+msgid "Add a new download"
+msgstr "Thêm tải về mới"
+
+#: MainWindow.ui~:76 MainWindow.ui:76
+msgid "Start the selected download"
+msgstr "Bắt đầu tải về được chọn"
+
+#: MainWindow.ui~:89 MainWindow.ui:89
+msgid "Pause the selected download"
+msgstr "Tạm dừng tải về đã chọn"
+
+#: MainWindow.ui~:102 MainWindow.ui:102
+msgid "Remove the selected file from the download list"
+msgstr "Loại bỏ tập tin đã chọn khỏi danh sách tải"
+
+#: MainWindow.ui~:121 MainWindow.ui:121
+msgid "Type here to filter downloads by file name"
+msgstr "Gõ vào đây để lọc các tải về theo tên"
+
+#: MainWindow.ui~:140 MainWindow.ui:140
+msgid "Application menu"
+msgstr "Trình đơn ứng dụng"
+
+#: MainWindow.ui~:142 MainWindow.ui:142
+msgid "Menu"
+msgstr "Trình đơn"
+
+#: MainWindow.ui~:206 AddFileDialog.ui:21 MainWindow.ui:206
+msgid "URL address:"
+msgstr "Địa chỉ URL:"
+
+#: MainWindow.ui~:220 MainWindow.ui:220
+msgid "Download location:"
+msgstr "Vị trí tải về:"
+
+#: MainWindow.ui~:326 MainWindow.ui:326
+msgid "Report a _problem"
+msgstr "Báo cáo một _vấn đề"
+
+#: MainWindow.ui~:338 MainWindow.ui:338
+msgid "_Translate this application"
+msgstr "_Dịch ứng dụng này"
+
+#: AddFileDialog.ui:61
+msgid "Save to:"
+msgstr "Lưu vào:"
+
+#: AddFileDialog.ui:88
+msgid "Upon completion:"
+msgstr "Sau khi hoàn thành:"
+
+#: AddFileDialog.ui:101
+msgid "Save as:"
+msgstr "Lưu với tên khác:"
+
+#: AddFileDialog.ui:160
+msgid "Command to run:"
+msgstr "Lệnh để chạy:"
+
+#: AddFileDialog.ui:187
+msgid "Run with the file as an argument"
+msgstr "Chạy với tên tập tin làm tham số"
+
+#: AddFileDialog.ui:241
+msgid "Run command"
+msgstr "Chạy lệnh"
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr "Tải về mới"
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr "Tự động chạy từ chương trình khác"
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+"Khi chương trình bên ngoài yêu cầu tải về, tự động tải về thay vì hiện hộp "
+"thoại \"Thêm tập tin để tải\"."
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr "Thư mục lưu tập tin mặc định:"
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr "Sau khi hoàn thành"
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr "Không làm gì cả"
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr "Tải về"
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr "Hiện khung thông báo"
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr "Hiện chỉ báo dưới thanh điều khiển"
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr "Vẫn chạy khi đóng cửa sổ chính"
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr "Ẩn cửa sổ chính khi khởi động"
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
+msgstr "Thông báo"
+
+#: MainWindow.ui:13
+msgid "Copy remote address"
+msgstr "Chép địa chỉ từ xa"
+
+#: Steadyflow/FileListController.vala:208
+msgid "File already in list"
+msgstr ""
+
+#: Steadyflow/FileListController.vala:209
+msgid ""
+"The address you are trying to add for download is already in the file list."
+msgstr ""
+
+#: Steadyflow/Application.vala:130
+msgid "Cannot connect to D-Bus. Steadyflow will exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:150
+msgid ""
+"Can neither create a D-Bus service nor connect to an existing instance of "
+"Steadyflow. Steadyflow will now exit."
+msgstr ""
+
+#: Steadyflow/Application.vala:168
+msgid "Steadyflow version %s"
+msgstr ""
