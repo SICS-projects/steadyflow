@@ -48,6 +48,9 @@ private const string INSERT_TEMPLATE = """
 
 public class IndicatorController : GLib.Object {
 	private static const int MAX_FILE_MENU_ENTRIES = 6;
+	private static const double REDRAW_SEC = 0.2;
+
+	private Timer redraw_timer;
 	
 	private static string stock_quit_label;
 	
@@ -75,8 +78,11 @@ public class IndicatorController : GLib.Object {
 	private Gtk.Action resume_all_action;
 	private Gtk.ActionGroup? merged_action_group = null;
 	private uint merge_id = 0;
-	
+
 	public IndicatorController() {
+		redraw_timer = new Timer ();
+		redraw_timer.start ();
+
 		ui_manager = new UIManager ();
 		Gtk.ActionGroup action_group = new Gtk.ActionGroup ("main");
 		action_group.add_actions (actions, null);
@@ -120,10 +126,10 @@ public class IndicatorController : GLib.Object {
 		
 		Services.download.file_added.connect ((file) => {
 			connect_file_signals (file);
-			update_file_menus ();
+			update_file_menus (true);
 		});
-		Services.download.file_removed.connect ((file) => { update_file_menus (); });
-		update_file_menus ();
+		Services.download.file_removed.connect ((file) => { update_file_menus (true); });
+		update_file_menus (true);
 	}
 	
 	public void set_main_window_visible (bool visible) {
@@ -132,10 +138,17 @@ public class IndicatorController : GLib.Object {
 	}
 	
 	private void connect_file_signals (IDownloadFile file) {
-		file.status_changed.connect ((old_status) => { update_file_menus(); });
+		file.status_changed.connect ((old_status) => { update_file_menus(true); });
+		file.download_progressed.connect ((size) => { update_file_menus (false); });
 	}
 	
-	private void update_file_menus () {
+	private void update_file_menus (bool force) {
+		if (redraw_timer.elapsed () >= REDRAW_SEC) {
+			redraw_timer.start ();
+		}else if (!force){
+			return;
+		}
+
 		bool enable_pause_all = false;
 		bool enable_resume_all = false;
 		var files_for_menu = new ArrayList<IDownloadFile> ();
@@ -176,7 +189,9 @@ public class IndicatorController : GLib.Object {
 			
 			foreach (var file in files_for_menu) {
 				string action_name = "FileAction%d".printf (file.uid);
-				string file_label = file.local_basename.replace ("_", "__"); // Cute emoticons!
+				int progress = (int) ((double) file.downloaded_size / file.size * 100);
+
+				string file_label = file.local_basename.replace ("_", "__") + " " + _("(%d%% heruntergeladen)").printf (progress) + " "; // Cute emoticons!
 				new_items.append ("<menuitem action='%s' />".printf (action_name));
 
 				Gtk.Action action;

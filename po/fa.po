@@ -436,6 +436,10 @@ msgstr ""
 msgid "Steadyflow version %s"
 msgstr ""
 
+#: Steadyflow/IndicatorController.vala:194
+msgid "Downloaded %d"
+msgstr ""
+
 #~ msgid "Steadyflow Error: %s\n"
 #~ msgstr "خطاهای Steadyflow:%s\n"
 

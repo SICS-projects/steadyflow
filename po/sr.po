@@ -427,5 +427,9 @@ msgstr ""
 msgid "Steadyflow version %s"
 msgstr ""
 
+#: Steadyflow/IndicatorController.vala:194
+msgid "Downloaded %d"
+msgstr ""
+
 #~ msgid "Report a _bug"
 #~ msgstr "Пријавите _грешку"

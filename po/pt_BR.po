@@ -449,6 +449,10 @@ msgstr ""
 msgid "Steadyflow version %s"
 msgstr ""
 
+#: Steadyflow/IndicatorController.vala:194
+msgid "Downloaded %d"
+msgstr ""
+
 #~ msgid "_View"
 #~ msgstr "_Visualizar"
 

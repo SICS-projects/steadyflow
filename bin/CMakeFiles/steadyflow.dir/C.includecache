@@ -333,6 +333,10 @@ gtk/gtk.h
 -
 glib/gi18n-lib.h
 -
+float.h
+-
+math.h
+-
 gee.h
 -
 

@@ -180,19 +180,19 @@ SteadyflowCoreIDownloadService* steadyflow_services_get_download (void);
 GeeList* steadyflow_core_idownload_service_get_files (SteadyflowCoreIDownloadService* self);
 static void steadyflow_file_list_controller_connect_file_signals (SteadyflowFileListController* self, SteadyflowCoreIDownloadFile* file);
 static void steadyflow_file_list_controller_update_model (SteadyflowFileListController* self);
-static void __lambda25_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFile* file);
-static void ___lambda25__steadyflow_core_idownload_service_file_added (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self);
 static void __lambda26_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFile* file);
-static void ___lambda26__steadyflow_core_idownload_service_file_removed (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self);
-static void __lambda27_ (SteadyflowFileListController* self);
-static void ___lambda27__gtk_tree_selection_changed (GtkTreeSelection* _sender, gpointer self);
+static void ___lambda26__steadyflow_core_idownload_service_file_added (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self);
+static void __lambda27_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFile* file);
+static void ___lambda27__steadyflow_core_idownload_service_file_removed (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self);
+static void __lambda28_ (SteadyflowFileListController* self);
+static void ___lambda28__gtk_tree_selection_changed (GtkTreeSelection* _sender, gpointer self);
 static SteadyflowCoreIDownloadFile* steadyflow_file_list_controller_file_from_iter (SteadyflowFileListController* self, GtkTreeIter* iter);
 void steadyflow_ui_download_cell_renderer_set_file (SteadyflowUIDownloadCellRenderer* self, SteadyflowCoreIDownloadFile* value);
-static void __lambda23_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFileStatus status);
-static void ___lambda23__steadyflow_core_idownload_file_status_changed (SteadyflowCoreIDownloadFile* _sender, SteadyflowCoreIDownloadFileStatus old_status, gpointer self);
-static void __lambda24_ (SteadyflowFileListController* self, gint64 size);
+static void __lambda24_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFileStatus status);
+static void ___lambda24__steadyflow_core_idownload_file_status_changed (SteadyflowCoreIDownloadFile* _sender, SteadyflowCoreIDownloadFileStatus old_status, gpointer self);
+static void __lambda25_ (SteadyflowFileListController* self, gint64 size);
 static void steadyflow_file_list_controller_on_progress_notify (SteadyflowFileListController* self);
-static void ___lambda24__steadyflow_core_idownload_file_download_progressed (SteadyflowCoreIDownloadFile* _sender, gint64 old_size, gpointer self);
+static void ___lambda25__steadyflow_core_idownload_file_download_progressed (SteadyflowCoreIDownloadFile* _sender, gint64 old_size, gpointer self);
 static void steadyflow_file_list_controller_set_mount_operation (SteadyflowFileListController* self, GMountOperation** mount_op);
 static void _steadyflow_file_list_controller_set_mount_operation_steadyflow_core_idownload_file_get_mount_operation (SteadyflowCoreIDownloadFile* _sender, GMountOperation** mount_op, gpointer self);
 const gchar* steadyflow_core_idownload_file_get_local_basename (SteadyflowCoreIDownloadFile* self);
@@ -226,7 +226,7 @@ static void _steadyflow_file_list_controller_set_cell_data_gtk_cell_layout_data_
 }
 
 
-static void __lambda25_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFile* file) {
+static void __lambda26_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFile* file) {
 	SteadyflowCoreIDownloadFile* _tmp0_;
 	g_return_if_fail (file != NULL);
 	_tmp0_ = file;
@@ -235,29 +235,29 @@ static void __lambda25_ (SteadyflowFileListController* self, SteadyflowCoreIDown
 }
 
 
-static void ___lambda25__steadyflow_core_idownload_service_file_added (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self) {
-	__lambda25_ (self, file);
+static void ___lambda26__steadyflow_core_idownload_service_file_added (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self) {
+	__lambda26_ (self, file);
 }
 
 
-static void __lambda26_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFile* file) {
+static void __lambda27_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFile* file) {
 	g_return_if_fail (file != NULL);
 	steadyflow_file_list_controller_update_model (self);
 }
 
 
-static void ___lambda26__steadyflow_core_idownload_service_file_removed (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self) {
-	__lambda26_ (self, file);
+static void ___lambda27__steadyflow_core_idownload_service_file_removed (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self) {
+	__lambda27_ (self, file);
 }
 
 
-static void __lambda27_ (SteadyflowFileListController* self) {
+static void __lambda28_ (SteadyflowFileListController* self) {
 	g_signal_emit_by_name (self, "selection-changed");
 }
 
 
-static void ___lambda27__gtk_tree_selection_changed (GtkTreeSelection* _sender, gpointer self) {
-	__lambda27_ (self);
+static void ___lambda28__gtk_tree_selection_changed (GtkTreeSelection* _sender, gpointer self) {
+	__lambda28_ (self);
 }
 
 
@@ -389,13 +389,13 @@ SteadyflowFileListController* steadyflow_file_list_controller_construct (GType o
 	steadyflow_file_list_controller_update_model (self);
 	_tmp37_ = steadyflow_services_get_download ();
 	_tmp38_ = _tmp37_;
-	g_signal_connect_object (_tmp38_, "file-added", (GCallback) ___lambda25__steadyflow_core_idownload_service_file_added, self, 0);
+	g_signal_connect_object (_tmp38_, "file-added", (GCallback) ___lambda26__steadyflow_core_idownload_service_file_added, self, 0);
 	_tmp39_ = steadyflow_services_get_download ();
 	_tmp40_ = _tmp39_;
-	g_signal_connect_object (_tmp40_, "file-removed", (GCallback) ___lambda26__steadyflow_core_idownload_service_file_removed, self, 0);
+	g_signal_connect_object (_tmp40_, "file-removed", (GCallback) ___lambda27__steadyflow_core_idownload_service_file_removed, self, 0);
 	_tmp41_ = tree;
 	_tmp42_ = gtk_tree_view_get_selection (_tmp41_);
-	g_signal_connect_object (_tmp42_, "changed", (GCallback) ___lambda27__gtk_tree_selection_changed, self, 0);
+	g_signal_connect_object (_tmp42_, "changed", (GCallback) ___lambda28__gtk_tree_selection_changed, self, 0);
 	_g_object_unref0 (renderer);
 	_g_object_unref0 (column);
 	return self;
@@ -449,7 +449,7 @@ static void steadyflow_file_list_controller_set_cell_data (SteadyflowFileListCon
 }
 
 
-static void __lambda23_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFileStatus status) {
+static void __lambda24_ (SteadyflowFileListController* self, SteadyflowCoreIDownloadFileStatus status) {
 	GtkTreeView* _tmp0_;
 	g_signal_emit_by_name (self, "selection-changed");
 	g_signal_emit_by_name (self, "filelist-changed");
@@ -458,18 +458,18 @@ static void __lambda23_ (SteadyflowFileListController* self, SteadyflowCoreIDown
 }
 
 
-static void ___lambda23__steadyflow_core_idownload_file_status_changed (SteadyflowCoreIDownloadFile* _sender, SteadyflowCoreIDownloadFileStatus old_status, gpointer self) {
-	__lambda23_ (self, old_status);
+static void ___lambda24__steadyflow_core_idownload_file_status_changed (SteadyflowCoreIDownloadFile* _sender, SteadyflowCoreIDownloadFileStatus old_status, gpointer self) {
+	__lambda24_ (self, old_status);
 }
 
 
-static void __lambda24_ (SteadyflowFileListController* self, gint64 size) {
+static void __lambda25_ (SteadyflowFileListController* self, gint64 size) {
 	steadyflow_file_list_controller_on_progress_notify (self);
 }
 
 
-static void ___lambda24__steadyflow_core_idownload_file_download_progressed (SteadyflowCoreIDownloadFile* _sender, gint64 old_size, gpointer self) {
-	__lambda24_ (self, old_size);
+static void ___lambda25__steadyflow_core_idownload_file_download_progressed (SteadyflowCoreIDownloadFile* _sender, gint64 old_size, gpointer self) {
+	__lambda25_ (self, old_size);
 }
 
 
@@ -485,9 +485,9 @@ static void steadyflow_file_list_controller_connect_file_signals (SteadyflowFile
 	g_return_if_fail (self != NULL);
 	g_return_if_fail (file != NULL);
 	_tmp0_ = file;
-	g_signal_connect_object (_tmp0_, "status-changed", (GCallback) ___lambda23__steadyflow_core_idownload_file_status_changed, self, 0);
+	g_signal_connect_object (_tmp0_, "status-changed", (GCallback) ___lambda24__steadyflow_core_idownload_file_status_changed, self, 0);
 	_tmp1_ = file;
-	g_signal_connect_object (_tmp1_, "download-progressed", (GCallback) ___lambda24__steadyflow_core_idownload_file_download_progressed, self, 0);
+	g_signal_connect_object (_tmp1_, "download-progressed", (GCallback) ___lambda25__steadyflow_core_idownload_file_download_progressed, self, 0);
 	_tmp2_ = file;
 	g_signal_connect_object (_tmp2_, "get-mount-operation", (GCallback) _steadyflow_file_list_controller_set_mount_operation_steadyflow_core_idownload_file_get_mount_operation, self, 0);
 }

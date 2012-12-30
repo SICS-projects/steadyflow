@@ -438,7 +438,8 @@ msgstr "Файл уже в списке"
 #: Steadyflow/FileListController.vala:209
 msgid ""
 "The address you are trying to add for download is already in the file list."
-msgstr "Адрес, который вы пытаетесь добавить, уже присутствует в списке файлов."
+msgstr ""
+"Адрес, который вы пытаетесь добавить, уже присутствует в списке файлов."
 
 #: Steadyflow/Application.vala:130
 msgid "Cannot connect to D-Bus. Steadyflow will exit."
@@ -449,12 +450,16 @@ msgid ""
 "Can neither create a D-Bus service nor connect to an existing instance of "
 "Steadyflow. Steadyflow will now exit."
 msgstr ""
-"Не удаётся ни создать сервис D-Bus, ни подключиться к существующему экземпляру "
-"Steadyflow. Steadyflow завершает работу."
+"Не удаётся ни создать сервис D-Bus, ни подключиться к существующему "
+"экземпляру Steadyflow. Steadyflow завершает работу."
 
 #: Steadyflow/Application.vala:168
 msgid "Steadyflow version %s"
 msgstr "Steadyflow версии %s"
+
+#: Steadyflow/IndicatorController.vala:194
+msgid "Downloaded %d"
+msgstr ""
 
 #~ msgid "Steadyflow Error: %s\n"
 #~ msgstr "Ошибка Steadyflow: %s\n"

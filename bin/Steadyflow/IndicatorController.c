@@ -25,6 +25,8 @@
 #include <string.h>
 #include <gtk/gtk.h>
 #include <glib/gi18n-lib.h>
+#include <float.h>
+#include <math.h>
 #include <gee.h>
 
 
@@ -38,6 +40,7 @@
 typedef struct _SteadyflowIndicatorController SteadyflowIndicatorController;
 typedef struct _SteadyflowIndicatorControllerClass SteadyflowIndicatorControllerClass;
 typedef struct _SteadyflowIndicatorControllerPrivate SteadyflowIndicatorControllerPrivate;
+#define _g_timer_destroy0(var) ((var == NULL) ? NULL : (var = (g_timer_destroy (var), NULL)))
 #define _g_object_unref0(var) ((var == NULL) ? NULL : (var = (g_object_unref (var), NULL)))
 #define _g_error_free0(var) ((var == NULL) ? NULL : (var = (g_error_free (var), NULL)))
 
@@ -91,6 +94,7 @@ struct _SteadyflowIndicatorControllerClass {
 };
 
 struct _SteadyflowIndicatorControllerPrivate {
+	GTimer* redraw_timer;
 	GtkActionEntry* actions;
 	gint actions_length1;
 	gint _actions_size_;
@@ -207,6 +211,7 @@ enum  {
 	STEADYFLOW_INDICATOR_CONTROLLER_DUMMY_PROPERTY
 };
 #define STEADYFLOW_INDICATOR_CONTROLLER_MAX_FILE_MENU_ENTRIES 6
+#define STEADYFLOW_INDICATOR_CONTROLLER_REDRAW_SEC 0.2
 SteadyflowIndicatorController* steadyflow_indicator_controller_new (void);
 SteadyflowIndicatorController* steadyflow_indicator_controller_construct (GType object_type);
 void steadyflow_core_util_fatal_error (GError* e, const gchar* message);
@@ -239,18 +244,22 @@ GType steadyflow_core_idownload_service_get_type (void) G_GNUC_CONST;
 SteadyflowCoreIDownloadService* steadyflow_services_get_download (void);
 GeeList* steadyflow_core_idownload_service_get_files (SteadyflowCoreIDownloadService* self);
 static void steadyflow_indicator_controller_connect_file_signals (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFile* file);
-static void __lambda21_ (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFile* file);
-static void steadyflow_indicator_controller_update_file_menus (SteadyflowIndicatorController* self);
-static void ___lambda21__steadyflow_core_idownload_service_file_added (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self);
 static void __lambda22_ (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFile* file);
-static void ___lambda22__steadyflow_core_idownload_service_file_removed (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self);
+static void steadyflow_indicator_controller_update_file_menus (SteadyflowIndicatorController* self, gboolean force);
+static void ___lambda22__steadyflow_core_idownload_service_file_added (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self);
+static void __lambda23_ (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFile* file);
+static void ___lambda23__steadyflow_core_idownload_service_file_removed (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self);
 static void __lambda18_ (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFileStatus old_status);
 static void ___lambda18__steadyflow_core_idownload_file_status_changed (SteadyflowCoreIDownloadFile* _sender, SteadyflowCoreIDownloadFileStatus old_status, gpointer self);
+static void __lambda21_ (SteadyflowIndicatorController* self, gint64 size);
+static void ___lambda21__steadyflow_core_idownload_file_download_progressed (SteadyflowCoreIDownloadFile* _sender, gint64 old_size, gpointer self);
 gboolean steadyflow_core_idownload_file_can_pause (SteadyflowCoreIDownloadFile* self);
 gboolean steadyflow_core_idownload_file_can_start (SteadyflowCoreIDownloadFile* self);
 static Block5Data* block5_data_ref (Block5Data* _data5_);
 static void block5_data_unref (void * _userdata_);
 gint steadyflow_core_idownload_file_get_uid (SteadyflowCoreIDownloadFile* self);
+gint64 steadyflow_core_idownload_file_get_downloaded_size (SteadyflowCoreIDownloadFile* self);
+gint64 steadyflow_core_idownload_file_get_size (SteadyflowCoreIDownloadFile* self);
 const gchar* steadyflow_core_idownload_file_get_local_basename (SteadyflowCoreIDownloadFile* self);
 static void ______lambda19_ (Block5Data* _data5_);
 void steadyflow_core_idownload_file_start (SteadyflowCoreIDownloadFile* self, gboolean resume);
@@ -348,100 +357,107 @@ static void _steadyflow_indicator_controller_resume_all_gtk_action_activate (Gtk
 }
 
 
-static void __lambda21_ (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFile* file) {
+static void __lambda22_ (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFile* file) {
 	SteadyflowCoreIDownloadFile* _tmp0_;
 	g_return_if_fail (file != NULL);
 	_tmp0_ = file;
 	steadyflow_indicator_controller_connect_file_signals (self, _tmp0_);
-	steadyflow_indicator_controller_update_file_menus (self);
+	steadyflow_indicator_controller_update_file_menus (self, TRUE);
 }
 
 
-static void ___lambda21__steadyflow_core_idownload_service_file_added (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self) {
-	__lambda21_ (self, file);
-}
-
-
-static void __lambda22_ (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFile* file) {
-	g_return_if_fail (file != NULL);
-	steadyflow_indicator_controller_update_file_menus (self);
-}
-
-
-static void ___lambda22__steadyflow_core_idownload_service_file_removed (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self) {
+static void ___lambda22__steadyflow_core_idownload_service_file_added (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self) {
 	__lambda22_ (self, file);
+}
+
+
+static void __lambda23_ (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFile* file) {
+	g_return_if_fail (file != NULL);
+	steadyflow_indicator_controller_update_file_menus (self, TRUE);
+}
+
+
+static void ___lambda23__steadyflow_core_idownload_service_file_removed (SteadyflowCoreIDownloadService* _sender, SteadyflowCoreIDownloadFile* file, gpointer self) {
+	__lambda23_ (self, file);
 }
 
 
 SteadyflowIndicatorController* steadyflow_indicator_controller_construct (GType object_type) {
 	SteadyflowIndicatorController * self = NULL;
-	GtkUIManager* _tmp0_;
-	GtkActionGroup* _tmp1_;
+	GTimer* _tmp0_;
+	GTimer* _tmp1_;
+	GtkUIManager* _tmp2_;
+	GtkActionGroup* _tmp3_;
 	GtkActionGroup* action_group;
-	GtkActionEntry* _tmp2_;
-	gint _tmp2__length1;
-	GtkToggleActionEntry* _tmp3_;
-	gint _tmp3__length1;
-	GtkUIManager* _tmp4_;
-	GtkUIManager* _tmp8_;
-	GtkWidget* _tmp9_ = NULL;
-	GtkMenu* _tmp10_;
-	SteadyflowUIIIndicatorService* _tmp11_;
-	SteadyflowUIIIndicatorService* _tmp12_;
-	GtkMenu* _tmp13_;
+	GtkActionEntry* _tmp4_;
+	gint _tmp4__length1;
+	GtkToggleActionEntry* _tmp5_;
+	gint _tmp5__length1;
+	GtkUIManager* _tmp6_;
+	GtkUIManager* _tmp10_;
+	GtkWidget* _tmp11_ = NULL;
+	GtkMenu* _tmp12_;
+	SteadyflowUIIIndicatorService* _tmp13_;
 	SteadyflowUIIIndicatorService* _tmp14_;
-	SteadyflowUIIIndicatorService* _tmp15_;
-	SteadyflowCoreISettingsService* _tmp16_;
-	SteadyflowCoreISettingsService* _tmp17_;
-	gboolean _tmp18_ = FALSE;
+	GtkMenu* _tmp15_;
+	SteadyflowUIIIndicatorService* _tmp16_;
+	SteadyflowUIIIndicatorService* _tmp17_;
+	SteadyflowCoreISettingsService* _tmp18_;
 	SteadyflowCoreISettingsService* _tmp19_;
-	SteadyflowCoreISettingsService* _tmp20_;
-	GtkAction* _tmp21_ = NULL;
-	GtkToggleAction* _tmp22_;
-	GtkToggleAction* _tmp23_;
-	SteadyflowCoreISettingsService* _tmp24_;
-	SteadyflowCoreISettingsService* _tmp25_;
-	gboolean _tmp26_ = FALSE;
-	GtkToggleAction* _tmp27_;
-	SteadyflowUIIIndicatorService* _tmp28_;
-	SteadyflowUIIIndicatorService* _tmp29_;
-	GtkAction* _tmp30_ = NULL;
-	GtkAction* _tmp31_ = NULL;
+	gboolean _tmp20_ = FALSE;
+	SteadyflowCoreISettingsService* _tmp21_;
+	SteadyflowCoreISettingsService* _tmp22_;
+	GtkAction* _tmp23_ = NULL;
+	GtkToggleAction* _tmp24_;
+	GtkToggleAction* _tmp25_;
+	SteadyflowCoreISettingsService* _tmp26_;
+	SteadyflowCoreISettingsService* _tmp27_;
+	gboolean _tmp28_ = FALSE;
+	GtkToggleAction* _tmp29_;
+	SteadyflowUIIIndicatorService* _tmp30_;
+	SteadyflowUIIIndicatorService* _tmp31_;
 	GtkAction* _tmp32_ = NULL;
-	GtkAction* _tmp33_;
-	GtkAction* _tmp34_;
+	GtkAction* _tmp33_ = NULL;
+	GtkAction* _tmp34_ = NULL;
 	GtkAction* _tmp35_;
-	GtkAction* _tmp36_ = NULL;
+	GtkAction* _tmp36_;
 	GtkAction* _tmp37_;
-	GtkAction* _tmp38_;
+	GtkAction* _tmp38_ = NULL;
 	GtkAction* _tmp39_;
-	SteadyflowCoreIDownloadService* _tmp54_;
-	SteadyflowCoreIDownloadService* _tmp55_;
+	GtkAction* _tmp40_;
+	GtkAction* _tmp41_;
 	SteadyflowCoreIDownloadService* _tmp56_;
 	SteadyflowCoreIDownloadService* _tmp57_;
+	SteadyflowCoreIDownloadService* _tmp58_;
+	SteadyflowCoreIDownloadService* _tmp59_;
 	GError * _inner_error_ = NULL;
 	self = (SteadyflowIndicatorController*) g_object_new (object_type, NULL);
-	_tmp0_ = gtk_ui_manager_new ();
+	_tmp0_ = g_timer_new ();
+	_g_timer_destroy0 (self->priv->redraw_timer);
+	self->priv->redraw_timer = _tmp0_;
+	_tmp1_ = self->priv->redraw_timer;
+	g_timer_start (_tmp1_);
+	_tmp2_ = gtk_ui_manager_new ();
 	_g_object_unref0 (self->priv->ui_manager);
-	self->priv->ui_manager = _tmp0_;
-	_tmp1_ = gtk_action_group_new ("main");
-	action_group = _tmp1_;
-	_tmp2_ = self->priv->actions;
-	_tmp2__length1 = self->priv->actions_length1;
-	gtk_action_group_add_actions (action_group, _tmp2_, _tmp2__length1, NULL);
-	_tmp3_ = self->priv->toggle_actions;
-	_tmp3__length1 = self->priv->toggle_actions_length1;
-	gtk_action_group_add_toggle_actions (action_group, _tmp3_, _tmp3__length1, NULL);
-	_tmp4_ = self->priv->ui_manager;
-	gtk_ui_manager_insert_action_group (_tmp4_, action_group, 0);
+	self->priv->ui_manager = _tmp2_;
+	_tmp3_ = gtk_action_group_new ("main");
+	action_group = _tmp3_;
+	_tmp4_ = self->priv->actions;
+	_tmp4__length1 = self->priv->actions_length1;
+	gtk_action_group_add_actions (action_group, _tmp4_, _tmp4__length1, NULL);
+	_tmp5_ = self->priv->toggle_actions;
+	_tmp5__length1 = self->priv->toggle_actions_length1;
+	gtk_action_group_add_toggle_actions (action_group, _tmp5_, _tmp5__length1, NULL);
+	_tmp6_ = self->priv->ui_manager;
+	gtk_ui_manager_insert_action_group (_tmp6_, action_group, 0);
 	{
-		GtkUIManager* _tmp5_;
-		gint _tmp6_;
-		gint _tmp7_;
-		_tmp5_ = self->priv->ui_manager;
-		_tmp6_ = strlen (STEADYFLOW_INDICATOR_MENU);
-		_tmp7_ = _tmp6_;
-		gtk_ui_manager_add_ui_from_string (_tmp5_, STEADYFLOW_INDICATOR_MENU, (gssize) _tmp7_, &_inner_error_);
+		GtkUIManager* _tmp7_;
+		gint _tmp8_;
+		gint _tmp9_;
+		_tmp7_ = self->priv->ui_manager;
+		_tmp8_ = strlen (STEADYFLOW_INDICATOR_MENU);
+		_tmp9_ = _tmp8_;
+		gtk_ui_manager_add_ui_from_string (_tmp7_, STEADYFLOW_INDICATOR_MENU, (gssize) _tmp9_, &_inner_error_);
 		if (_inner_error_ != NULL) {
 			goto __catch18_g_error;
 		}
@@ -462,112 +478,112 @@ SteadyflowIndicatorController* steadyflow_indicator_controller_construct (GType 
 		g_clear_error (&_inner_error_);
 		return NULL;
 	}
-	_tmp8_ = self->priv->ui_manager;
-	_tmp9_ = gtk_ui_manager_get_widget (_tmp8_, "/ui/IndicatorMenu");
-	_tmp10_ = _g_object_ref0 (GTK_MENU (_tmp9_));
+	_tmp10_ = self->priv->ui_manager;
+	_tmp11_ = gtk_ui_manager_get_widget (_tmp10_, "/ui/IndicatorMenu");
+	_tmp12_ = _g_object_ref0 (GTK_MENU (_tmp11_));
 	_g_object_unref0 (self->priv->menu);
-	self->priv->menu = _tmp10_;
-	_tmp11_ = steadyflow_services_get_indicator ();
-	_tmp12_ = _tmp11_;
-	_tmp13_ = self->priv->menu;
-	steadyflow_ui_iindicator_service_set_menu (_tmp12_, _tmp13_);
-	_tmp14_ = steadyflow_services_get_indicator ();
-	_tmp15_ = _tmp14_;
-	_tmp16_ = steadyflow_services_get_settings ();
+	self->priv->menu = _tmp12_;
+	_tmp13_ = steadyflow_services_get_indicator ();
+	_tmp14_ = _tmp13_;
+	_tmp15_ = self->priv->menu;
+	steadyflow_ui_iindicator_service_set_menu (_tmp14_, _tmp15_);
+	_tmp16_ = steadyflow_services_get_indicator ();
 	_tmp17_ = _tmp16_;
-	_tmp18_ = steadyflow_core_isettings_service_get_boolean (_tmp17_, "show-indicator");
-	steadyflow_ui_iindicator_service_set_visible (_tmp15_, _tmp18_);
-	_tmp19_ = steadyflow_services_get_settings ();
-	_tmp20_ = _tmp19_;
-	g_signal_connect_object (_tmp20_, "changed::show-indicator", (GCallback) ___lambda13__steadyflow_core_isettings_service_changed, self, 0);
-	_tmp21_ = gtk_action_group_get_action (action_group, "ShowHide");
-	_tmp22_ = _g_object_ref0 (GTK_TOGGLE_ACTION (_tmp21_));
+	_tmp18_ = steadyflow_services_get_settings ();
+	_tmp19_ = _tmp18_;
+	_tmp20_ = steadyflow_core_isettings_service_get_boolean (_tmp19_, "show-indicator");
+	steadyflow_ui_iindicator_service_set_visible (_tmp17_, _tmp20_);
+	_tmp21_ = steadyflow_services_get_settings ();
+	_tmp22_ = _tmp21_;
+	g_signal_connect_object (_tmp22_, "changed::show-indicator", (GCallback) ___lambda13__steadyflow_core_isettings_service_changed, self, 0);
+	_tmp23_ = gtk_action_group_get_action (action_group, "ShowHide");
+	_tmp24_ = _g_object_ref0 (GTK_TOGGLE_ACTION (_tmp23_));
 	_g_object_unref0 (self->priv->show_hide_action);
-	self->priv->show_hide_action = _tmp22_;
-	_tmp23_ = self->priv->show_hide_action;
-	_tmp24_ = steadyflow_services_get_settings ();
-	_tmp25_ = _tmp24_;
-	_tmp26_ = steadyflow_core_isettings_service_get_boolean (_tmp25_, "start-minimized");
-	gtk_toggle_action_set_active (_tmp23_, !_tmp26_);
-	_tmp27_ = self->priv->show_hide_action;
-	g_signal_connect_object (_tmp27_, "toggled", (GCallback) ___lambda14__gtk_toggle_action_toggled, self, 0);
-	_tmp28_ = steadyflow_services_get_indicator ();
-	_tmp29_ = _tmp28_;
-	g_signal_connect_object (_tmp29_, "clicked", (GCallback) ___lambda15__steadyflow_ui_iindicator_service_clicked, self, 0);
-	_tmp30_ = gtk_action_group_get_action (action_group, "Add");
-	g_signal_connect_object (_tmp30_, "activate", (GCallback) ___lambda16__gtk_action_activate, self, 0);
-	_tmp31_ = gtk_action_group_get_action (action_group, "Quit");
-	g_signal_connect_object (_tmp31_, "activate", (GCallback) ___lambda17__gtk_action_activate, self, 0);
-	_tmp32_ = gtk_action_group_get_action (action_group, "PauseAll");
-	_tmp33_ = _g_object_ref0 (GTK_ACTION (_tmp32_));
+	self->priv->show_hide_action = _tmp24_;
+	_tmp25_ = self->priv->show_hide_action;
+	_tmp26_ = steadyflow_services_get_settings ();
+	_tmp27_ = _tmp26_;
+	_tmp28_ = steadyflow_core_isettings_service_get_boolean (_tmp27_, "start-minimized");
+	gtk_toggle_action_set_active (_tmp25_, !_tmp28_);
+	_tmp29_ = self->priv->show_hide_action;
+	g_signal_connect_object (_tmp29_, "toggled", (GCallback) ___lambda14__gtk_toggle_action_toggled, self, 0);
+	_tmp30_ = steadyflow_services_get_indicator ();
+	_tmp31_ = _tmp30_;
+	g_signal_connect_object (_tmp31_, "clicked", (GCallback) ___lambda15__steadyflow_ui_iindicator_service_clicked, self, 0);
+	_tmp32_ = gtk_action_group_get_action (action_group, "Add");
+	g_signal_connect_object (_tmp32_, "activate", (GCallback) ___lambda16__gtk_action_activate, self, 0);
+	_tmp33_ = gtk_action_group_get_action (action_group, "Quit");
+	g_signal_connect_object (_tmp33_, "activate", (GCallback) ___lambda17__gtk_action_activate, self, 0);
+	_tmp34_ = gtk_action_group_get_action (action_group, "PauseAll");
+	_tmp35_ = _g_object_ref0 (GTK_ACTION (_tmp34_));
 	_g_object_unref0 (self->priv->pause_all_action);
-	self->priv->pause_all_action = _tmp33_;
-	_tmp34_ = self->priv->pause_all_action;
-	gtk_action_set_sensitive (_tmp34_, FALSE);
-	_tmp35_ = self->priv->pause_all_action;
-	g_signal_connect_object (_tmp35_, "activate", (GCallback) _steadyflow_indicator_controller_pause_all_gtk_action_activate, self, 0);
-	_tmp36_ = gtk_action_group_get_action (action_group, "ResumeAll");
-	_tmp37_ = _g_object_ref0 (GTK_ACTION (_tmp36_));
+	self->priv->pause_all_action = _tmp35_;
+	_tmp36_ = self->priv->pause_all_action;
+	gtk_action_set_sensitive (_tmp36_, FALSE);
+	_tmp37_ = self->priv->pause_all_action;
+	g_signal_connect_object (_tmp37_, "activate", (GCallback) _steadyflow_indicator_controller_pause_all_gtk_action_activate, self, 0);
+	_tmp38_ = gtk_action_group_get_action (action_group, "ResumeAll");
+	_tmp39_ = _g_object_ref0 (GTK_ACTION (_tmp38_));
 	_g_object_unref0 (self->priv->resume_all_action);
-	self->priv->resume_all_action = _tmp37_;
-	_tmp38_ = self->priv->resume_all_action;
-	gtk_action_set_sensitive (_tmp38_, FALSE);
-	_tmp39_ = self->priv->resume_all_action;
-	g_signal_connect_object (_tmp39_, "activate", (GCallback) _steadyflow_indicator_controller_resume_all_gtk_action_activate, self, 0);
+	self->priv->resume_all_action = _tmp39_;
+	_tmp40_ = self->priv->resume_all_action;
+	gtk_action_set_sensitive (_tmp40_, FALSE);
+	_tmp41_ = self->priv->resume_all_action;
+	g_signal_connect_object (_tmp41_, "activate", (GCallback) _steadyflow_indicator_controller_resume_all_gtk_action_activate, self, 0);
 	{
-		SteadyflowCoreIDownloadService* _tmp40_;
-		SteadyflowCoreIDownloadService* _tmp41_;
-		GeeList* _tmp42_;
-		GeeList* _tmp43_;
-		GeeList* _file_list;
+		SteadyflowCoreIDownloadService* _tmp42_;
+		SteadyflowCoreIDownloadService* _tmp43_;
 		GeeList* _tmp44_;
-		gint _tmp45_;
-		gint _tmp46_;
+		GeeList* _tmp45_;
+		GeeList* _file_list;
+		GeeList* _tmp46_;
+		gint _tmp47_;
+		gint _tmp48_;
 		gint _file_size;
 		gint _file_index;
-		_tmp40_ = steadyflow_services_get_download ();
-		_tmp41_ = _tmp40_;
-		_tmp42_ = steadyflow_core_idownload_service_get_files (_tmp41_);
+		_tmp42_ = steadyflow_services_get_download ();
 		_tmp43_ = _tmp42_;
-		_file_list = _tmp43_;
-		_tmp44_ = _file_list;
-		_tmp45_ = gee_collection_get_size ((GeeCollection*) _tmp44_);
-		_tmp46_ = _tmp45_;
-		_file_size = _tmp46_;
+		_tmp44_ = steadyflow_core_idownload_service_get_files (_tmp43_);
+		_tmp45_ = _tmp44_;
+		_file_list = _tmp45_;
+		_tmp46_ = _file_list;
+		_tmp47_ = gee_collection_get_size ((GeeCollection*) _tmp46_);
+		_tmp48_ = _tmp47_;
+		_file_size = _tmp48_;
 		_file_index = -1;
 		while (TRUE) {
-			gint _tmp47_;
-			gint _tmp48_;
 			gint _tmp49_;
-			GeeList* _tmp50_;
+			gint _tmp50_;
 			gint _tmp51_;
-			gpointer _tmp52_ = NULL;
+			GeeList* _tmp52_;
+			gint _tmp53_;
+			gpointer _tmp54_ = NULL;
 			SteadyflowCoreIDownloadFile* file;
-			SteadyflowCoreIDownloadFile* _tmp53_;
-			_tmp47_ = _file_index;
-			_file_index = _tmp47_ + 1;
-			_tmp48_ = _file_index;
-			_tmp49_ = _file_size;
-			if (!(_tmp48_ < _tmp49_)) {
+			SteadyflowCoreIDownloadFile* _tmp55_;
+			_tmp49_ = _file_index;
+			_file_index = _tmp49_ + 1;
+			_tmp50_ = _file_index;
+			_tmp51_ = _file_size;
+			if (!(_tmp50_ < _tmp51_)) {
 				break;
 			}
-			_tmp50_ = _file_list;
-			_tmp51_ = _file_index;
-			_tmp52_ = gee_list_get (_tmp50_, _tmp51_);
-			file = (SteadyflowCoreIDownloadFile*) _tmp52_;
-			_tmp53_ = file;
-			steadyflow_indicator_controller_connect_file_signals (self, _tmp53_);
+			_tmp52_ = _file_list;
+			_tmp53_ = _file_index;
+			_tmp54_ = gee_list_get (_tmp52_, _tmp53_);
+			file = (SteadyflowCoreIDownloadFile*) _tmp54_;
+			_tmp55_ = file;
+			steadyflow_indicator_controller_connect_file_signals (self, _tmp55_);
 			_g_object_unref0 (file);
 		}
 		_g_object_unref0 (_file_list);
 	}
-	_tmp54_ = steadyflow_services_get_download ();
-	_tmp55_ = _tmp54_;
-	g_signal_connect_object (_tmp55_, "file-added", (GCallback) ___lambda21__steadyflow_core_idownload_service_file_added, self, 0);
 	_tmp56_ = steadyflow_services_get_download ();
 	_tmp57_ = _tmp56_;
-	g_signal_connect_object (_tmp57_, "file-removed", (GCallback) ___lambda22__steadyflow_core_idownload_service_file_removed, self, 0);
-	steadyflow_indicator_controller_update_file_menus (self);
+	g_signal_connect_object (_tmp57_, "file-added", (GCallback) ___lambda22__steadyflow_core_idownload_service_file_added, self, 0);
+	_tmp58_ = steadyflow_services_get_download ();
+	_tmp59_ = _tmp58_;
+	g_signal_connect_object (_tmp59_, "file-removed", (GCallback) ___lambda23__steadyflow_core_idownload_service_file_removed, self, 0);
+	steadyflow_indicator_controller_update_file_menus (self, TRUE);
 	_g_object_unref0 (action_group);
 	return self;
 }
@@ -596,7 +612,7 @@ void steadyflow_indicator_controller_set_main_window_visible (SteadyflowIndicato
 
 
 static void __lambda18_ (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFileStatus old_status) {
-	steadyflow_indicator_controller_update_file_menus (self);
+	steadyflow_indicator_controller_update_file_menus (self, TRUE);
 }
 
 
@@ -605,12 +621,25 @@ static void ___lambda18__steadyflow_core_idownload_file_status_changed (Steadyfl
 }
 
 
+static void __lambda21_ (SteadyflowIndicatorController* self, gint64 size) {
+	steadyflow_indicator_controller_update_file_menus (self, FALSE);
+}
+
+
+static void ___lambda21__steadyflow_core_idownload_file_download_progressed (SteadyflowCoreIDownloadFile* _sender, gint64 old_size, gpointer self) {
+	__lambda21_ (self, old_size);
+}
+
+
 static void steadyflow_indicator_controller_connect_file_signals (SteadyflowIndicatorController* self, SteadyflowCoreIDownloadFile* file) {
 	SteadyflowCoreIDownloadFile* _tmp0_;
+	SteadyflowCoreIDownloadFile* _tmp1_;
 	g_return_if_fail (self != NULL);
 	g_return_if_fail (file != NULL);
 	_tmp0_ = file;
 	g_signal_connect_object (_tmp0_, "status-changed", (GCallback) ___lambda18__steadyflow_core_idownload_file_status_changed, self, 0);
+	_tmp1_ = file;
+	g_signal_connect_object (_tmp1_, "download-progressed", (GCallback) ___lambda21__steadyflow_core_idownload_file_download_progressed, self, 0);
 }
 
 
@@ -729,295 +758,350 @@ static void _______lambda20__gtk_action_activate (GtkAction* _sender, gpointer s
 }
 
 
-static void steadyflow_indicator_controller_update_file_menus (SteadyflowIndicatorController* self) {
+static void steadyflow_indicator_controller_update_file_menus (SteadyflowIndicatorController* self, gboolean force) {
+	GTimer* _tmp0_;
+	gdouble _tmp1_ = 0.0;
 	gboolean enable_pause_all;
 	gboolean enable_resume_all;
-	GeeArrayList* _tmp0_;
+	GeeArrayList* _tmp4_;
 	GeeArrayList* files_for_menu;
-	GtkAction* _tmp31_;
-	gboolean _tmp32_;
-	GtkAction* _tmp33_;
-	gboolean _tmp34_;
-	GtkActionGroup* _tmp35_;
-	guint _tmp38_;
-	GeeArrayList* _tmp41_;
-	gint _tmp42_;
-	gint _tmp43_;
-	SteadyflowUIIIndicatorService* _tmp102_;
-	SteadyflowUIIIndicatorService* _tmp103_;
-	GtkMenu* _tmp104_;
+	GtkAction* _tmp35_;
+	gboolean _tmp36_;
+	GtkAction* _tmp37_;
+	gboolean _tmp38_;
+	GtkActionGroup* _tmp39_;
+	guint _tmp42_;
+	GeeArrayList* _tmp45_;
+	gint _tmp46_;
+	gint _tmp47_;
+	SteadyflowUIIIndicatorService* _tmp123_;
+	SteadyflowUIIIndicatorService* _tmp124_;
+	GtkMenu* _tmp125_;
 	GError * _inner_error_ = NULL;
 	g_return_if_fail (self != NULL);
+	_tmp0_ = self->priv->redraw_timer;
+	_tmp1_ = g_timer_elapsed (_tmp0_, NULL);
+	if (_tmp1_ >= STEADYFLOW_INDICATOR_CONTROLLER_REDRAW_SEC) {
+		GTimer* _tmp2_;
+		_tmp2_ = self->priv->redraw_timer;
+		g_timer_start (_tmp2_);
+	} else {
+		gboolean _tmp3_;
+		_tmp3_ = force;
+		if (!_tmp3_) {
+			return;
+		}
+	}
 	enable_pause_all = FALSE;
 	enable_resume_all = FALSE;
-	_tmp0_ = gee_array_list_new (STEADYFLOW_CORE_TYPE_IDOWNLOAD_FILE, (GBoxedCopyFunc) g_object_ref, g_object_unref, NULL);
-	files_for_menu = _tmp0_;
+	_tmp4_ = gee_array_list_new (STEADYFLOW_CORE_TYPE_IDOWNLOAD_FILE, (GBoxedCopyFunc) g_object_ref, g_object_unref, NULL);
+	files_for_menu = _tmp4_;
 	{
-		SteadyflowCoreIDownloadService* _tmp1_;
-		SteadyflowCoreIDownloadService* _tmp2_;
-		GeeList* _tmp3_;
-		GeeList* _tmp4_;
+		SteadyflowCoreIDownloadService* _tmp5_;
+		SteadyflowCoreIDownloadService* _tmp6_;
+		GeeList* _tmp7_;
+		GeeList* _tmp8_;
 		GeeList* _file_list;
-		GeeList* _tmp5_;
-		gint _tmp6_;
-		gint _tmp7_;
+		GeeList* _tmp9_;
+		gint _tmp10_;
+		gint _tmp11_;
 		gint _file_size;
 		gint _file_index;
-		_tmp1_ = steadyflow_services_get_download ();
-		_tmp2_ = _tmp1_;
-		_tmp3_ = steadyflow_core_idownload_service_get_files (_tmp2_);
-		_tmp4_ = _tmp3_;
-		_file_list = _tmp4_;
-		_tmp5_ = _file_list;
-		_tmp6_ = gee_collection_get_size ((GeeCollection*) _tmp5_);
-		_tmp7_ = _tmp6_;
-		_file_size = _tmp7_;
+		_tmp5_ = steadyflow_services_get_download ();
+		_tmp6_ = _tmp5_;
+		_tmp7_ = steadyflow_core_idownload_service_get_files (_tmp6_);
+		_tmp8_ = _tmp7_;
+		_file_list = _tmp8_;
+		_tmp9_ = _file_list;
+		_tmp10_ = gee_collection_get_size ((GeeCollection*) _tmp9_);
+		_tmp11_ = _tmp10_;
+		_file_size = _tmp11_;
 		_file_index = -1;
 		while (TRUE) {
-			gint _tmp8_;
-			gint _tmp9_;
-			gint _tmp10_;
-			GeeList* _tmp11_;
 			gint _tmp12_;
-			gpointer _tmp13_ = NULL;
+			gint _tmp13_;
+			gint _tmp14_;
+			GeeList* _tmp15_;
+			gint _tmp16_;
+			gpointer _tmp17_ = NULL;
 			SteadyflowCoreIDownloadFile* file;
-			SteadyflowCoreIDownloadFile* _tmp14_;
-			gboolean _tmp15_ = FALSE;
-			SteadyflowCoreIDownloadFile* _tmp16_;
-			gboolean _tmp17_ = FALSE;
-			gboolean _tmp18_ = FALSE;
-			GeeArrayList* _tmp19_;
-			gint _tmp20_;
-			gint _tmp21_;
-			gboolean _tmp28_;
-			_tmp8_ = _file_index;
-			_file_index = _tmp8_ + 1;
-			_tmp9_ = _file_index;
-			_tmp10_ = _file_size;
-			if (!(_tmp9_ < _tmp10_)) {
+			SteadyflowCoreIDownloadFile* _tmp18_;
+			gboolean _tmp19_ = FALSE;
+			SteadyflowCoreIDownloadFile* _tmp20_;
+			gboolean _tmp21_ = FALSE;
+			gboolean _tmp22_ = FALSE;
+			GeeArrayList* _tmp23_;
+			gint _tmp24_;
+			gint _tmp25_;
+			gboolean _tmp32_;
+			_tmp12_ = _file_index;
+			_file_index = _tmp12_ + 1;
+			_tmp13_ = _file_index;
+			_tmp14_ = _file_size;
+			if (!(_tmp13_ < _tmp14_)) {
 				break;
 			}
-			_tmp11_ = _file_list;
-			_tmp12_ = _file_index;
-			_tmp13_ = gee_list_get (_tmp11_, _tmp12_);
-			file = (SteadyflowCoreIDownloadFile*) _tmp13_;
-			_tmp14_ = file;
-			_tmp15_ = steadyflow_core_idownload_file_can_pause (_tmp14_);
-			if (_tmp15_) {
+			_tmp15_ = _file_list;
+			_tmp16_ = _file_index;
+			_tmp17_ = gee_list_get (_tmp15_, _tmp16_);
+			file = (SteadyflowCoreIDownloadFile*) _tmp17_;
+			_tmp18_ = file;
+			_tmp19_ = steadyflow_core_idownload_file_can_pause (_tmp18_);
+			if (_tmp19_) {
 				enable_pause_all = TRUE;
 			}
-			_tmp16_ = file;
-			_tmp17_ = steadyflow_core_idownload_file_can_start (_tmp16_);
-			if (_tmp17_) {
+			_tmp20_ = file;
+			_tmp21_ = steadyflow_core_idownload_file_can_start (_tmp20_);
+			if (_tmp21_) {
 				enable_resume_all = TRUE;
 			}
-			_tmp19_ = files_for_menu;
-			_tmp20_ = gee_abstract_collection_get_size ((GeeCollection*) _tmp19_);
-			_tmp21_ = _tmp20_;
-			if (_tmp21_ < STEADYFLOW_INDICATOR_CONTROLLER_MAX_FILE_MENU_ENTRIES) {
-				gboolean _tmp22_ = FALSE;
-				SteadyflowCoreIDownloadFile* _tmp23_;
-				gboolean _tmp24_ = FALSE;
-				gboolean _tmp27_;
-				_tmp23_ = file;
-				_tmp24_ = steadyflow_core_idownload_file_can_start (_tmp23_);
-				if (_tmp24_) {
-					_tmp22_ = TRUE;
+			_tmp23_ = files_for_menu;
+			_tmp24_ = gee_abstract_collection_get_size ((GeeCollection*) _tmp23_);
+			_tmp25_ = _tmp24_;
+			if (_tmp25_ < STEADYFLOW_INDICATOR_CONTROLLER_MAX_FILE_MENU_ENTRIES) {
+				gboolean _tmp26_ = FALSE;
+				SteadyflowCoreIDownloadFile* _tmp27_;
+				gboolean _tmp28_ = FALSE;
+				gboolean _tmp31_;
+				_tmp27_ = file;
+				_tmp28_ = steadyflow_core_idownload_file_can_start (_tmp27_);
+				if (_tmp28_) {
+					_tmp26_ = TRUE;
 				} else {
-					SteadyflowCoreIDownloadFile* _tmp25_;
-					gboolean _tmp26_ = FALSE;
-					_tmp25_ = file;
-					_tmp26_ = steadyflow_core_idownload_file_can_pause (_tmp25_);
-					_tmp22_ = _tmp26_;
+					SteadyflowCoreIDownloadFile* _tmp29_;
+					gboolean _tmp30_ = FALSE;
+					_tmp29_ = file;
+					_tmp30_ = steadyflow_core_idownload_file_can_pause (_tmp29_);
+					_tmp26_ = _tmp30_;
 				}
-				_tmp27_ = _tmp22_;
-				_tmp18_ = _tmp27_;
+				_tmp31_ = _tmp26_;
+				_tmp22_ = _tmp31_;
 			} else {
-				_tmp18_ = FALSE;
+				_tmp22_ = FALSE;
 			}
-			_tmp28_ = _tmp18_;
-			if (_tmp28_) {
-				GeeArrayList* _tmp29_;
-				SteadyflowCoreIDownloadFile* _tmp30_;
-				_tmp29_ = files_for_menu;
-				_tmp30_ = file;
-				gee_abstract_collection_add ((GeeAbstractCollection*) _tmp29_, _tmp30_);
+			_tmp32_ = _tmp22_;
+			if (_tmp32_) {
+				GeeArrayList* _tmp33_;
+				SteadyflowCoreIDownloadFile* _tmp34_;
+				_tmp33_ = files_for_menu;
+				_tmp34_ = file;
+				gee_abstract_collection_add ((GeeAbstractCollection*) _tmp33_, _tmp34_);
 			}
 			_g_object_unref0 (file);
 		}
 		_g_object_unref0 (_file_list);
 	}
-	_tmp31_ = self->priv->pause_all_action;
-	_tmp32_ = enable_pause_all;
-	gtk_action_set_sensitive (_tmp31_, _tmp32_);
-	_tmp33_ = self->priv->resume_all_action;
-	_tmp34_ = enable_resume_all;
-	gtk_action_set_sensitive (_tmp33_, _tmp34_);
-	_tmp35_ = self->priv->merged_action_group;
-	if (_tmp35_ != NULL) {
-		GtkUIManager* _tmp36_;
-		GtkActionGroup* _tmp37_;
-		_tmp36_ = self->priv->ui_manager;
-		_tmp37_ = self->priv->merged_action_group;
-		gtk_ui_manager_remove_action_group (_tmp36_, _tmp37_);
+	_tmp35_ = self->priv->pause_all_action;
+	_tmp36_ = enable_pause_all;
+	gtk_action_set_sensitive (_tmp35_, _tmp36_);
+	_tmp37_ = self->priv->resume_all_action;
+	_tmp38_ = enable_resume_all;
+	gtk_action_set_sensitive (_tmp37_, _tmp38_);
+	_tmp39_ = self->priv->merged_action_group;
+	if (_tmp39_ != NULL) {
+		GtkUIManager* _tmp40_;
+		GtkActionGroup* _tmp41_;
+		_tmp40_ = self->priv->ui_manager;
+		_tmp41_ = self->priv->merged_action_group;
+		gtk_ui_manager_remove_action_group (_tmp40_, _tmp41_);
 	}
-	_tmp38_ = self->priv->merge_id;
-	if (_tmp38_ != ((guint) 0)) {
-		GtkUIManager* _tmp39_;
-		guint _tmp40_;
-		_tmp39_ = self->priv->ui_manager;
-		_tmp40_ = self->priv->merge_id;
-		gtk_ui_manager_remove_ui (_tmp39_, _tmp40_);
+	_tmp42_ = self->priv->merge_id;
+	if (_tmp42_ != ((guint) 0)) {
+		GtkUIManager* _tmp43_;
+		guint _tmp44_;
+		_tmp43_ = self->priv->ui_manager;
+		_tmp44_ = self->priv->merge_id;
+		gtk_ui_manager_remove_ui (_tmp43_, _tmp44_);
 	}
-	_tmp41_ = files_for_menu;
-	_tmp42_ = gee_abstract_collection_get_size ((GeeCollection*) _tmp41_);
-	_tmp43_ = _tmp42_;
-	if (_tmp43_ == 0) {
+	_tmp45_ = files_for_menu;
+	_tmp46_ = gee_abstract_collection_get_size ((GeeCollection*) _tmp45_);
+	_tmp47_ = _tmp46_;
+	if (_tmp47_ == 0) {
 		_g_object_unref0 (self->priv->merged_action_group);
 		self->priv->merged_action_group = NULL;
 		self->priv->merge_id = (guint) 0;
 	} else {
-		GtkActionGroup* _tmp44_;
-		GString* _tmp45_;
+		GtkActionGroup* _tmp48_;
+		GString* _tmp49_;
 		GString* new_items;
-		GString* _tmp89_;
-		const gchar* _tmp90_;
-		gchar* _tmp91_ = NULL;
+		GString* _tmp110_;
+		const gchar* _tmp111_;
+		gchar* _tmp112_ = NULL;
 		gchar* new_ui;
-		GtkUIManager* _tmp99_;
-		GtkActionGroup* _tmp100_;
-		GtkUIManager* _tmp101_;
-		_tmp44_ = gtk_action_group_new ("fileitems");
+		GtkUIManager* _tmp120_;
+		GtkActionGroup* _tmp121_;
+		GtkUIManager* _tmp122_;
+		_tmp48_ = gtk_action_group_new ("fileitems");
 		_g_object_unref0 (self->priv->merged_action_group);
-		self->priv->merged_action_group = _tmp44_;
-		_tmp45_ = g_string_new ("");
-		new_items = _tmp45_;
+		self->priv->merged_action_group = _tmp48_;
+		_tmp49_ = g_string_new ("");
+		new_items = _tmp49_;
 		{
-			GeeArrayList* _tmp46_;
-			GeeArrayList* _tmp47_;
+			GeeArrayList* _tmp50_;
+			GeeArrayList* _tmp51_;
 			GeeArrayList* _file_list;
-			GeeArrayList* _tmp48_;
-			gint _tmp49_;
-			gint _tmp50_;
+			GeeArrayList* _tmp52_;
+			gint _tmp53_;
+			gint _tmp54_;
 			gint _file_size;
 			gint _file_index;
-			_tmp46_ = files_for_menu;
-			_tmp47_ = _g_object_ref0 (_tmp46_);
-			_file_list = _tmp47_;
-			_tmp48_ = _file_list;
-			_tmp49_ = gee_abstract_collection_get_size ((GeeCollection*) _tmp48_);
-			_tmp50_ = _tmp49_;
-			_file_size = _tmp50_;
+			_tmp50_ = files_for_menu;
+			_tmp51_ = _g_object_ref0 (_tmp50_);
+			_file_list = _tmp51_;
+			_tmp52_ = _file_list;
+			_tmp53_ = gee_abstract_collection_get_size ((GeeCollection*) _tmp52_);
+			_tmp54_ = _tmp53_;
+			_file_size = _tmp54_;
 			_file_index = -1;
 			while (TRUE) {
 				Block5Data* _data5_;
-				gint _tmp51_;
-				gint _tmp52_;
-				gint _tmp53_;
-				GeeArrayList* _tmp54_;
 				gint _tmp55_;
-				gpointer _tmp56_ = NULL;
-				SteadyflowCoreIDownloadFile* _tmp57_;
-				gint _tmp58_;
+				gint _tmp56_;
+				gint _tmp57_;
+				GeeArrayList* _tmp58_;
 				gint _tmp59_;
-				gchar* _tmp60_ = NULL;
-				gchar* action_name;
+				gpointer _tmp60_ = NULL;
 				SteadyflowCoreIDownloadFile* _tmp61_;
-				const gchar* _tmp62_;
-				const gchar* _tmp63_;
+				gint _tmp62_;
+				gint _tmp63_;
 				gchar* _tmp64_ = NULL;
+				gchar* action_name;
+				SteadyflowCoreIDownloadFile* _tmp65_;
+				gint64 _tmp66_;
+				gint64 _tmp67_;
+				SteadyflowCoreIDownloadFile* _tmp68_;
+				gint64 _tmp69_;
+				gint64 _tmp70_;
+				gint progress;
+				SteadyflowCoreIDownloadFile* _tmp71_;
+				const gchar* _tmp72_;
+				const gchar* _tmp73_;
+				gchar* _tmp74_ = NULL;
+				gchar* _tmp75_;
+				gchar* _tmp76_;
+				gchar* _tmp77_;
+				const gchar* _tmp78_ = NULL;
+				gint _tmp79_;
+				gchar* _tmp80_ = NULL;
+				gchar* _tmp81_;
+				gchar* _tmp82_;
+				gchar* _tmp83_;
+				gchar* _tmp84_;
+				gchar* _tmp85_;
 				gchar* file_label;
-				GString* _tmp65_;
-				const gchar* _tmp66_;
-				gchar* _tmp67_ = NULL;
-				gchar* _tmp68_;
+				GString* _tmp86_;
+				const gchar* _tmp87_;
+				gchar* _tmp88_ = NULL;
+				gchar* _tmp89_;
 				GtkAction* action = NULL;
-				SteadyflowCoreIDownloadFile* _tmp69_;
-				gboolean _tmp70_ = FALSE;
-				GtkActionGroup* _tmp87_;
-				GtkAction* _tmp88_;
+				SteadyflowCoreIDownloadFile* _tmp90_;
+				gboolean _tmp91_ = FALSE;
+				GtkActionGroup* _tmp108_;
+				GtkAction* _tmp109_;
 				_data5_ = g_slice_new0 (Block5Data);
 				_data5_->_ref_count_ = 1;
 				_data5_->self = g_object_ref (self);
-				_tmp51_ = _file_index;
-				_file_index = _tmp51_ + 1;
-				_tmp52_ = _file_index;
-				_tmp53_ = _file_size;
-				if (!(_tmp52_ < _tmp53_)) {
+				_tmp55_ = _file_index;
+				_file_index = _tmp55_ + 1;
+				_tmp56_ = _file_index;
+				_tmp57_ = _file_size;
+				if (!(_tmp56_ < _tmp57_)) {
 					block5_data_unref (_data5_);
 					_data5_ = NULL;
 					break;
 				}
-				_tmp54_ = _file_list;
-				_tmp55_ = _file_index;
-				_tmp56_ = gee_abstract_list_get ((GeeAbstractList*) _tmp54_, _tmp55_);
-				_data5_->file = (SteadyflowCoreIDownloadFile*) _tmp56_;
-				_tmp57_ = _data5_->file;
-				_tmp58_ = steadyflow_core_idownload_file_get_uid (_tmp57_);
-				_tmp59_ = _tmp58_;
-				_tmp60_ = g_strdup_printf ("FileAction%d", _tmp59_);
-				action_name = _tmp60_;
+				_tmp58_ = _file_list;
+				_tmp59_ = _file_index;
+				_tmp60_ = gee_abstract_list_get ((GeeAbstractList*) _tmp58_, _tmp59_);
+				_data5_->file = (SteadyflowCoreIDownloadFile*) _tmp60_;
 				_tmp61_ = _data5_->file;
-				_tmp62_ = steadyflow_core_idownload_file_get_local_basename (_tmp61_);
+				_tmp62_ = steadyflow_core_idownload_file_get_uid (_tmp61_);
 				_tmp63_ = _tmp62_;
-				_tmp64_ = string_replace (_tmp63_, "_", "__");
-				file_label = _tmp64_;
-				_tmp65_ = new_items;
-				_tmp66_ = action_name;
-				_tmp67_ = g_strdup_printf ("<menuitem action='%s' />", _tmp66_);
-				_tmp68_ = _tmp67_;
-				g_string_append (_tmp65_, _tmp68_);
-				_g_free0 (_tmp68_);
-				_tmp69_ = _data5_->file;
-				_tmp70_ = steadyflow_core_idownload_file_can_start (_tmp69_);
-				if (_tmp70_) {
-					const gchar* _tmp71_;
-					const gchar* _tmp72_ = NULL;
-					const gchar* _tmp73_;
-					gchar* _tmp74_ = NULL;
-					gchar* _tmp75_;
-					GtkAction* _tmp76_;
-					GtkAction* _tmp77_;
-					GtkAction* _tmp78_;
-					_tmp71_ = action_name;
-					_tmp72_ = _ ("Start %s");
-					_tmp73_ = file_label;
-					_tmp74_ = g_strdup_printf (_tmp72_, _tmp73_);
-					_tmp75_ = _tmp74_;
-					_tmp76_ = gtk_action_new (_tmp71_, _tmp75_, NULL, NULL);
+				_tmp64_ = g_strdup_printf ("FileAction%d", _tmp63_);
+				action_name = _tmp64_;
+				_tmp65_ = _data5_->file;
+				_tmp66_ = steadyflow_core_idownload_file_get_downloaded_size (_tmp65_);
+				_tmp67_ = _tmp66_;
+				_tmp68_ = _data5_->file;
+				_tmp69_ = steadyflow_core_idownload_file_get_size (_tmp68_);
+				_tmp70_ = _tmp69_;
+				progress = (gint) ((((gdouble) _tmp67_) / _tmp70_) * 100);
+				_tmp71_ = _data5_->file;
+				_tmp72_ = steadyflow_core_idownload_file_get_local_basename (_tmp71_);
+				_tmp73_ = _tmp72_;
+				_tmp74_ = string_replace (_tmp73_, "_", "__");
+				_tmp75_ = _tmp74_;
+				_tmp76_ = g_strconcat (_tmp75_, " ", NULL);
+				_tmp77_ = _tmp76_;
+				_tmp78_ = _ ("Downloaded %d");
+				_tmp79_ = progress;
+				_tmp80_ = g_strdup_printf (_tmp78_, _tmp79_);
+				_tmp81_ = _tmp80_;
+				_tmp82_ = g_strconcat (_tmp77_, _tmp81_, NULL);
+				_tmp83_ = _tmp82_;
+				_tmp84_ = g_strconcat (_tmp83_, " ", NULL);
+				_tmp85_ = _tmp84_;
+				_g_free0 (_tmp83_);
+				_g_free0 (_tmp81_);
+				_g_free0 (_tmp77_);
+				_g_free0 (_tmp75_);
+				file_label = _tmp85_;
+				_tmp86_ = new_items;
+				_tmp87_ = action_name;
+				_tmp88_ = g_strdup_printf ("<menuitem action='%s' />", _tmp87_);
+				_tmp89_ = _tmp88_;
+				g_string_append (_tmp86_, _tmp89_);
+				_g_free0 (_tmp89_);
+				_tmp90_ = _data5_->file;
+				_tmp91_ = steadyflow_core_idownload_file_can_start (_tmp90_);
+				if (_tmp91_) {
+					const gchar* _tmp92_;
+					const gchar* _tmp93_ = NULL;
+					const gchar* _tmp94_;
+					gchar* _tmp95_ = NULL;
+					gchar* _tmp96_;
+					GtkAction* _tmp97_;
+					GtkAction* _tmp98_;
+					GtkAction* _tmp99_;
+					_tmp92_ = action_name;
+					_tmp93_ = _ ("Start %s");
+					_tmp94_ = file_label;
+					_tmp95_ = g_strdup_printf (_tmp93_, _tmp94_);
+					_tmp96_ = _tmp95_;
+					_tmp97_ = gtk_action_new (_tmp92_, _tmp96_, NULL, NULL);
 					_g_object_unref0 (action);
-					action = _tmp76_;
-					_g_free0 (_tmp75_);
-					_tmp77_ = action;
-					gtk_action_set_icon_name (_tmp77_, "media-playback-start");
-					_tmp78_ = action;
-					g_signal_connect_data (_tmp78_, "activate", (GCallback) _______lambda19__gtk_action_activate, block5_data_ref (_data5_), (GClosureNotify) block5_data_unref, 0);
+					action = _tmp97_;
+					_g_free0 (_tmp96_);
+					_tmp98_ = action;
+					gtk_action_set_icon_name (_tmp98_, "media-playback-start");
+					_tmp99_ = action;
+					g_signal_connect_data (_tmp99_, "activate", (GCallback) _______lambda19__gtk_action_activate, block5_data_ref (_data5_), (GClosureNotify) block5_data_unref, 0);
 				} else {
-					const gchar* _tmp79_;
-					const gchar* _tmp80_ = NULL;
-					const gchar* _tmp81_;
-					gchar* _tmp82_ = NULL;
-					gchar* _tmp83_;
-					GtkAction* _tmp84_;
-					GtkAction* _tmp85_;
-					GtkAction* _tmp86_;
-					_tmp79_ = action_name;
-					_tmp80_ = _ ("Pause %s");
-					_tmp81_ = file_label;
-					_tmp82_ = g_strdup_printf (_tmp80_, _tmp81_);
-					_tmp83_ = _tmp82_;
-					_tmp84_ = gtk_action_new (_tmp79_, _tmp83_, NULL, NULL);
+					const gchar* _tmp100_;
+					const gchar* _tmp101_ = NULL;
+					const gchar* _tmp102_;
+					gchar* _tmp103_ = NULL;
+					gchar* _tmp104_;
+					GtkAction* _tmp105_;
+					GtkAction* _tmp106_;
+					GtkAction* _tmp107_;
+					_tmp100_ = action_name;
+					_tmp101_ = _ ("Pause %s");
+					_tmp102_ = file_label;
+					_tmp103_ = g_strdup_printf (_tmp101_, _tmp102_);
+					_tmp104_ = _tmp103_;
+					_tmp105_ = gtk_action_new (_tmp100_, _tmp104_, NULL, NULL);
 					_g_object_unref0 (action);
-					action = _tmp84_;
-					_g_free0 (_tmp83_);
-					_tmp85_ = action;
-					gtk_action_set_icon_name (_tmp85_, "media-playback-pause");
-					_tmp86_ = action;
-					g_signal_connect_data (_tmp86_, "activate", (GCallback) _______lambda20__gtk_action_activate, block5_data_ref (_data5_), (GClosureNotify) block5_data_unref, 0);
+					action = _tmp105_;
+					_g_free0 (_tmp104_);
+					_tmp106_ = action;
+					gtk_action_set_icon_name (_tmp106_, "media-playback-pause");
+					_tmp107_ = action;
+					g_signal_connect_data (_tmp107_, "activate", (GCallback) _______lambda20__gtk_action_activate, block5_data_ref (_data5_), (GClosureNotify) block5_data_unref, 0);
 				}
-				_tmp87_ = self->priv->merged_action_group;
-				_tmp88_ = action;
-				gtk_action_group_add_action (_tmp87_, _tmp88_);
+				_tmp108_ = self->priv->merged_action_group;
+				_tmp109_ = action;
+				gtk_action_group_add_action (_tmp108_, _tmp109_);
 				_g_object_unref0 (action);
 				_g_free0 (file_label);
 				_g_free0 (action_name);
@@ -1026,29 +1110,29 @@ static void steadyflow_indicator_controller_update_file_menus (SteadyflowIndicat
 			}
 			_g_object_unref0 (_file_list);
 		}
-		_tmp89_ = new_items;
-		_tmp90_ = _tmp89_->str;
-		_tmp91_ = g_strdup_printf (STEADYFLOW_INSERT_TEMPLATE, _tmp90_);
-		new_ui = _tmp91_;
+		_tmp110_ = new_items;
+		_tmp111_ = _tmp110_->str;
+		_tmp112_ = g_strdup_printf (STEADYFLOW_INSERT_TEMPLATE, _tmp111_);
+		new_ui = _tmp112_;
 		{
-			GtkUIManager* _tmp92_;
-			const gchar* _tmp93_;
-			const gchar* _tmp94_;
-			gint _tmp95_;
-			gint _tmp96_;
-			guint _tmp97_ = 0U;
-			guint _tmp98_;
-			_tmp92_ = self->priv->ui_manager;
-			_tmp93_ = new_ui;
-			_tmp94_ = new_ui;
-			_tmp95_ = strlen (_tmp94_);
-			_tmp96_ = _tmp95_;
-			_tmp97_ = gtk_ui_manager_add_ui_from_string (_tmp92_, _tmp93_, (gssize) _tmp96_, &_inner_error_);
-			_tmp98_ = _tmp97_;
+			GtkUIManager* _tmp113_;
+			const gchar* _tmp114_;
+			const gchar* _tmp115_;
+			gint _tmp116_;
+			gint _tmp117_;
+			guint _tmp118_ = 0U;
+			guint _tmp119_;
+			_tmp113_ = self->priv->ui_manager;
+			_tmp114_ = new_ui;
+			_tmp115_ = new_ui;
+			_tmp116_ = strlen (_tmp115_);
+			_tmp117_ = _tmp116_;
+			_tmp118_ = gtk_ui_manager_add_ui_from_string (_tmp113_, _tmp114_, (gssize) _tmp117_, &_inner_error_);
+			_tmp119_ = _tmp118_;
 			if (_inner_error_ != NULL) {
 				goto __catch20_g_error;
 			}
-			self->priv->merge_id = _tmp98_;
+			self->priv->merge_id = _tmp119_;
 		}
 		goto __finally20;
 		__catch20_g_error:
@@ -1068,18 +1152,18 @@ static void steadyflow_indicator_controller_update_file_menus (SteadyflowIndicat
 			g_clear_error (&_inner_error_);
 			return;
 		}
-		_tmp99_ = self->priv->ui_manager;
-		_tmp100_ = self->priv->merged_action_group;
-		gtk_ui_manager_insert_action_group (_tmp99_, _tmp100_, 1);
-		_tmp101_ = self->priv->ui_manager;
-		gtk_ui_manager_ensure_update (_tmp101_);
+		_tmp120_ = self->priv->ui_manager;
+		_tmp121_ = self->priv->merged_action_group;
+		gtk_ui_manager_insert_action_group (_tmp120_, _tmp121_, 1);
+		_tmp122_ = self->priv->ui_manager;
+		gtk_ui_manager_ensure_update (_tmp122_);
 		_g_free0 (new_ui);
 		_g_string_free0 (new_items);
 	}
-	_tmp102_ = steadyflow_services_get_indicator ();
-	_tmp103_ = _tmp102_;
-	_tmp104_ = self->priv->menu;
-	steadyflow_ui_iindicator_service_set_menu (_tmp103_, _tmp104_);
+	_tmp123_ = steadyflow_services_get_indicator ();
+	_tmp124_ = _tmp123_;
+	_tmp125_ = self->priv->menu;
+	steadyflow_ui_iindicator_service_set_menu (_tmp124_, _tmp125_);
 	_g_object_unref0 (files_for_menu);
 }
 
@@ -1281,6 +1365,7 @@ static void steadyflow_indicator_controller_instance_init (SteadyflowIndicatorCo
 static void steadyflow_indicator_controller_finalize (GObject* obj) {
 	SteadyflowIndicatorController * self;
 	self = STEADYFLOW_INDICATOR_CONTROLLER (obj);
+	_g_timer_destroy0 (self->priv->redraw_timer);
 	self->priv->actions = (g_free (self->priv->actions), NULL);
 	self->priv->toggle_actions = (g_free (self->priv->toggle_actions), NULL);
 	_g_object_unref0 (self->priv->ui_manager);

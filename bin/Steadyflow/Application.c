@@ -184,16 +184,16 @@ static Block3Data* block3_data_ref (Block3Data* _data3_);
 static void block3_data_unref (void * _userdata_);
 GType steadyflow_show_main_window_get_type (void) G_GNUC_CONST;
 static void steadyflow_application_create_service (SteadyflowApplication* self, SteadyflowShowMainWindow show_mode, SteadyflowApplicationCreateServiceCallback callback, void* callback_target);
-static void ____lambda35_ (Block3Data* _data3_, GError** error);
+static void ____lambda36_ (Block3Data* _data3_, GError** error);
 void steadyflow_iapp_service_add_file (SteadyflowIAppService* self, const gchar* url, GError** error);
-static void _____lambda35__steadyflow_application_create_service_callback (gpointer self, GError** error);
+static void _____lambda36__steadyflow_application_create_service_callback (gpointer self, GError** error);
 static void ___lambda11__steadyflow_core_option_parser_option_command (gchar** args, int args_length1, GeeMap* kwargs, gpointer self);
-static void __lambda36_ (SteadyflowApplication* self, gchar** args, int args_length1, GeeMap* kwargs);
-static void ___lambda36__steadyflow_core_option_parser_option_command (gchar** args, int args_length1, GeeMap* kwargs, gpointer self);
 static void __lambda37_ (SteadyflowApplication* self, gchar** args, int args_length1, GeeMap* kwargs);
 static void ___lambda37__steadyflow_core_option_parser_option_command (gchar** args, int args_length1, GeeMap* kwargs, gpointer self);
 static void __lambda38_ (SteadyflowApplication* self, gchar** args, int args_length1, GeeMap* kwargs);
 static void ___lambda38__steadyflow_core_option_parser_option_command (gchar** args, int args_length1, GeeMap* kwargs, gpointer self);
+static void __lambda39_ (SteadyflowApplication* self, gchar** args, int args_length1, GeeMap* kwargs);
+static void ___lambda39__steadyflow_core_option_parser_option_command (gchar** args, int args_length1, GeeMap* kwargs, gpointer self);
 void steadyflow_application_run (SteadyflowApplication* self);
 void steadyflow_core_option_parser_run (SteadyflowCoreOptionParser* self);
 static Block4Data* block4_data_ref (Block4Data* _data4_);
@@ -201,12 +201,12 @@ static void block4_data_unref (void * _userdata_);
 static void __lambda12_ (SteadyflowApplication* self, GDBusConnection* conn);
 static void steadyflow_application_on_bus_acquired (SteadyflowApplication* self, GDBusConnection* conn);
 static void ___lambda12__gbus_acquired_callback (GDBusConnection* connection, const gchar* name, gpointer self);
-static void __lambda33_ (Block4Data* _data4_);
+static void __lambda34_ (Block4Data* _data4_);
 static void steadyflow_application_on_name_acquired (SteadyflowApplication* self, SteadyflowShowMainWindow show_mode, SteadyflowApplicationCreateServiceCallback callback, void* callback_target);
-static void ___lambda33__gbus_name_acquired_callback (GDBusConnection* connection, const gchar* name, gpointer self);
-static void __lambda34_ (Block4Data* _data4_, GDBusConnection* conn);
+static void ___lambda34__gbus_name_acquired_callback (GDBusConnection* connection, const gchar* name, gpointer self);
+static void __lambda35_ (Block4Data* _data4_, GDBusConnection* conn);
 static void steadyflow_application_on_name_lost (SteadyflowApplication* self, GDBusConnection* conn, SteadyflowShowMainWindow show_mode, SteadyflowApplicationCreateServiceCallback callback, void* callback_target);
-static void ___lambda34__gbus_name_lost_callback (GDBusConnection* connection, const gchar* name, gpointer self);
+static void ___lambda35__gbus_name_lost_callback (GDBusConnection* connection, const gchar* name, gpointer self);
 GType steadyflow_app_service_get_type (void) G_GNUC_CONST;
 void steadyflow_app_service_stop (SteadyflowAppService* self);
 SteadyflowAppService* steadyflow_app_service_new (void);
@@ -263,7 +263,7 @@ static void block3_data_unref (void * _userdata_) {
 }
 
 
-static void ____lambda35_ (Block3Data* _data3_, GError** error) {
+static void ____lambda36_ (Block3Data* _data3_, GError** error) {
 	SteadyflowApplication * self;
 	SteadyflowIAppService* _tmp0_;
 	gchar** _tmp1_;
@@ -289,8 +289,8 @@ static void ____lambda35_ (Block3Data* _data3_, GError** error) {
 }
 
 
-static void _____lambda35__steadyflow_application_create_service_callback (gpointer self, GError** error) {
-	____lambda35_ (self, error);
+static void _____lambda36__steadyflow_application_create_service_callback (gpointer self, GError** error) {
+	____lambda36_ (self, error);
 }
 
 
@@ -320,7 +320,7 @@ static void __lambda11_ (SteadyflowApplication* self, gchar** args, int args_len
 		if (_tmp2__length1 == 0) {
 			steadyflow_application_create_service (self, STEADYFLOW_SHOW_MAIN_WINDOW_DEFAULT, NULL, NULL);
 		} else {
-			steadyflow_application_create_service (self, STEADYFLOW_SHOW_MAIN_WINDOW_DEFAULT, _____lambda35__steadyflow_application_create_service_callback, _data3_);
+			steadyflow_application_create_service (self, STEADYFLOW_SHOW_MAIN_WINDOW_DEFAULT, _____lambda36__steadyflow_application_create_service_callback, _data3_);
 		}
 	}
 	block3_data_unref (_data3_);
@@ -333,20 +333,9 @@ static void ___lambda11__steadyflow_core_option_parser_option_command (gchar** a
 }
 
 
-static void __lambda36_ (SteadyflowApplication* self, gchar** args, int args_length1, GeeMap* kwargs) {
-	g_return_if_fail (kwargs != NULL);
-	steadyflow_application_create_service (self, STEADYFLOW_SHOW_MAIN_WINDOW_SHOW, NULL, NULL);
-}
-
-
-static void ___lambda36__steadyflow_core_option_parser_option_command (gchar** args, int args_length1, GeeMap* kwargs, gpointer self) {
-	__lambda36_ (self, args, args_length1, kwargs);
-}
-
-
 static void __lambda37_ (SteadyflowApplication* self, gchar** args, int args_length1, GeeMap* kwargs) {
 	g_return_if_fail (kwargs != NULL);
-	steadyflow_application_create_service (self, STEADYFLOW_SHOW_MAIN_WINDOW_HIDE, NULL, NULL);
+	steadyflow_application_create_service (self, STEADYFLOW_SHOW_MAIN_WINDOW_SHOW, NULL, NULL);
 }
 
 
@@ -357,12 +346,23 @@ static void ___lambda37__steadyflow_core_option_parser_option_command (gchar** a
 
 static void __lambda38_ (SteadyflowApplication* self, gchar** args, int args_length1, GeeMap* kwargs) {
 	g_return_if_fail (kwargs != NULL);
-	steadyflow_application_create_service (self, STEADYFLOW_SHOW_MAIN_WINDOW_DEFAULT, NULL, NULL);
+	steadyflow_application_create_service (self, STEADYFLOW_SHOW_MAIN_WINDOW_HIDE, NULL, NULL);
 }
 
 
 static void ___lambda38__steadyflow_core_option_parser_option_command (gchar** args, int args_length1, GeeMap* kwargs, gpointer self) {
 	__lambda38_ (self, args, args_length1, kwargs);
+}
+
+
+static void __lambda39_ (SteadyflowApplication* self, gchar** args, int args_length1, GeeMap* kwargs) {
+	g_return_if_fail (kwargs != NULL);
+	steadyflow_application_create_service (self, STEADYFLOW_SHOW_MAIN_WINDOW_DEFAULT, NULL, NULL);
+}
+
+
+static void ___lambda39__steadyflow_core_option_parser_option_command (gchar** args, int args_length1, GeeMap* kwargs, gpointer self) {
+	__lambda39_ (self, args, args_length1, kwargs);
 }
 
 
@@ -419,11 +419,11 @@ SteadyflowApplication* steadyflow_application_construct (GType object_type, gcha
 	_tmp13_ = self->priv->parser;
 	steadyflow_core_option_parser_register_command (_tmp13_, "add", ___lambda11__steadyflow_core_option_parser_option_command, self);
 	_tmp14_ = self->priv->parser;
-	steadyflow_core_option_parser_register_command (_tmp14_, "show", ___lambda36__steadyflow_core_option_parser_option_command, self);
+	steadyflow_core_option_parser_register_command (_tmp14_, "show", ___lambda37__steadyflow_core_option_parser_option_command, self);
 	_tmp15_ = self->priv->parser;
-	steadyflow_core_option_parser_register_command (_tmp15_, "hide", ___lambda37__steadyflow_core_option_parser_option_command, self);
+	steadyflow_core_option_parser_register_command (_tmp15_, "hide", ___lambda38__steadyflow_core_option_parser_option_command, self);
 	_tmp16_ = self->priv->parser;
-	steadyflow_core_option_parser_register_command (_tmp16_, "@default", ___lambda38__steadyflow_core_option_parser_option_command, self);
+	steadyflow_core_option_parser_register_command (_tmp16_, "@default", ___lambda39__steadyflow_core_option_parser_option_command, self);
 	_g_free0 (domain);
 	return self;
 }
@@ -473,7 +473,7 @@ static void ___lambda12__gbus_acquired_callback (GDBusConnection* connection, co
 }
 
 
-static void __lambda33_ (Block4Data* _data4_) {
+static void __lambda34_ (Block4Data* _data4_) {
 	SteadyflowApplication * self;
 	SteadyflowShowMainWindow _tmp0_;
 	SteadyflowApplicationCreateServiceCallback _tmp1_;
@@ -486,12 +486,12 @@ static void __lambda33_ (Block4Data* _data4_) {
 }
 
 
-static void ___lambda33__gbus_name_acquired_callback (GDBusConnection* connection, const gchar* name, gpointer self) {
-	__lambda33_ (self);
+static void ___lambda34__gbus_name_acquired_callback (GDBusConnection* connection, const gchar* name, gpointer self) {
+	__lambda34_ (self);
 }
 
 
-static void __lambda34_ (Block4Data* _data4_, GDBusConnection* conn) {
+static void __lambda35_ (Block4Data* _data4_, GDBusConnection* conn) {
 	SteadyflowApplication * self;
 	GDBusConnection* _tmp0_;
 	SteadyflowShowMainWindow _tmp1_;
@@ -507,8 +507,8 @@ static void __lambda34_ (Block4Data* _data4_, GDBusConnection* conn) {
 }
 
 
-static void ___lambda34__gbus_name_lost_callback (GDBusConnection* connection, const gchar* name, gpointer self) {
-	__lambda34_ (self, connection);
+static void ___lambda35__gbus_name_lost_callback (GDBusConnection* connection, const gchar* name, gpointer self) {
+	__lambda35_ (self, connection);
 }
 
 
@@ -531,7 +531,7 @@ static void steadyflow_application_create_service (SteadyflowApplication* self, 
 	_tmp1__target = callback_target;
 	_data4_->callback = _tmp1_;
 	_data4_->callback_target = _tmp1__target;
-	_tmp2_ = g_bus_own_name_with_closures (G_BUS_TYPE_SESSION, "net.launchpad.steadyflow.App", G_BUS_NAME_OWNER_FLAGS_NONE, (GClosure*) ((___lambda12__gbus_acquired_callback == NULL) ? NULL : g_cclosure_new ((GCallback) ___lambda12__gbus_acquired_callback, steadyflow_application_ref (self), steadyflow_application_unref)), (GClosure*) ((___lambda33__gbus_name_acquired_callback == NULL) ? NULL : g_cclosure_new ((GCallback) ___lambda33__gbus_name_acquired_callback, block4_data_ref (_data4_), block4_data_unref)), (GClosure*) ((___lambda34__gbus_name_lost_callback == NULL) ? NULL : g_cclosure_new ((GCallback) ___lambda34__gbus_name_lost_callback, block4_data_ref (_data4_), block4_data_unref)));
+	_tmp2_ = g_bus_own_name_with_closures (G_BUS_TYPE_SESSION, "net.launchpad.steadyflow.App", G_BUS_NAME_OWNER_FLAGS_NONE, (GClosure*) ((___lambda12__gbus_acquired_callback == NULL) ? NULL : g_cclosure_new ((GCallback) ___lambda12__gbus_acquired_callback, steadyflow_application_ref (self), steadyflow_application_unref)), (GClosure*) ((___lambda34__gbus_name_acquired_callback == NULL) ? NULL : g_cclosure_new ((GCallback) ___lambda34__gbus_name_acquired_callback, block4_data_ref (_data4_), block4_data_unref)), (GClosure*) ((___lambda35__gbus_name_lost_callback == NULL) ? NULL : g_cclosure_new ((GCallback) ___lambda35__gbus_name_lost_callback, block4_data_ref (_data4_), block4_data_unref)));
 	bus_id = _tmp2_;
 	gtk_main ();
 	_tmp3_ = self->priv->is_server;

@@ -296,15 +296,15 @@ GType steadyflow_core_isettings_service_get_type (void) G_GNUC_CONST;
 SteadyflowCoreISettingsService* steadyflow_services_get_settings (void);
 gboolean steadyflow_core_isettings_service_get_boolean (SteadyflowCoreISettingsService* self, const gchar* key);
 gint steadyflow_core_isettings_service_get_int (SteadyflowCoreISettingsService* self, const gchar* key);
-static void __lambda28_ (SteadyflowMainWindow* self);
-static void ___lambda28__steadyflow_core_isettings_service_changed (SteadyflowCoreISettingsService* _sender, gpointer self);
-static void __lambda29_ (SteadyflowMainWindow* self, gboolean value);
-static void ___lambda29__steadyflow_indicator_controller_show_hide_toggled (SteadyflowIndicatorController* _sender, gboolean visible, gpointer self);
-static void __lambda30_ (SteadyflowMainWindow* self);
-void steadyflow_main_window_add_download (SteadyflowMainWindow* self, const gchar* starting_url);
-static void ___lambda30__steadyflow_indicator_controller_add_download_clicked (SteadyflowIndicatorController* _sender, gpointer self);
+static void __lambda29_ (SteadyflowMainWindow* self);
+static void ___lambda29__steadyflow_core_isettings_service_changed (SteadyflowCoreISettingsService* _sender, gpointer self);
+static void __lambda30_ (SteadyflowMainWindow* self, gboolean value);
+static void ___lambda30__steadyflow_indicator_controller_show_hide_toggled (SteadyflowIndicatorController* _sender, gboolean visible, gpointer self);
 static void __lambda31_ (SteadyflowMainWindow* self);
-static void ___lambda31__steadyflow_indicator_controller_quit_clicked (SteadyflowIndicatorController* _sender, gpointer self);
+void steadyflow_main_window_add_download (SteadyflowMainWindow* self, const gchar* starting_url);
+static void ___lambda31__steadyflow_indicator_controller_add_download_clicked (SteadyflowIndicatorController* _sender, gpointer self);
+static void __lambda32_ (SteadyflowMainWindow* self);
+static void ___lambda32__steadyflow_indicator_controller_quit_clicked (SteadyflowIndicatorController* _sender, gpointer self);
 static void steadyflow_main_window_on_selection_changed (SteadyflowMainWindow* self);
 static void _steadyflow_main_window_on_selection_changed_steadyflow_file_list_controller_selection_changed (SteadyflowFileListController* _sender, gpointer self);
 static void steadyflow_main_window_update_searchbox_and_file_counts (SteadyflowMainWindow* self);
@@ -313,9 +313,9 @@ void steadyflow_ui_ui_util_install_clear_handler (GtkEntry* entry);
 static gboolean steadyflow_main_window_on_resize (SteadyflowMainWindow* self, GdkEventConfigure* event);
 static gboolean _steadyflow_main_window_on_resize_gtk_widget_configure_event (GtkWidget* _sender, GdkEventConfigure* event, gpointer self);
 static void _gtk_main_quit_gtk_widget_destroy (GtkWidget* _sender, gpointer self);
-static gboolean __lambda32_ (SteadyflowMainWindow* self);
+static gboolean __lambda33_ (SteadyflowMainWindow* self);
 static gboolean steadyflow_main_window_on_close (SteadyflowMainWindow* self);
-static gboolean ___lambda32__gtk_widget_delete_event (GtkWidget* _sender, GdkEventAny* event, gpointer self);
+static gboolean ___lambda33__gtk_widget_delete_event (GtkWidget* _sender, GdkEventAny* event, gpointer self);
 void steadyflow_ui_igtk_builder_container_autoconnect (SteadyflowUIIGtkBuilderContainer* self);
 void steadyflow_core_isettings_service_set_int (SteadyflowCoreISettingsService* self, const gchar* key, gint value);
 void steadyflow_core_isettings_service_save (SteadyflowCoreISettingsService* self);
@@ -389,7 +389,7 @@ static void _vala_array_free (gpointer array, gint array_length, GDestroyNotify 
 static gint _vala_array_length (gpointer array);
 
 
-static void __lambda28_ (SteadyflowMainWindow* self) {
+static void __lambda29_ (SteadyflowMainWindow* self) {
 	SteadyflowCoreISettingsService* _tmp0_;
 	SteadyflowCoreISettingsService* _tmp1_;
 	gboolean _tmp2_ = FALSE;
@@ -400,40 +400,40 @@ static void __lambda28_ (SteadyflowMainWindow* self) {
 }
 
 
-static void ___lambda28__steadyflow_core_isettings_service_changed (SteadyflowCoreISettingsService* _sender, gpointer self) {
-	__lambda28_ (self);
+static void ___lambda29__steadyflow_core_isettings_service_changed (SteadyflowCoreISettingsService* _sender, gpointer self) {
+	__lambda29_ (self);
 }
 
 
-static void __lambda29_ (SteadyflowMainWindow* self, gboolean value) {
+static void __lambda30_ (SteadyflowMainWindow* self, gboolean value) {
 	gboolean _tmp0_;
 	_tmp0_ = value;
 	gtk_widget_set_visible ((GtkWidget*) self, _tmp0_);
 }
 
 
-static void ___lambda29__steadyflow_indicator_controller_show_hide_toggled (SteadyflowIndicatorController* _sender, gboolean visible, gpointer self) {
-	__lambda29_ (self, visible);
-}
-
-
-static void __lambda30_ (SteadyflowMainWindow* self) {
-	steadyflow_main_window_add_download (self, "");
-}
-
-
-static void ___lambda30__steadyflow_indicator_controller_add_download_clicked (SteadyflowIndicatorController* _sender, gpointer self) {
-	__lambda30_ (self);
+static void ___lambda30__steadyflow_indicator_controller_show_hide_toggled (SteadyflowIndicatorController* _sender, gboolean visible, gpointer self) {
+	__lambda30_ (self, visible);
 }
 
 
 static void __lambda31_ (SteadyflowMainWindow* self) {
+	steadyflow_main_window_add_download (self, "");
+}
+
+
+static void ___lambda31__steadyflow_indicator_controller_add_download_clicked (SteadyflowIndicatorController* _sender, gpointer self) {
+	__lambda31_ (self);
+}
+
+
+static void __lambda32_ (SteadyflowMainWindow* self) {
 	gtk_widget_destroy ((GtkWidget*) self);
 }
 
 
-static void ___lambda31__steadyflow_indicator_controller_quit_clicked (SteadyflowIndicatorController* _sender, gpointer self) {
-	__lambda31_ (self);
+static void ___lambda32__steadyflow_indicator_controller_quit_clicked (SteadyflowIndicatorController* _sender, gpointer self) {
+	__lambda32_ (self);
 }
 
 
@@ -459,7 +459,7 @@ static void _gtk_main_quit_gtk_widget_destroy (GtkWidget* _sender, gpointer self
 }
 
 
-static gboolean __lambda32_ (SteadyflowMainWindow* self) {
+static gboolean __lambda33_ (SteadyflowMainWindow* self) {
 	gboolean result = FALSE;
 	gboolean _tmp0_ = FALSE;
 	_tmp0_ = steadyflow_main_window_on_close (self);
@@ -468,9 +468,9 @@ static gboolean __lambda32_ (SteadyflowMainWindow* self) {
 }
 
 
-static gboolean ___lambda32__gtk_widget_delete_event (GtkWidget* _sender, GdkEventAny* event, gpointer self) {
+static gboolean ___lambda33__gtk_widget_delete_event (GtkWidget* _sender, GdkEventAny* event, gpointer self) {
 	gboolean result;
-	result = __lambda32_ (self);
+	result = __lambda33_ (self);
 	return result;
 }
 
@@ -596,13 +596,13 @@ SteadyflowMainWindow* steadyflow_main_window_construct (GType object_type, GErro
 	gtk_window_set_position ((GtkWindow*) self, GTK_WIN_POS_CENTER);
 	_tmp30_ = steadyflow_services_get_settings ();
 	_tmp31_ = _tmp30_;
-	g_signal_connect_object (_tmp31_, "changed::show-statuspanel", (GCallback) ___lambda28__steadyflow_core_isettings_service_changed, self, 0);
+	g_signal_connect_object (_tmp31_, "changed::show-statuspanel", (GCallback) ___lambda29__steadyflow_core_isettings_service_changed, self, 0);
 	_tmp32_ = self->priv->indicator_controller;
-	g_signal_connect_object (_tmp32_, "show-hide-toggled", (GCallback) ___lambda29__steadyflow_indicator_controller_show_hide_toggled, self, 0);
+	g_signal_connect_object (_tmp32_, "show-hide-toggled", (GCallback) ___lambda30__steadyflow_indicator_controller_show_hide_toggled, self, 0);
 	_tmp33_ = self->priv->indicator_controller;
-	g_signal_connect_object (_tmp33_, "add-download-clicked", (GCallback) ___lambda30__steadyflow_indicator_controller_add_download_clicked, self, 0);
+	g_signal_connect_object (_tmp33_, "add-download-clicked", (GCallback) ___lambda31__steadyflow_indicator_controller_add_download_clicked, self, 0);
 	_tmp34_ = self->priv->indicator_controller;
-	g_signal_connect_object (_tmp34_, "quit-clicked", (GCallback) ___lambda31__steadyflow_indicator_controller_quit_clicked, self, 0);
+	g_signal_connect_object (_tmp34_, "quit-clicked", (GCallback) ___lambda32__steadyflow_indicator_controller_quit_clicked, self, 0);
 	_tmp35_ = self->priv->file_list_controller;
 	g_signal_connect_object (_tmp35_, "selection-changed", (GCallback) _steadyflow_main_window_on_selection_changed_steadyflow_file_list_controller_selection_changed, self, 0);
 	_tmp36_ = self->priv->file_list_controller;
@@ -611,7 +611,7 @@ SteadyflowMainWindow* steadyflow_main_window_construct (GType object_type, GErro
 	steadyflow_ui_ui_util_install_clear_handler (_tmp37_);
 	g_signal_connect_object ((GtkWidget*) self, "configure-event", (GCallback) _steadyflow_main_window_on_resize_gtk_widget_configure_event, self, 0);
 	g_signal_connect ((GtkWidget*) self, "destroy", (GCallback) _gtk_main_quit_gtk_widget_destroy, NULL);
-	g_signal_connect_object ((GtkWidget*) self, "delete-event", (GCallback) ___lambda32__gtk_widget_delete_event, self, 0);
+	g_signal_connect_object ((GtkWidget*) self, "delete-event", (GCallback) ___lambda33__gtk_widget_delete_event, self, 0);
 	steadyflow_ui_igtk_builder_container_autoconnect ((SteadyflowUIIGtkBuilderContainer*) self);
 	steadyflow_main_window_update_searchbox_and_file_counts (self);
 	return self;

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: steadyflow 0.1\n"
 "Report-Msgid-Bugs-To: sikon@ubuntu.com\n"
-"POT-Creation-Date: 2012-06-30 19:25+0700\n"
+"POT-Creation-Date: 2012-12-30 19:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,94 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-
-#: Steadyflow/IndicatorController.vala:61 MainWindow.ui:5
-msgid "_Add download..."
-msgstr ""
-
-#: Steadyflow/IndicatorController.vala:63
-msgid "_Pause all"
-msgstr ""
-
-#: Steadyflow/IndicatorController.vala:64
-msgid "_Resume all"
-msgstr ""
-
-#: Steadyflow/IndicatorController.vala:68
-msgid "Show download manager"
-msgstr ""
-
-#: Steadyflow/IndicatorController.vala:185
-msgid "Start %s"
-msgstr ""
-
-#: Steadyflow/IndicatorController.vala:189
-msgid "Pause %s"
-msgstr ""
-
-#: Steadyflow/MainWindow.vala:41
-msgid "Steadyflow Download Manager"
-msgstr ""
-
-#: Steadyflow/MainWindow.vala:68
-msgid "Download Manager"
-msgstr ""
-
-#: Steadyflow/MainWindow.vala:220
-msgid "The file \"%s\" is not downloaded yet"
-msgstr ""
-
-#: Steadyflow/MainWindow.vala:221
-msgid ""
-"The file you request to be removed from the download list is not yet fully "
-"downloaded. Are you sure you want to remove it?"
-msgstr ""
-
-#: Steadyflow/MainWindow.vala:284
-msgid "Could not launch web browser for URL %s"
-msgstr ""
-
-#: Steadyflow/MainWindow.vala:307
-msgid "Simple download manager for GNOME"
-msgstr ""
-
-#: Steadyflow/MainWindow.vala:310
-msgid "Website"
-msgstr ""
-
-#: Steadyflow/MainWindow.vala:311
-msgid "translator-credits"
-msgstr ""
-
-#: Steadyflow/MainWindow.vala:423
-msgid "%d downloading, %d paused, %d finished"
-msgstr ""
-
-#: Steadyflow/AddFileDialog.vala:37
-msgid "Add File for Download"
-msgstr ""
-
-#: Steadyflow/Services.vala:59
-msgid "Whoopsie!"
-msgstr ""
-
-#: Steadyflow/Services.vala:60
-msgid ""
-"Steadyflow has experienced a problem and needs to close. Please pass the "
-"following information to the developer:\n"
-"\n"
-"Error Code %d:\n"
-"\n"
-"%s"
-msgstr ""
-
-#: Steadyflow/NotificationController.vala:55
-msgid "Download Started"
-msgstr ""
-
-#: Steadyflow/NotificationController.vala:59
-msgid "Download Complete"
-msgstr ""
 
 #: Steadyflow/FileListController.vala:182
 msgid "Please enter a command to run"
@@ -155,8 +67,54 @@ msgstr ""
 msgid "An error has occurred while trying to start the download."
 msgstr ""
 
-#: Steadyflow/PreferencesDialog.vala:38
-msgid "Steadyflow Preferences"
+#: Steadyflow/NotificationController.vala:55
+msgid "Download Started"
+msgstr ""
+
+#: Steadyflow/NotificationController.vala:59
+msgid "Download Complete"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:41
+msgid "Steadyflow Download Manager"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:68
+msgid "Download Manager"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:220
+msgid "The file \"%s\" is not downloaded yet"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:221
+msgid ""
+"The file you request to be removed from the download list is not yet fully "
+"downloaded. Are you sure you want to remove it?"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:284
+msgid "Could not launch web browser for URL %s"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:307
+msgid "Simple download manager for GNOME"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:310
+msgid "Website"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:311
+msgid "translator-credits"
+msgstr ""
+
+#: Steadyflow/MainWindow.vala:423
+msgid "%d downloading, %d paused, %d finished"
+msgstr ""
+
+#: Steadyflow/AddFileDialog.vala:37
+msgid "Add File for Download"
 msgstr ""
 
 #: Steadyflow/Application.vala:130
@@ -177,14 +135,56 @@ msgstr ""
 msgid "Steadyflow version %s"
 msgstr ""
 
+#: Steadyflow/IndicatorController.vala:64 MainWindow.ui:5
+msgid "_Add download..."
+msgstr ""
+
+#: Steadyflow/IndicatorController.vala:66
+msgid "_Pause all"
+msgstr ""
+
+#: Steadyflow/IndicatorController.vala:67
+msgid "_Resume all"
+msgstr ""
+
+#: Steadyflow/IndicatorController.vala:71
+msgid "Show download manager"
+msgstr ""
+
+#: Steadyflow/IndicatorController.vala:194
+msgid "Downloaded %d"
+msgstr ""
+
+#: Steadyflow/IndicatorController.vala:200
+msgid "Start %s"
+msgstr ""
+
+#: Steadyflow/IndicatorController.vala:204
+msgid "Pause %s"
+msgstr ""
+
+#: Steadyflow/Services.vala:59
+msgid "Whoopsie!"
+msgstr ""
+
+#: Steadyflow/Services.vala:60
+msgid ""
+"Steadyflow has experienced a problem and needs to close. Please pass the "
+"following information to the developer:\n"
+"\n"
+"Error Code %d:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: Steadyflow/PreferencesDialog.vala:38
+msgid "Steadyflow Preferences"
+msgstr ""
+
 #: Steadyflow.Core/DownloadService.vala:78
 msgid ""
 "Cannot create settings directory - a non-directory with that name already "
 "exists"
-msgstr ""
-
-#: Steadyflow.UI/UIUtil.vala:55
-msgid "Clear"
 msgstr ""
 
 #: Steadyflow.UI/DownloadCellRenderer.vala:51
@@ -259,6 +259,10 @@ msgid_plural "%d days"
 msgstr[0] ""
 msgstr[1] ""
 
+#: Steadyflow.UI/UIUtil.vala:55
+msgid "Clear"
+msgstr ""
+
 #: Steadyflow.UI/IGtkBuilderContainer.vala:40
 msgid "Cannot find XML definition file for window %s"
 msgstr ""
@@ -291,70 +295,20 @@ msgstr ""
 msgid "Run command"
 msgstr ""
 
-#: PreferencesDialog.ui:22
-msgid "New Downloads"
-msgstr ""
-
-#: PreferencesDialog.ui:36
-msgid "Start automatically from external programs"
-msgstr ""
-
-#: PreferencesDialog.ui:41
-msgid ""
-"When an external application requests to download a file, start the download "
-"automatically instead of displaying the \"Add File for Download\" dialog."
-msgstr ""
-
-#: PreferencesDialog.ui:58
-msgid "Default folder to save files to:"
-msgstr ""
-
-#: PreferencesDialog.ui:96
-msgid "Upon Completion"
-msgstr ""
-
-#: PreferencesDialog.ui:111
-msgid "Do nothing"
-msgstr ""
-
-#: PreferencesDialog.ui:131 MainWindow.ui:17
-msgid "Open downloaded file"
-msgstr ""
-
-#: PreferencesDialog.ui:152 MainWindow.ui:21
-msgid "Open containing folder"
-msgstr ""
-
-#: PreferencesDialog.ui:178
-msgid "Downloads"
-msgstr ""
-
-#: PreferencesDialog.ui:191
-msgid "Show notification popups"
-msgstr ""
-
-#: PreferencesDialog.ui:206
-msgid "Show panel indicator"
-msgstr ""
-
-#: PreferencesDialog.ui:225
-msgid "Keep running when the main window is closed"
-msgstr ""
-
-#: PreferencesDialog.ui:245
-msgid "Hide main window on startup"
-msgstr ""
-
-#: PreferencesDialog.ui:267
-msgid "Notifications"
-msgstr ""
-
 #: MainWindow.ui:6
 msgid "_Add"
 msgstr ""
 
 #: MainWindow.ui:12
 msgid "Copy remote address"
+msgstr ""
+
+#: MainWindow.ui:17 PreferencesDialog.ui:131
+msgid "Open downloaded file"
+msgstr ""
+
+#: MainWindow.ui:21 PreferencesDialog.ui:152
+msgid "Open containing folder"
 msgstr ""
 
 #: MainWindow.ui:25
@@ -411,4 +365,54 @@ msgstr ""
 
 #: MainWindow.ui:346
 msgid "_Translate this application"
+msgstr ""
+
+#: PreferencesDialog.ui:22
+msgid "New Downloads"
+msgstr ""
+
+#: PreferencesDialog.ui:36
+msgid "Start automatically from external programs"
+msgstr ""
+
+#: PreferencesDialog.ui:41
+msgid ""
+"When an external application requests to download a file, start the download "
+"automatically instead of displaying the \"Add File for Download\" dialog."
+msgstr ""
+
+#: PreferencesDialog.ui:58
+msgid "Default folder to save files to:"
+msgstr ""
+
+#: PreferencesDialog.ui:96
+msgid "Upon Completion"
+msgstr ""
+
+#: PreferencesDialog.ui:111
+msgid "Do nothing"
+msgstr ""
+
+#: PreferencesDialog.ui:178
+msgid "Downloads"
+msgstr ""
+
+#: PreferencesDialog.ui:191
+msgid "Show notification popups"
+msgstr ""
+
+#: PreferencesDialog.ui:206
+msgid "Show panel indicator"
+msgstr ""
+
+#: PreferencesDialog.ui:225
+msgid "Keep running when the main window is closed"
+msgstr ""
+
+#: PreferencesDialog.ui:245
+msgid "Hide main window on startup"
+msgstr ""
+
+#: PreferencesDialog.ui:267
+msgid "Notifications"
 msgstr ""
